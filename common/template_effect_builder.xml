@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <template name="effect_builder_output">
+        <string_column_full>
+            <frame mergerule="replace" name="fielddark" offset="7,5,7,5" />
+            <sourceless />
+            <readonly />
+            <script file="common/scripts/effect_builder_output.lua" />
+        </string_column_full>
+    </template>
+    <template name="effects_builder_list">
+        <list_text name="effects_list">
+        <class>effects_list</class>
+        </list_text>
+    </template>
+</root>

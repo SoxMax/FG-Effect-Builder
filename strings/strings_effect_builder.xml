@@ -2,5 +2,8 @@
 
 <root>
     <!-- Effect Builder Window-->
-    <string name="effect_name_label">Effect Name: </string>
+    <string name="effect_builder_title">Effect Builder</string>
+    <string name="effect_name_label">Effect Name:</string>
+    <string name="header_effects_list">EFFECTS</string>
+    <string name="output_effect_label">EFFECT STRING</string>
 </root>

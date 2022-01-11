@@ -13,6 +13,8 @@
 	<base>
 		<!-- Strings -->
 		<includefile source="strings/strings_effect_builder.xml" />
+		<!-- Templates -->
+		<includefile source="common/template_effect_builder.xml" />
 		<!-- Windows -->
 		<includefile source="windows/effect_builder.xml" />
 		<!-- Scripts -->

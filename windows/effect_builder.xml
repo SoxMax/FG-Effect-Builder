@@ -15,7 +15,7 @@
 		<tooltip control="name" />
 		<sheetdata>
 			<windowtitlebar name="title">
-				<resource>power_title_effect</resource>
+				<resource>effect_builder_title</resource>
 			</windowtitlebar>
 			
 			<frame_record_editor name="contentframe" />
@@ -38,6 +38,7 @@
 		<sheetdata>
 			<anchor_column name="columnanchor" />
 			
+            <!-- Effect Name -->
 			<label_column name="name_label">
 				<static textres="effect_name_label" />
 			</label_column>
@@ -49,177 +50,39 @@
 				</anchored>
                 <sourceless />
             </string_column_full>
-
-			<header_column name="header_label">
-				<static textres="power_header_effect" />
+            <!-- Effect Name -->
+			
+            <!-- Effects List -->
+			<header_column name="header_effects">
+				<static textres="header_effects_list" />
 				<center />
 			</header_column>
-			<string_column_full name="label">
-                <sourceless />
-            </string_column_full>
-			
-			<header_column name="header_duration">
-				<static textres="power_header_effect_duration" />
+            <button_iedit name="effects_iedit">
+                <anchored to="header_effects" position="insidetopright" offset="-5,0" />
+                <target>effects_list</target>
+            </button_iedit>
+            <button_iadd name="effects_list_iadd">
+                <anchored to="effects_iedit" position="lefthigh" offset="5,0" />
+                <target>effects_list</target>
+            </button_iadd>
+            <list_text name="effects_list">
+                <anchored>
+                    <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+                    <left />
+                    <right />
+                </anchored>
+            </list_text>
+            <!-- /Effects List -->
+
+            <!-- Output -->
+			<header_column name="output_label">
+				<static textres="output_effect_label" />
 				<center />
 			</header_column>
-
-			<basicdice name="durdice">
-				<anchored width="60" height="20">
-					<top parent="columnanchor" anchor="bottom" relation="relative" offset="22" />
-					<left offset="5" />
-				</anchored>
-                <sourceless />
-			</basicdice>
-			<label_fieldtop>
-				<anchored to="durdice" />
-				<static textres="power_label_effect_durdice" />
-			</label_fieldtop>
-			<label name="label_durdicestatx">
-				<anchored to="durdice" position="righthigh" offset="5,0" width="10" />
-				<static>x</static>
-				<center />
-			</label>
-			<button_stringcycler name="durdicestat">
-				<anchored to="label_durdicestatx" position="righthigh" offset="5,0" width="60" />
-                <sourceless />
-				<parameters>
-					<defaultlabelres>dash</defaultlabelres>
-					<labelsres>cl|evencl|oddcl</labelsres>
-					<values>cl|halfcl|oddcl</values>
-				</parameters>
-			</button_stringcycler>
-			<label name="durdicestatmaxparen">
-				<anchored to="durdicestat" position="righthigh" offset="5,0" />
-				<static>(</static>
-			</label>
-			<basicnumber name="durdicestatmax">
-				<anchored to="durdicestatmaxparen" position="righthigh" offset="5,0" width="20" height="20" />
-                <sourceless />
-				<hideonvalue value="0" />
-				<tooltip textres="power_tooltip_dicemax" />
-			</basicnumber>
-			<label name="durdicestatmaxparen2">
-				<anchored to="durdicestatmax" position="righthigh" offset="5,0" />
-				<static>)</static>
-			</label>
-			<label_fieldtop>
-				<anchored to="durdicestat">
-					<right parent="durdicestatmaxparen2" />
-				</anchored>
-				<static textres="power_label_effect_durdicemult" />
-			</label_fieldtop>
-			<label name="label_durplus">
-				<anchored to="durdicestatmaxparen2" position="righthigh" offset="2,0" width="10" />
-				<static>+</static>
-			</label>
-			<basicnumber name="durmult">
-				<anchored to="label_durplus" position="righthigh" offset="3,0" width="20" height="20" />
-                <sourceless />
-				<default>1</default>
-				<min>1</min>
-				<hideonvalue>1</hideonvalue>
-				<tooltip textres="power_tooltip_statmult" />
-			</basicnumber>
-			<label name="label_durstatmultx">
-				<anchored to="durmult" position="righthigh" offset="5,0" width="10" />
-				<static>x</static>
-				<center />
-			</label>
-			<cycler_ability name="durstat">
-				<anchored to="label_durstatmultx" position="righthigh" offset="5,0" width="60" />
-                <sourceless />
-				<parameters>
-					<defaultlabelres>dash</defaultlabelres>
-					<labelsres>cl|evencl|oddcl|str|dex|con|int|wis|cha</labelsres>
-					<values>cl|halfcl|oddcl|strength|dexterity|constitution|intelligence|wisdom|charisma</values>
-				</parameters>
-			</cycler_ability>
-			<label name="durstatmaxparen">
-				<anchored to="durstat" position="righthigh" offset="5,0" />
-				<static>(</static>
-			</label>
-			<basicnumber name="dmaxstat">
-				<anchored to="durstatmaxparen" position="righthigh" offset="5,0" width="20" height="20" />
-                <sourceless />
-				<hideonvalue value="0" />
-				<tooltip textres="power_tooltip_statmax" />
-			</basicnumber>
-			<label name="durstatmaxparen2">
-				<anchored to="dmaxstat" position="righthigh" offset="5,0" />
-				<static>)</static>
-			</label>
-			<label_fieldtop>
-				<anchored to="durmult">
-					<right parent="durstatmaxparen2" />
-				</anchored>
-				<static textres="power_label_effect_durstat" />
-			</label_fieldtop>
-			<label name="label_durplus2">
-				<anchored to="durstatmaxparen2" position="righthigh" offset="2,0" width="10" />
-				<static>+</static>
-			</label>
-			<basicnumber name="durmod">
-				<anchored to="label_durplus2" position="righthigh" offset="2,0" width="20" height="20" />
-                <sourceless />
-				<hideonvalue>0</hideonvalue>
-			</basicnumber>
-			<label_fieldtop>
-				<anchored to="durmod" />
-				<static textres="power_label_effect_durmod" />
-			</label_fieldtop>
-			
-			<label_column>
-				<static textres="power_label_effect_durunit" />
-			</label_column>
-			<cycler_ability name="durunit">
-				<anchored width="40" height="20">
-					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-					<left offset="97" />
-				</anchored>
-                <sourceless />
-				<parameters>
-					<defaultlabelres>effect_label_durunitrnd</defaultlabelres>
-					<labelsres>effect_label_durunitmin|effect_label_durunithr|effect_label_durunitday</labelsres>
-					<values>minute|hour|day</values>
-				</parameters>
-			</cycler_ability>
-
-			<header_column name="header_other">
-				<static textres="power_header_effect_other" />
-				<center />
-			</header_column>
-			
-			<label_column name="targeting_label">
-				<static textres="power_label_targeting" />
-			</label_column>
-			<button_stringcycler name="targeting">
-				<anchored width="60" height="20">
-					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-					<left offset="97" />
-				</anchored>
-                <sourceless />
-				<parameters>
-					<defaultlabelres>power_label_targetnormal</defaultlabelres>
-					<labelsres>power_label_targetself</labelsres>
-					<values>self</values>
-				</parameters>
-			</button_stringcycler>
-			
-			<label_column name="apply_label">
-				<static textres="power_label_effect_apply" />
-			</label_column>
-			<button_stringcycler name="apply">
-				<anchored width="120" height="20">
-					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-					<left offset="97" />
-				</anchored>
-                <sourceless />
-				<parameters>
-					<defaultlabelres>power_label_effect_applyall</defaultlabelres>
-					<labelsres>power_label_effect_applyaction|power_label_effect_applyroll|power_label_effect_applysingle</labelsres>
-					<values>action|roll|single</values>
-				</parameters>
-			</button_stringcycler>
+			<effect_builder_output name="output_effect">
+                <default>Test Item;</default>
+            </effect_builder_output>
+            <!-- /Output -->
 		</sheetdata>
 	</windowclass>
 </root>
