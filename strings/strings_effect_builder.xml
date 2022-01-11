@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <!-- Effect Builder Window-->
+    <string name="effect_name_label">Effect Name: </string>
+</root>
