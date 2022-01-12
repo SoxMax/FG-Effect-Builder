@@ -12,10 +12,13 @@
 	
 	<base>
 		<!-- Strings -->
+		<includefile source="strings/strings_effect_editor.xml" />
 		<includefile source="strings/strings_effect_builder.xml" />
 		<!-- Templates -->
+		<includefile source="common/template_effect_editor.xml" />
 		<includefile source="common/template_effect_builder.xml" />
 		<!-- Windows -->
+		<includefile source="windows/effect_editor.xml" />
 		<includefile source="windows/effect_builder.xml" />
 		<!-- Scripts -->
 		<script name="BuildEffect" file="scripts/build_effect.lua" />

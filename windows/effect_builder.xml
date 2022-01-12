@@ -89,6 +89,7 @@
             <!-- /Output -->
         </sheetdata>
     </windowclass>
+    <!-- Effect Rows -->
     <windowclass name="effect_builder_entry">
         <!-- <nodelete /> -->
         <margins control="0,2,0,2" />
@@ -119,12 +120,11 @@
                     <top />
                     <right anchor="left" relation="relative" />
                 </anchored>
-                <!-- <script>
-					function onButtonPress()
-                        local w = Interface.openWindow("weapon_effect_editor", window.getDatabaseNode());
-                        w.main.subwindow.name.setValue(DB.getValue(window.getDatabaseNode(), "...name", ""));
-					end
-                </script> -->
+                <script>
+                    function onButtonPress()
+                        local w = Interface.openWindow("effect_editor", "")
+                    end
+                </script>
             </button_details>
 
             <!-- delete button if in edit mode -->
@@ -147,4 +147,5 @@
             </basicstring>
         </sheetdata>
     </windowclass>
+    <!-- /Effect Rows -->
 </root>

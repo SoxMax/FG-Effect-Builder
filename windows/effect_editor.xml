@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <!-- Effect Editor -->
+    <windowclass name="effect_editor">
+        <frame>charsheethelper</frame>
+        <placement>
+            <size width="350" height="400" />
+        </placement>
+        <sizelimits>
+            <minimum width="350" height="350" />
+            <dynamic />
+        </sizelimits>
+        <nodelete />
+        <playercontrol />
+        <minimize>minimized_char</minimize>
+        <tooltip control="name" />
+        <sheetdata>
+            <windowtitlebar name="title">
+                <resource>power_title_effect</resource>
+            </windowtitlebar>
+            <anchor_title_charsheethelper name="contentanchor" />
+
+            <genericcontrol name="contentframe">
+                <anchored to="contentanchor">
+                    <top anchor="bottom" offset="0" />
+                    <left />
+                    <right />
+                    <bottom parent="" offset="-30" />
+                </anchored>
+            </genericcontrol>
+
+            <subwindow_record name="main">
+                <class>effect_editor_main</class>
+                <activate />
+                <fastinit />
+            </subwindow_record>
+
+            <scrollbar_record>
+                <target>main</target>
+            </scrollbar_record>
+
+            <resize_charsheethelper />
+            <close_charsheethelper />
+        </sheetdata>
+    </windowclass>
+    
+    <windowclass name="effect_editor_main">
+        <script file="utility/scripts/weapon_effects_editor.lua" />
+        <sheetdata>
+            <anchor_column name="columnanchor" />
+
+            <header_column name="header_label">
+                <static textres="power_header_effect" />
+                <center />
+            </header_column>
+
+            <!-- effect type cycler here -->
+            <label_column name="type_label">
+                <static textres="power_label_type" />
+                <tooltip textres="power_label_type_tooltip" />
+            </label_column>
+
+            <cycler_effecttypes name="type">
+                <anchored>
+                    <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+                    <left offset="97" />
+                    <right offset="-110" />
+                </anchored>
+            </cycler_effecttypes>
+
+            <!-- effect / label -->
+            <!-- <string_column_full name="effect" /> -->
+
+            <!-- ability version -->
+            <cycler_ability name="ability">
+                <anchored>
+                    <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+                    <left offset="5" />
+                    <right offset="-230" />
+                </anchored>
+            </cycler_ability>
+
+            <effect_number name="ability_modifier">
+                <anchored to="ability" position="righthigh" offset="10,0" width="20" height="20"/>
+            </effect_number>
+
+            <combobox_bonus_types name="ability_bonus_type">
+                <anchored to="ability_modifier" position="righthigh" offset="10,0" width="100" height="20"/>
+            </combobox_bonus_types>
+        </sheetdata>
+    </windowclass>
+    <!-- /Effect Editor -->
+</root>
