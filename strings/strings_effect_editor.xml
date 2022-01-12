@@ -45,18 +45,16 @@
     <string name="custom">Custom</string>
     <string name="save">Save</string>
     <string name="ability">Ability</string>
-    <string name="resist">Resistance</string>
+    <string name="resist">Resistance (Resist)</string>
     <string name="resistant">Resistant</string>
     <string name="immune">Immunity</string>
+    <string name="dr">Damage Resistance (DR)</string>
     <string name="vuln">Vulnerability</string>
     <string name="susceptiblity">Susceptiblity</string>
     <string name="misc">Miscellaneous</string>
 	<string name="label">Label Only</string>
 		
-    <string name="modifier">Modifier</string>
-    <string name="percent_modifier">% Modifier</string>
-    <string name="base">Base</string>
-    <string name="base_percent">Base %</string>
+    <string name="allsaves">All Saves</string>
 
     <string name="bac">Base AC</string>
     <string name="atk">Attack</string>

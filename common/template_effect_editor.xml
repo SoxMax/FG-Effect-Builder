@@ -7,27 +7,99 @@
         </button_stringcycler>
     </template>
 
-    <template name="button_stringcycler_sourceless">
+    <template name="effects_stringcycler">
         <button_stringcycler_defaultable>
             <sourceless />
+            <script>
+                function onValueChanged()
+                    window.updateEffectString()
+                end
+            </script>
         </button_stringcycler_defaultable>
     </template>
 
     <template name="combobox_sourceless">
         <combobox>
             <sourceless />
+            <script>
+                function onValueChanged()
+                    window.updateEffectString()
+                end
+            </script>
         </combobox>
     </template>
 
+    <template name="cycler_effecttypes">
+        <button_stringcycler_defaultable>
+            <parameters>
+                <defaultlabelres mergerule="replace">ability</defaultlabelres>
+                <defaultvalue>ability</defaultvalue>
+                <labelsres>save|susceptiblity|misc</labelsres>
+                <values>save|susceptiblity|misc</values>
+            </parameters>
+            <sourceless />
+            <script>
+                function onValueChanged()
+                    window.updateVisibility()
+                end
+            </script>
+        </button_stringcycler_defaultable>
+    </template>
+
     <template name="cycler_ability">
-        <button_stringcycler_sourceless>
+        <effects_stringcycler>
             <parameters>
                 <defaultlabelres mergerule="replace">strength</defaultlabelres>
                 <defaultvalue>STR</defaultvalue>
                 <labelsres>dexterity|constitution|intelligence|wisdom|charisma</labelsres>
                 <values>DEX|CON|INT|WIS|CHA</values>
             </parameters>
-        </button_stringcycler_sourceless>
+        </effects_stringcycler>
+    </template>
+
+    <template name="cycler_saves">
+        <effects_stringcycler>
+            <parameters>
+                <defaultlabelres mergerule="replace">allsaves</defaultlabelres>
+                <labelsres>fortitude|reflex|will</labelsres>
+                <values>fortitude|reflex|will</values>
+            </parameters>
+        </effects_stringcycler>
+    </template>
+
+    <template name="cycler_susceptiblitytypes">
+        <effects_stringcycler>
+            <parameters>
+                <defaultlabelres mergerule="replace">immune</defaultlabelres>
+                <defaultvalue>IMMUNE</defaultvalue>
+                <labelsres>resist|vuln</labelsres>
+                <values>RESIST|VULN</values>
+            </parameters>
+        </effects_stringcycler>
+    </template>
+
+    <template name="cycler_misctypes">
+        <effects_stringcycler>
+            <parameters>
+                <defaultlabelres mergerule="replace">ac</defaultlabelres>
+                <defaultvalue>AC</defaultvalue>
+                <labelsres>atk|dmg|heal|init_ae</labelsres>
+                <values>ATK|DMG|HEAL|INIT</values>
+            </parameters>
+        </effects_stringcycler>
+    </template>
+
+    <template name="combobox_damage_types">
+        <combobox_sourceless>
+            <listdirection>down</listdirection>
+            <script>
+                function onInit()
+                    super.onInit();
+                    addItems(DataCommon.dmgtypes);
+                end
+            </script>
+            <listmaxsize>5</listmaxsize>
+        </combobox_sourceless>
     </template>
 
     <template name="combobox_bonus_types">
@@ -44,74 +116,16 @@
         </combobox_sourceless>
     </template>
 
-    <template name="cycler_effecttypes">
-        <button_stringcycler_sourceless>
-            <parameters>
-                <defaultlabelres mergerule="replace">dash</defaultlabelres>
-                <labelsres>ability|save|susceptiblity|misc</labelsres>
-                <values>ability|save|susceptiblity|misc</values>
-            </parameters>
-        </button_stringcycler_sourceless>
-    </template>
-
-    <template name="cycler_savetypes">
-        <button_stringcycler_sourceless>
-            <parameters>
-                <defaultlabelres mergerule="replace">modifier</defaultlabelres>
-                <labelsres>modifier</labelsres>
-                <values>modifier</values>
-            </parameters>
-        </button_stringcycler_sourceless>
-    </template>
-
-    <template name="cycler_saves">
-        <button_stringcycler_sourceless>
-            <parameters>
-                <defaultlabelres mergerule="replace">fortitude</defaultlabelres>
-                <labelsres>reflex|will</labelsres>
-                <values>reflex|will</values>
-            </parameters>
-        </button_stringcycler_sourceless>
-    </template>
-
-    <template name="cycler_susceptiblitytypes">
-        <button_stringcycler_sourceless>
-            <parameters>
-                <defaultlabelres mergerule="replace">immune</defaultlabelres>
-                <labelsres>resist|vuln</labelsres>
-                <values>resist|vuln</values>
-            </parameters>
-        </button_stringcycler_sourceless>
-    </template>
-
-    <template name="combobox_damage_types">
-        <combobox_sourceless>
-            <listdirection>down</listdirection>
-            <script>
-                function onInit()
-                    super.onInit();
-                    addItems(DataCommon.dmgtypes);
-                end
-            </script>
-            <listmaxsize>5</listmaxsize>
-        </combobox_sourceless>
-    </template>
-
-    <template name="cycler_misctypes">
-        <button_stringcycler_sourceless>
-            <parameters>
-                <defaultlabelres mergerule="replace">ac</defaultlabelres>
-                <labelsres>atk|dmg|heal|init_ae</labelsres>
-                <values>atk|dmg|heal|init</values>
-            </parameters>
-        </button_stringcycler_sourceless>
-    </template>
-
     <template name="effect_number">
         <basicnumber>
             <default>0</default>
             <hideonvalue>0</hideonvalue>
             <sourceless />
+            <script>
+                function onValueChanged()
+                    window.updateEffectString()
+                end
+            </script>
         </basicnumber>
     </template>
 

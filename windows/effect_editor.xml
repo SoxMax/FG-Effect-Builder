@@ -11,8 +11,8 @@
             <minimum width="350" height="350" />
             <dynamic />
         </sizelimits>
-		<nodelete />
-		<playercontrol />
+        <nodelete />
+        <playercontrol />
         <minimize>minimized_char</minimize>
         <tooltip control="name" />
         <sheetdata>
@@ -44,8 +44,9 @@
             <close_charsheethelper />
         </sheetdata>
     </windowclass>
-    
+
     <windowclass name="effect_editor_main">
+        <script file="windows/scripts/effect_editor.lua" />
         <sheetdata>
             <anchor_column name="columnanchor" />
 
@@ -60,7 +61,7 @@
                 <tooltip textres="power_label_type_tooltip" />
             </label_column>
 
-            <cycler_effecttypes name="type">
+            <cycler_effecttypes name="effect_type">
                 <anchored>
                     <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
                     <left offset="97" />
@@ -68,28 +69,79 @@
                 </anchored>
             </cycler_effecttypes>
 
-            <!-- effect / label -->
-            <!-- <string_column_full name="effect" /> -->
-
-            <!-- ability version -->
+            <!-- Ability version -->
             <cycler_ability name="ability">
                 <anchored>
                     <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
                     <left offset="5" />
                     <right offset="-230" />
                 </anchored>
-                <script file="windows/scripts/effect_editor.lua"/>
             </cycler_ability>
 
             <effect_number name="ability_modifier">
                 <anchored to="ability" position="righthigh" offset="10,0" width="20" height="20"/>
-                <script file="windows/scripts/effect_editor.lua"/>
             </effect_number>
 
             <combobox_bonus_types name="ability_bonus_type">
                 <anchored to="ability_modifier" position="righthigh" offset="10,0" width="100" height="20"/>
-                <script file="windows/scripts/effect_editor.lua"/>
             </combobox_bonus_types>
+
+            <!-- Save Types -->
+            <cycler_saves name="save">
+                <anchored>
+                    <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+                    <left offset="5" />
+                    <right offset="-250" />
+                </anchored>
+                <tooltip textres="we_label_save_type_tooltip" />
+            </cycler_saves>
+
+            <effect_number name="save_modifier">
+                <anchored to="save" position="righthigh" offset="10,0" width="20" height="20"/>
+                <tooltip textres="we_label_save_value_tooltip" />
+            </effect_number>
+
+            <combobox_bonus_types name="save_bonus_type">
+                <anchored to="save_modifier" position="righthigh" offset="10,0" width="100" height="20"/>
+            </combobox_bonus_types>
+
+            <!-- Susceptiblity version -->
+            <cycler_susceptiblitytypes name="susceptiblity_type">
+                <anchored>
+                    <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+                    <left offset="5" />
+                    <right offset="-230" />
+                </anchored>
+                <tooltip textres="we_ability_type_tooltip" />
+            </cycler_susceptiblitytypes>
+
+            <combobox_damage_types name="susceptiblity">
+                <anchored to="susceptiblity_type" position="righthigh" offset="10,0" width="80" height="20"/>
+            </combobox_damage_types>
+
+            <effect_number name="susceptiblity_modifier">
+                <anchored to="susceptiblity" position="righthigh" offset="10,0" width="20" height="20"/>
+            </effect_number>
+
+            <!-- Misc version -->
+            <cycler_misctypes name="misc">
+                <anchored>
+                    <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+                    <left offset="5" />
+                    <right offset="-230" />
+                </anchored>
+                <tooltip textres="effect_label_misc_type_tooltip" />
+            </cycler_misctypes>
+
+            <effect_number name="misc_modifier">
+                <anchored to="misc" position="righthigh" offset="10,0" width="20" height="20"/>
+                <tooltip textres="effect_label_misc_value_tooltip" />
+            </effect_number>
+
+            <combobox_bonus_types name="misc_bonus_type">
+                <anchored to="misc_modifier" position="righthigh" offset="10,0" width="100" height="20"/>
+            </combobox_bonus_types>
+
         </sheetdata>
     </windowclass>
     <!-- /Effect Editor -->
