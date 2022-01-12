@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <template name="button_stringcycler_sourceless">
+    <template name="button_stringcycler_defaultable">
         <button_stringcycler>
-            <sourceless />
+            <script file="common/scripts/button_stringcycler_defaultable.lua" />
         </button_stringcycler>
+    </template>
+
+    <template name="button_stringcycler_sourceless">
+        <button_stringcycler_defaultable>
+            <sourceless />
+        </button_stringcycler_defaultable>
     </template>
 
     <template name="combobox_sourceless">
@@ -17,8 +23,9 @@
         <button_stringcycler_sourceless>
             <parameters>
                 <defaultlabelres mergerule="replace">strength</defaultlabelres>
+                <defaultvalue>STR</defaultvalue>
                 <labelsres>dexterity|constitution|intelligence|wisdom|charisma</labelsres>
-                <values>dex|con|int|wis|cha</values>
+                <values>DEX|CON|INT|WIS|CHA</values>
             </parameters>
         </button_stringcycler_sourceless>
     </template>
@@ -29,8 +36,8 @@
             <script>
                 function onInit()
                     super.onInit();
+                    add("");
                     addItems(DataCommon.bonustypes);
-                    add("none");
                 end
             </script>
             <listmaxsize>3</listmaxsize>
@@ -41,8 +48,8 @@
         <button_stringcycler_sourceless>
             <parameters>
                 <defaultlabelres mergerule="replace">dash</defaultlabelres>
-                <labelsres>save|ability|susceptiblity|misc</labelsres>
-                <values>save|ability|susceptiblity|misc</values>
+                <labelsres>ability|save|susceptiblity|misc</labelsres>
+                <values>ability|save|susceptiblity|misc</values>
             </parameters>
         </button_stringcycler_sourceless>
     </template>

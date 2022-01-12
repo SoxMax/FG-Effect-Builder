@@ -36,6 +36,7 @@
         </sheetdata>
     </windowclass>
     <windowclass name="effect_builder_main">
+        <script file="windows/scripts/effect_builder.lua"/>
         <sheetdata>
             <anchor_column name="columnanchor" />
 
@@ -50,6 +51,11 @@
                     <right offset="-5" />
                 </anchored>
                 <sourceless />
+                <script>
+                    function onValueChanged()
+                        window.updateEffectString()
+                    end
+                </script>
             </string_column_full>
             <!-- Effect Name -->
 
@@ -75,6 +81,11 @@
                 <readonly />
                 <sourceless />
                 <class>effect_builder_entry</class>
+                <script>
+                    function onListChanged()
+                        window.updateEffectString()
+                    end
+                </script>
             </list_text>
             <!-- /Effects List -->
 
@@ -84,7 +95,7 @@
                 <center />
             </header_column>
             <effect_builder_output name="output_effect">
-                <default>Test Item;</default>
+
             </effect_builder_output>
             <!-- /Output -->
         </sheetdata>
@@ -123,6 +134,7 @@
                 <script>
                     function onButtonPress()
                         local w = Interface.openWindow("effect_editor", "")
+                        w.effectDescription = window.effect_description
                     end
                 </script>
             </button_details>
@@ -144,6 +156,11 @@
                 </anchored>
                 <multilinespacing>20</multilinespacing>
                 <readonly />
+                <script>
+                    function onValueChanged()
+                        window.windowlist.window.updateEffectString()
+                    end
+                </script>
             </basicstring>
         </sheetdata>
     </windowclass>
