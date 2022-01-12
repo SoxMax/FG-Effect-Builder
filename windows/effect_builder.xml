@@ -2,67 +2,68 @@
 
 <root>
     <windowclass name="effect_builder">
-		<frame>recordsheet</frame>
-		<placement>
-			<size width="460" height="370" />
-		</placement>
-		<sizelimits>
-			<minimum width="460" height="370" />
-			<dynamic />
-		</sizelimits>
-		<nodelete />
-		<playercontrol />
-		<tooltip control="name" />
-		<sheetdata>
-			<windowtitlebar name="title">
-				<resource>effect_builder_title</resource>
-			</windowtitlebar>
-			
-			<frame_record_editor name="contentframe" />
+        <!-- <softclose /> -->
+        <frame>recordsheet</frame>
+        <placement>
+            <size width="460" height="370" />
+        </placement>
+        <sizelimits>
+            <minimum width="460" height="370" />
+            <dynamic />
+        </sizelimits>
+        <nodelete />
+        <playercontrol />
+        <tooltip control="name" />
+        <sheetdata>
+            <windowtitlebar name="title">
+                <resource>effect_builder_title</resource>
+            </windowtitlebar>
 
-			<subwindow_record name="main">
-				<class>effect_builder_main</class>
-				<activate />
-				<fastinit />
-			</subwindow_record>
+            <frame_record_editor name="contentframe" />
 
-			<scrollbar_record>
-				<target>main</target>
-			</scrollbar_record>
+            <subwindow_record name="main">
+                <class>effect_builder_main</class>
+                <activate />
+                <fastinit />
+            </subwindow_record>
 
-			<resize_recordsheet />
-			<close_recordsheet />
-		</sheetdata>
-	</windowclass>
-	<windowclass name="effect_builder_main">
-		<sheetdata>
-			<anchor_column name="columnanchor" />
-			
+            <scrollbar_record>
+                <target>main</target>
+            </scrollbar_record>
+
+            <resize_recordsheet />
+            <close_recordsheet />
+        </sheetdata>
+    </windowclass>
+    <windowclass name="effect_builder_main">
+        <sheetdata>
+            <anchor_column name="columnanchor" />
+
             <!-- Effect Name -->
-			<label_column name="name_label">
-				<static textres="effect_name_label" />
-			</label_column>
-			<string_column_full name="effect_name">
-				<anchored>
-					<top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-					<left offset="97" />
-					<right offset="-5" />
-				</anchored>
+            <label_column name="name_label">
+                <static textres="effect_name_label" />
+            </label_column>
+            <string_column_full name="effect_name">
+                <anchored>
+                    <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+                    <left offset="97" />
+                    <right offset="-5" />
+                </anchored>
                 <sourceless />
             </string_column_full>
             <!-- Effect Name -->
-			
+
             <!-- Effects List -->
-			<header_column name="header_effects">
-				<static textres="header_effects_list" />
-				<center />
-			</header_column>
-            <button_iedit name="effects_iedit">
+            <header_column name="header_effects">
+                <static textres="header_effects_list" />
+                <center />
+            </header_column>
+            <button_iedit name="effects_list_iedit">
                 <anchored to="header_effects" position="insidetopright" offset="-5,0" />
                 <target>effects_list</target>
             </button_iedit>
             <button_iadd name="effects_list_iadd">
-                <anchored to="effects_iedit" position="lefthigh" offset="5,0" />
+                <anchored to="effects_list_iedit" position="lefthigh" offset="5,0" />
                 <target>effects_list</target>
             </button_iadd>
             <list_text name="effects_list">
@@ -71,18 +72,79 @@
                     <left />
                     <right />
                 </anchored>
+                <readonly />
+                <sourceless />
+                <class>effect_builder_entry</class>
             </list_text>
             <!-- /Effects List -->
 
             <!-- Output -->
-			<header_column name="output_label">
-				<static textres="output_effect_label" />
-				<center />
-			</header_column>
-			<effect_builder_output name="output_effect">
+            <header_column name="output_label">
+                <static textres="output_effect_label" />
+                <center />
+            </header_column>
+            <effect_builder_output name="output_effect">
                 <default>Test Item;</default>
             </effect_builder_output>
             <!-- /Output -->
-		</sheetdata>
-	</windowclass>
+        </sheetdata>
+    </windowclass>
+    <windowclass name="effect_builder_entry">
+        <!-- <nodelete /> -->
+        <margins control="0,2,0,2" />
+        <script>
+            function delete()
+                close()
+            end
+        </script>
+        <sheetdata>
+            <genericcontrol name="rightanchor">
+                <anchored width="0" height="0">
+                    <top offset="5" />
+                    <right />
+                </anchored>
+                <invisible />
+            </genericcontrol>
+            <genericcontrol name="leftanchor">
+                <anchored width="0" height="0">
+                    <top offset="5" />
+                    <left />
+                </anchored>
+                <invisible />
+            </genericcontrol>
+
+            <!-- editor button -->
+            <button_details name="effect_detail">
+                <anchored to="rightanchor" width="20" height="20">
+                    <top />
+                    <right anchor="left" relation="relative" />
+                </anchored>
+                <!-- <script>
+					function onButtonPress()
+                        local w = Interface.openWindow("weapon_effect_editor", window.getDatabaseNode());
+                        w.main.subwindow.name.setValue(DB.getValue(window.getDatabaseNode(), "...name", ""));
+					end
+                </script> -->
+            </button_details>
+
+            <!-- delete button if in edit mode -->
+            <button_idelete name="idelete">
+                <anchored width="20" height="20">
+                    <top parent="effect_detail" anchor="top"/>
+                    <right parent="effect_detail" anchor="left" relation="relative"/>
+                </anchored>
+            </button_idelete>
+
+            <hs name="name"/>
+            <basicstring name="effect_description">
+                <anchored to="leftanchor">
+                    <top />
+                    <left anchor="right" relation="relative" offset="5" />
+                    <right parent="rightanchor" anchor="left" relation="relative" offset="-20" />
+                </anchored>
+                <multilinespacing>20</multilinespacing>
+                <readonly />
+            </basicstring>
+        </sheetdata>
+    </windowclass>
 </root>

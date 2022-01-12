@@ -9,9 +9,4 @@
             <script file="common/scripts/effect_builder_output.lua" />
         </string_column_full>
     </template>
-    <template name="effects_builder_list">
-        <list_text name="effects_list">
-        <class>effects_list</class>
-        </list_text>
-    </template>
 </root>
