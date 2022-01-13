@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
+    <template name="window_effect_editor">
+        <windowcontrol>
+            <script file="common/scripts/window_effect_editor.lua" />
+        </windowcontrol>
+    </template>
+
     <template name="button_stringcycler_defaultable">
         <button_stringcycler>
             <script file="common/scripts/button_stringcycler_defaultable.lua" />
@@ -10,22 +16,14 @@
     <template name="effects_stringcycler">
         <button_stringcycler_defaultable>
             <sourceless />
-            <script>
-                function onValueChanged()
-                    window.createEffectString()
-                end
-            </script>
+            <script file="common/scripts/valueholder_effect_editor.lua" />
         </button_stringcycler_defaultable>
     </template>
 
     <template name="combobox_sourceless">
         <combobox>
             <sourceless />
-            <script>
-                function onValueChanged()
-                    window.createEffectString()
-                end
-            </script>
+            <script file="common/scripts/valueholder_effect_editor.lua" />
         </combobox>
     </template>
 
@@ -34,11 +32,7 @@
             <default>0</default>
             <hideonvalue>0</hideonvalue>
             <sourceless />
-            <script>
-                function onValueChanged()
-                    window.createEffectString()
-                end
-            </script>
+            <script file="common/scripts/valueholder_effect_editor.lua" />
         </basicnumber>
     </template>
 

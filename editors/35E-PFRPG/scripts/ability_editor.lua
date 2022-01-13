@@ -4,5 +4,5 @@ function createEffectString()
         effectString = effectString .. " " .. ability_bonus_type.getValue()
     end
     -- parentcontrol.window.effectDescription.setValue(effectString)
-    parentcontrol.window.updateEffectString(effectString)
+    return effectString
 end

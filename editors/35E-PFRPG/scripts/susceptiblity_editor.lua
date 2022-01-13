@@ -3,5 +3,5 @@ function createEffectString()
     if susceptiblity_modifier.getValue() ~= 0 then
         effectString = effectString .. " " .. susceptiblity_modifier.getValue()
     end
-    parentcontrol.window.updateEffectString(effectString)
+    return effectString
 end

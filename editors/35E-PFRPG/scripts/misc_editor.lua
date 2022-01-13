@@ -3,5 +3,5 @@ function createEffectString()
     if not misc_bonus_type.isEmpty() then
         effectString = effectString .. " " .. misc_bonus_type.getValue()
     end
-    parentcontrol.window.updateEffectString(effectString)
+    return effectString
 end

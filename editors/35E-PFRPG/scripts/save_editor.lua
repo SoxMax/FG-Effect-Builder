@@ -7,5 +7,5 @@ function createEffectString()
     elseif not save_bonus_type.isEmpty() then
         effectString = effectString .. " " .. save_bonus_type.getValue()
     end
-    parentcontrol.window.updateEffectString(effectString)
+    return effectString
 end

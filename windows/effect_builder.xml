@@ -64,9 +64,8 @@
                 <static textres="output_effect_label" />
                 <center />
             </header_column>
-            <effect_builder_output name="output_effect">
-
-            </effect_builder_output>
+            <string_column_output_effect name="output_effect">
+            </string_column_output_effect>
             <!-- /Output -->
 
             <!-- Effects List -->
