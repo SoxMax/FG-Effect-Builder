@@ -8,7 +8,7 @@
 		<loadorder>42</loadorder>
 	</properties>
 	
-	<announcement text="https://github.com/SoxMax/FG-Effect-Builder \r Effect Builder v1.0.0 \r GUI utility to help with building effects" font="emotefont" />
+	<announcement text="https://github.com/SoxMax/FG-Effect-Builder \r Effect Builder v0.1.0 \r GUI utility to help with building effects" font="emotefont" />
 	
 	<base>
 		<!-- Strings -->
