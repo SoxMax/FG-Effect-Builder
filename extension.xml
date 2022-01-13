@@ -15,6 +15,7 @@
 		<includefile source="strings/strings_effect_editor.xml" />
 		<includefile source="strings/strings_effect_builder.xml" />
 		<!-- Templates -->
+		<includefile source="common/template_common.xml" />
 		<includefile source="common/template_effect_editor.xml" />
 		<includefile source="common/template_effect_builder.xml" />
 		<!-- Windows -->

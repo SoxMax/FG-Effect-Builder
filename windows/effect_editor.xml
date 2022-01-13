@@ -1,34 +1,24 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <!-- Effect Editor -->
     <windowclass name="effect_editor">
-        <frame>charsheethelper</frame>
+        <frame>recordsheet</frame>
         <placement>
-            <size width="350" height="400" />
+            <size width="460" height="370" />
         </placement>
         <sizelimits>
-            <minimum width="350" height="350" />
+            <minimum width="460" height="370" />
             <dynamic />
         </sizelimits>
         <nodelete />
         <playercontrol />
-        <minimize>minimized_char</minimize>
         <tooltip control="name" />
         <sheetdata>
             <windowtitlebar name="title">
                 <resource>power_title_effect</resource>
             </windowtitlebar>
-            <anchor_title_charsheethelper name="contentanchor" />
 
-            <genericcontrol name="contentframe">
-                <anchored to="contentanchor">
-                    <top anchor="bottom" offset="0" />
-                    <left />
-                    <right />
-                    <bottom parent="" offset="-30" />
-                </anchored>
-            </genericcontrol>
+            <frame_effects name="contentframe" />
 
             <subwindow_record name="main">
                 <class>effect_editor_main</class>
@@ -40,20 +30,14 @@
                 <target>main</target>
             </scrollbar_record>
 
-            <resize_charsheethelper />
-            <close_charsheethelper />
+            <resize_recordsheet />
+            <close_recordsheet />
         </sheetdata>
     </windowclass>
-
     <windowclass name="effect_editor_main">
         <script file="windows/scripts/effect_editor.lua" />
         <sheetdata>
             <anchor_column name="columnanchor" />
-
-            <header_column name="header_label">
-                <static textres="power_header_effect" />
-                <center />
-            </header_column>
 
             <!-- effect type cycler here -->
             <label_column name="type_label">

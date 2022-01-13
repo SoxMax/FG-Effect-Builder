@@ -24,8 +24,8 @@
     <string name="effect_label_misc_type_tooltip">The type of effect you wish to apply.</string>
     <string name="effect_label_misc_value_tooltip">Value to be applied to the type of effect.</string>
 
-    <string name="power_label_type">Type</string>
-    <string name="power_label_type_tooltip">Type of effect. Use CUSTOM to set the string manually.</string>
+    <string name="power_label_type">Effect Type</string>
+    <string name="power_label_type_tooltip">The type of effect to generate.</string>
 
     <string name="header_saves">Save Features</string>
     <string name="we_save_type_tooltip">Modifier of a save score.</string>

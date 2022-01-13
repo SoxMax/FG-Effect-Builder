@@ -19,7 +19,7 @@
                 <resource>effect_builder_title</resource>
             </windowtitlebar>
 
-            <frame_record_editor name="contentframe" />
+            <frame_effects name="contentframe" />
 
             <subwindow_record name="main">
                 <class>effect_builder_main</class>
@@ -59,6 +59,16 @@
             </string_column_full>
             <!-- Effect Name -->
 
+            <!-- Output -->
+            <header_column name="output_label">
+                <static textres="output_effect_label" />
+                <center />
+            </header_column>
+            <effect_builder_output name="output_effect">
+
+            </effect_builder_output>
+            <!-- /Output -->
+
             <!-- Effects List -->
             <header_column name="header_effects">
                 <static textres="header_effects_list" />
@@ -88,16 +98,6 @@
                 </script>
             </list_text>
             <!-- /Effects List -->
-
-            <!-- Output -->
-            <header_column name="output_label">
-                <static textres="output_effect_label" />
-                <center />
-            </header_column>
-            <effect_builder_output name="output_effect">
-
-            </effect_builder_output>
-            <!-- /Output -->
         </sheetdata>
     </windowclass>
     <!-- Effect Rows -->
