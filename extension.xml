@@ -5,7 +5,7 @@
 		<version>0.2.0</version>
 		<author>SoxMax</author>
 		<description>GUI utility to help with building effects</description>
-		<loadorder>42</loadorder>
+		<loadorder>1000</loadorder>
 	</properties>
 	
 	<announcement text="https://github.com/SoxMax/FG-Effect-Builder \r Effect Builder v0.2.0 \r GUI utility to help with building effects" font="emotefont" />
