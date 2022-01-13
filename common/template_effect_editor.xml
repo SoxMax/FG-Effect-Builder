@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <template name="window_effect_editor">
-        <windowcontrol>
-            <script file="common/scripts/window_effect_editor.lua" />
-        </windowcontrol>
-    </template>
-
     <template name="button_stringcycler_defaultable">
         <button_stringcycler>
             <script file="common/scripts/button_stringcycler_defaultable.lua" />
