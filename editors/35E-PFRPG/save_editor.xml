@@ -12,7 +12,6 @@
                     <left offset="5" />
                     <right offset="-250" />
                 </anchored>
-                <tooltip textres="we_label_save_type_tooltip" />
                 <parameters>
                     <defaultlabelres mergerule="replace">allsaves</defaultlabelres>
                     <labelsres>fortitude|reflex|will</labelsres>
@@ -22,7 +21,6 @@
 
             <effect_number name="save_modifier">
                 <anchored to="save" position="righthigh" offset="10,0" width="20" height="20"/>
-                <tooltip textres="we_label_save_value_tooltip" />
             </effect_number>
 
             <combobox_bonus_types name="save_bonus_type">

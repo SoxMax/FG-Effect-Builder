@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <string name="save">Save</string>
+    <string name="ability">Ability</string>
+    <string name="susceptiblity">Susceptiblity</string>
+    <string name="misc">Miscellaneous</string>
+
+    <string name="allsaves">All Saves</string>
+    <string name="resist">Resistance (Resist)</string>
+    <string name="immune">Immunity</string>
+    <string name="dr">Damage Resistance (DR)</string>
+    <string name="vuln">Vulnerability</string>
+    <string name="atk">Attack</string>
+    <string name="dmg">Damage</string>
+    <string name="heal">Heal</string>
+    <string name="init_eb">Initiative</string>
+</root>

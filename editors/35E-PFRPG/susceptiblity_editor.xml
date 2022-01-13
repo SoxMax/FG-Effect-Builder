@@ -12,7 +12,6 @@
                     <left offset="5" />
                     <right offset="-230" />
                 </anchored>
-                <tooltip textres="we_ability_type_tooltip" />
                 <parameters>
                     <defaultlabelres mergerule="replace">immune</defaultlabelres>
                     <defaultvalue>IMMUNE</defaultvalue>

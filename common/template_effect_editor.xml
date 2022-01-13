@@ -68,4 +68,20 @@
             <listmaxsize>3</listmaxsize>
         </combobox_sourceless>
     </template>
+
+    <template name="cycler_effect_type">
+        <button_stringcycler_defaultable name="effect_type">
+                <anchored>
+                    <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+                    <left offset="97" />
+                    <right offset="-110" />
+                </anchored>
+                <sourceless />
+                <script>
+                    function onValueChanged()
+                        window.updateEffectType()
+                    end
+                </script>
+            </button_stringcycler_defaultable>
+    </template>
 </root>

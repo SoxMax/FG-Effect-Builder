@@ -12,18 +12,16 @@
                     <left offset="5" />
                     <right offset="-230" />
                 </anchored>
-                <tooltip textres="effect_label_misc_type_tooltip" />
                 <parameters>
                     <defaultlabelres mergerule="replace">ac</defaultlabelres>
                     <defaultvalue>AC</defaultvalue>
-                    <labelsres>atk|dmg|heal|init_ae</labelsres>
+                    <labelsres>atk|dmg|heal|init_eb</labelsres>
                     <values>ATK|DMG|HEAL|INIT</values>
                 </parameters>
             </effects_stringcycler>
 
             <effect_number name="misc_modifier">
                 <anchored to="misc" position="righthigh" offset="10,0" width="20" height="20"/>
-                <tooltip textres="effect_label_misc_value_tooltip" />
             </effect_number>
 
             <combobox_bonus_types name="misc_bonus_type">
