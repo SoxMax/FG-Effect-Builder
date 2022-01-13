@@ -55,9 +55,13 @@
                     <right offset="-35" />
                     <bottom offset="-32" />
                 </anchored>
-                <class>ability_editor</class>
                 <activate />
                 <fastinit />
+                <script>
+                    function onInit()
+                        window.updateEffectType()
+                    end
+                </script>
             </subwindow>
         </sheetdata>
     </windowclass>
