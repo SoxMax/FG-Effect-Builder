@@ -1,4 +1,3 @@
-
 function updateEffectString()
     local effectItems = {}
     if(not effect_name.isEmpty()) then

@@ -2,7 +2,7 @@
 <root version="3.3">
 	<properties>
 		<name>Feature: Effect Builder</name>
-		<version>1.0.0</version>
+		<version>0.1.0</version>
 		<author>SoxMax</author>
 		<description>GUI utility to help with building effects</description>
 		<loadorder>42</loadorder>
@@ -18,6 +18,8 @@
 		<includefile source="common/template_common.xml" />
 		<includefile source="common/template_effect_editor.xml" />
 		<includefile source="common/template_effect_builder.xml" />
+		<!-- Editors -->
+		<includefile source="editors/editor_loader.xml" />
 		<!-- Windows -->
 		<includefile source="windows/effect_editor.xml" />
 		<includefile source="windows/effect_builder.xml" />

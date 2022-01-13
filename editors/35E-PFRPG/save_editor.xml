@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="save_editor">
+        <script file="editors/35E-PFRPG/scripts/save_editor.lua" />
+        <sheetdata>
+            <anchor_column name="columnanchor" />
+
+            <effects_stringcycler name="save">
+                <anchored>
+                    <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+                    <left offset="5" />
+                    <right offset="-250" />
+                </anchored>
+                <tooltip textres="we_label_save_type_tooltip" />
+                <parameters>
+                    <defaultlabelres mergerule="replace">allsaves</defaultlabelres>
+                    <labelsres>fortitude|reflex|will</labelsres>
+                    <values>fortitude|reflex|will</values>
+                </parameters>
+            </effects_stringcycler>
+
+            <effect_number name="save_modifier">
+                <anchored to="save" position="righthigh" offset="10,0" width="20" height="20"/>
+                <tooltip textres="we_label_save_value_tooltip" />
+            </effect_number>
+
+            <combobox_bonus_types name="save_bonus_type">
+                <anchored to="save_modifier" position="righthigh" offset="10,0" width="100" height="20"/>
+            </combobox_bonus_types>
+        </sheetdata>
+    </windowclass>
+</root>

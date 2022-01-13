@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root version="3.3">
+    <includefile source="editors/35E-PFRPG/ability_editor.xml" />
+    <includefile source="editors/35E-PFRPG/save_editor.xml" />
+    <includefile source="editors/35E-PFRPG/susceptiblity_editor.xml" />
+    <includefile source="editors/35E-PFRPG/misc_editor.xml" />
+</root>

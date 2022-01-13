@@ -12,7 +12,7 @@
             <sourceless />
             <script>
                 function onValueChanged()
-                    window.updateEffectString()
+                    window.createEffectString()
                 end
             </script>
         </button_stringcycler_defaultable>
@@ -23,70 +23,23 @@
             <sourceless />
             <script>
                 function onValueChanged()
-                    window.updateEffectString()
+                    window.createEffectString()
                 end
             </script>
         </combobox>
     </template>
 
-    <template name="cycler_effecttypes">
-        <button_stringcycler_defaultable>
-            <parameters>
-                <defaultlabelres mergerule="replace">ability</defaultlabelres>
-                <defaultvalue>ability</defaultvalue>
-                <labelsres>save|susceptiblity|misc</labelsres>
-                <values>save|susceptiblity|misc</values>
-            </parameters>
+    <template name="effect_number">
+        <basicnumber>
+            <default>0</default>
+            <hideonvalue>0</hideonvalue>
             <sourceless />
             <script>
                 function onValueChanged()
-                    window.updateVisibility()
+                    window.createEffectString()
                 end
             </script>
-        </button_stringcycler_defaultable>
-    </template>
-
-    <template name="cycler_ability">
-        <effects_stringcycler>
-            <parameters>
-                <defaultlabelres mergerule="replace">strength</defaultlabelres>
-                <defaultvalue>STR</defaultvalue>
-                <labelsres>dexterity|constitution|intelligence|wisdom|charisma</labelsres>
-                <values>DEX|CON|INT|WIS|CHA</values>
-            </parameters>
-        </effects_stringcycler>
-    </template>
-
-    <template name="cycler_saves">
-        <effects_stringcycler>
-            <parameters>
-                <defaultlabelres mergerule="replace">allsaves</defaultlabelres>
-                <labelsres>fortitude|reflex|will</labelsres>
-                <values>fortitude|reflex|will</values>
-            </parameters>
-        </effects_stringcycler>
-    </template>
-
-    <template name="cycler_susceptiblitytypes">
-        <effects_stringcycler>
-            <parameters>
-                <defaultlabelres mergerule="replace">immune</defaultlabelres>
-                <defaultvalue>IMMUNE</defaultvalue>
-                <labelsres>resist|vuln</labelsres>
-                <values>RESIST|VULN</values>
-            </parameters>
-        </effects_stringcycler>
-    </template>
-
-    <template name="cycler_misctypes">
-        <effects_stringcycler>
-            <parameters>
-                <defaultlabelres mergerule="replace">ac</defaultlabelres>
-                <defaultvalue>AC</defaultvalue>
-                <labelsres>atk|dmg|heal|init_ae</labelsres>
-                <values>ATK|DMG|HEAL|INIT</values>
-            </parameters>
-        </effects_stringcycler>
+        </basicnumber>
     </template>
 
     <template name="combobox_damage_types">
@@ -115,18 +68,4 @@
             <listmaxsize>3</listmaxsize>
         </combobox_sourceless>
     </template>
-
-    <template name="effect_number">
-        <basicnumber>
-            <default>0</default>
-            <hideonvalue>0</hideonvalue>
-            <sourceless />
-            <script>
-                function onValueChanged()
-                    window.updateEffectString()
-                end
-            </script>
-        </basicnumber>
-    </template>
-
 </root>

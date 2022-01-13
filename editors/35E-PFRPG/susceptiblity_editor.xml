@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="susceptiblity_editor">
+        <script file="editors/35E-PFRPG/scripts/susceptiblity_editor.lua" />
+        <sheetdata>
+            <anchor_column name="columnanchor" />
+
+            <effects_stringcycler name="susceptiblity_type">
+                <anchored>
+                    <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
+                    <left offset="5" />
+                    <right offset="-230" />
+                </anchored>
+                <tooltip textres="we_ability_type_tooltip" />
+                <parameters>
+                    <defaultlabelres mergerule="replace">immune</defaultlabelres>
+                    <defaultvalue>IMMUNE</defaultvalue>
+                    <labelsres>resist|vuln</labelsres>
+                    <values>RESIST|VULN</values>
+                </parameters>
+            </effects_stringcycler>
+
+            <combobox_damage_types name="susceptiblity">
+                <anchored to="susceptiblity_type" position="righthigh" offset="10,0" width="80" height="20"/>
+            </combobox_damage_types>
+
+            <effect_number name="susceptiblity_modifier">
+                <anchored to="susceptiblity" position="righthigh" offset="10,0" width="20" height="20"/>
+            </effect_number>
+        </sheetdata>
+    </windowclass>
+</root>
