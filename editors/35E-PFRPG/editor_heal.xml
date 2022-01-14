@@ -24,8 +24,8 @@
                 <parameters>
                     <defaultlabelres mergerule="replace">heal</defaultlabelres>
                     <defaultvalue>HEAL</defaultvalue>
-                    <labelsres></labelsres>
-                    <values></values>
+                    <labelsres>fast_heal|regen</labelsres>
+                    <values>FHEAL|REGEN</values>
                 </parameters>
             </stringcycler_effects>
 
