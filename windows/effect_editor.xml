@@ -2,58 +2,52 @@
 
 <root>
     <windowclass name="effect_editor">
-        <frame>recordsheet</frame>
-        <placement>
-            <size width="460" height="370" />
-        </placement>
-        <sizelimits>
-            <minimum width="460" height="370" />
-            <dynamic />
-        </sizelimits>
-        <nodelete />
-        <playercontrol />
-        <tooltip control="name" />
-        <sheetdata>
-            <windowtitlebar name="title">
-                <resource>power_title_effect</resource>
-            </windowtitlebar>
-
-            <frame_effects name="contentframe" />
-
-            <subwindow_record name="main">
-                <class>effect_editor_main</class>
-                <activate />
-                <fastinit />
-            </subwindow_record>
-
-            <scrollbar_record>
-                <target>main</target>
-            </scrollbar_record>
-
-            <resize_recordsheet />
-            <close_recordsheet />
-        </sheetdata>
-    </windowclass>
-    <windowclass name="effect_editor_main">
+        <!-- <frame name="border" /> -->
         <script file="windows/scripts/effect_editor.lua" />
+        <margin control="0,0,0,2" />
+        <sizelimits>
+            <minimum height="25" />
+        </sizelimits>
         <sheetdata>
-            <anchor_column name="columnanchor" />
+            <genericcontrol name="leftanchor">
+                <anchored width="0" height="0">
+                    <top />
+                    <left />
+                </anchored>
+                <invisible />
+                <disabled />
+            </genericcontrol>
+            <genericcontrol name="rightanchor">
+                <anchored width="0" height="0">
+                    <top />
+                    <right />
+                </anchored>
+                <invisible />
+                <disabled />
+            </genericcontrol>
 
-            <!-- effect type cycler -->
-            <label_column name="type_label">
-                <static textres="power_label_type" />
-                <tooltip textres="power_label_type_tooltip" />
-            </label_column>
-
-            <cycler_active_effect_type name="effect_type" >
+            <cycler_active_effect_type name="effect_type">
+                <anchored width="100" height="20">
+                    <top offset="2" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
+                </anchored>
             </cycler_active_effect_type>
 
+            <!-- delete button if in edit mode -->
+            <button_idelete name="idelete">
+                <anchored width="20" height="20">
+                    <top parent="rightanchor" anchor="top" />
+                    <right parent="rightanchor" anchor="left" relation="relative" />
+                </anchored>
+            </button_idelete>
+
+            <!-- Effect Specific editor -->
             <subwindow name="effect_type_editor">
+                <!-- <frame name="border" /> -->
                 <anchored>
-                    <top parent="type_label" anchor="bottom" offset="15" />
-                    <left offset="35" />
-                    <right offset="-35" />
-                    <bottom offset="-32" />
+                    <top />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+                    <right parent="rightanchor" anchor="left" relation="relative" offset="-5" />
                 </anchored>
                 <activate />
                 <fastinit />
@@ -63,6 +57,15 @@
                     end
                 </script>
             </subwindow>
+
+            <!-- Effect String holder -->
+            <hs name="effect_description">
+                <script>
+                    function onValueChanged()
+                        window.windowlist.window.updateEffectString()
+                    end
+                </script>
+            </hs>
         </sheetdata>
     </windowclass>
 </root>

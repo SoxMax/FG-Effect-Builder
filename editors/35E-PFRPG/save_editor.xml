@@ -3,28 +3,43 @@
 <root>
     <windowclass name="save_editor">
         <script file="editors/35E-PFRPG/scripts/save_editor.lua" />
+        <margin control="0,0,0,2" />
+        <sizelimits>
+            <minimum height="25" />
+        </sizelimits>
         <sheetdata>
-            <anchor_column name="columnanchor" />
+            <genericcontrol name="leftanchor">
+                <anchored width="0" height="0">
+                    <top />
+                    <left />
+                </anchored>
+                <invisible />
+            </genericcontrol>
 
-            <effects_stringcycler name="save">
-                <anchored>
-                    <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-                    <left offset="5" />
-                    <right offset="-250" />
+            <stringcycler_effects name="save">
+                <anchored width="100" height="20">
+                    <top offset="2" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
                 </anchored>
                 <parameters>
                     <defaultlabelres mergerule="replace">allsaves</defaultlabelres>
                     <labelsres>fortitude|reflex|will</labelsres>
                     <values>fortitude|reflex|will</values>
                 </parameters>
-            </effects_stringcycler>
+            </stringcycler_effects>
 
             <effect_number name="save_modifier">
-                <anchored to="save" position="righthigh" offset="10,0" width="20" height="20"/>
+                <anchored width="20" height="20">
+                    <top offset="2" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+                </anchored>
             </effect_number>
 
             <combobox_bonus_types name="save_bonus_type">
-                <anchored to="save_modifier" position="righthigh" offset="10,0" width="100" height="20"/>
+                <anchored width="100" height="20">
+                    <top offset="2" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+                </anchored>
             </combobox_bonus_types>
         </sheetdata>
     </windowclass>

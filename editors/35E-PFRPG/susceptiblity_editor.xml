@@ -3,14 +3,23 @@
 <root>
     <windowclass name="susceptiblity_editor">
         <script file="editors/35E-PFRPG/scripts/susceptiblity_editor.lua" />
+        <margin control="0,0,0,2" />
+        <sizelimits>
+            <minimum height="25" />
+        </sizelimits>
         <sheetdata>
-            <anchor_column name="columnanchor" />
+            <genericcontrol name="leftanchor">
+                <anchored width="0" height="0">
+                    <top />
+                    <left />
+                </anchored>
+                <invisible />
+            </genericcontrol>
 
-            <effects_stringcycler name="susceptiblity_type">
-                <anchored>
-                    <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-                    <left offset="5" />
-                    <right offset="-230" />
+            <stringcycler_effects name="susceptiblity_type">
+                <anchored width="100" height="20">
+                    <top offset="2" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
                 </anchored>
                 <parameters>
                     <defaultlabelres mergerule="replace">immune</defaultlabelres>
@@ -18,14 +27,20 @@
                     <labelsres>resist|vuln</labelsres>
                     <values>RESIST|VULN</values>
                 </parameters>
-            </effects_stringcycler>
+            </stringcycler_effects>
 
             <combobox_damage_types name="susceptiblity">
-                <anchored to="susceptiblity_type" position="righthigh" offset="10,0" width="80" height="20"/>
+                <anchored width="100" height="20">
+                    <top offset="2" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+                </anchored>
             </combobox_damage_types>
 
             <effect_number name="susceptiblity_modifier">
-                <anchored to="susceptiblity" position="righthigh" offset="10,0" width="20" height="20"/>
+                <anchored width="20" height="20">
+                    <top offset="2" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+                </anchored>
             </effect_number>
         </sheetdata>
     </windowclass>

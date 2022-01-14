@@ -5,10 +5,10 @@
         <!-- <softclose /> -->
         <frame>recordsheet</frame>
         <placement>
-            <size width="460" height="370" />
+            <size width="480" height="370" />
         </placement>
         <sizelimits>
-            <minimum width="460" height="370" />
+            <minimum width="480" height="370" />
             <dynamic />
         </sizelimits>
         <nodelete />
@@ -89,79 +89,19 @@
                 </anchored>
                 <readonly />
                 <sourceless />
-                <class>effect_builder_entry</class>
+                <class>effect_editor</class>
                 <script>
                     function onListChanged()
+                        -- Debug.chat("listChanged")
                         window.updateEffectString()
+                    end
+                    function onListRearranged(listchanged)
+                        -- Debug.chat("listRearranged", listchanged)
+                        -- window.updateEffectString()
                     end
                 </script>
             </list_text>
             <!-- /Effects List -->
         </sheetdata>
     </windowclass>
-    <!-- Effect Rows -->
-    <windowclass name="effect_builder_entry">
-        <!-- <nodelete /> -->
-        <margins control="0,2,0,2" />
-        <script>
-            function delete()
-                close()
-            end
-        </script>
-        <sheetdata>
-            <genericcontrol name="rightanchor">
-                <anchored width="0" height="0">
-                    <top offset="5" />
-                    <right />
-                </anchored>
-                <invisible />
-            </genericcontrol>
-            <genericcontrol name="leftanchor">
-                <anchored width="0" height="0">
-                    <top offset="5" />
-                    <left />
-                </anchored>
-                <invisible />
-            </genericcontrol>
-
-            <!-- editor button -->
-            <button_details name="effect_detail">
-                <anchored to="rightanchor" width="20" height="20">
-                    <top />
-                    <right anchor="left" relation="relative" />
-                </anchored>
-                <script>
-                    function onButtonPress()
-                        local w = Interface.openWindow("effect_editor", "")
-                        w.effectDescription = window.effect_description
-                    end
-                </script>
-            </button_details>
-
-            <!-- delete button if in edit mode -->
-            <button_idelete name="idelete">
-                <anchored width="20" height="20">
-                    <top parent="effect_detail" anchor="top"/>
-                    <right parent="effect_detail" anchor="left" relation="relative"/>
-                </anchored>
-            </button_idelete>
-
-            <hs name="name"/>
-            <basicstring name="effect_description">
-                <anchored to="leftanchor">
-                    <top />
-                    <left anchor="right" relation="relative" offset="5" />
-                    <right parent="rightanchor" anchor="left" relation="relative" offset="-20" />
-                </anchored>
-                <multilinespacing>20</multilinespacing>
-                <readonly />
-                <script>
-                    function onValueChanged()
-                        window.windowlist.window.updateEffectString()
-                    end
-                </script>
-            </basicstring>
-        </sheetdata>
-    </windowclass>
-    <!-- /Effect Rows -->
 </root>
