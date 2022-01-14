@@ -2,7 +2,7 @@ function delete()
     close()
 end
 
-function updateEffectType()
+function updateEffectEditor()
     effect_type_editor.setValue(effect_type.getStringValue())
 end
 

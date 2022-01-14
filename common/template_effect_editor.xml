@@ -81,7 +81,7 @@
             <sourceless />
             <script>
                     function onValueChanged()
-                        window.updateEffectType()
+                        window.updateEffectEditor()
                     end
                 </script>
         </button_stringcycler_defaultable>
@@ -91,11 +91,7 @@
         <subwindow>
             <activate />
             <fastinit />
-            <script>
-                function updateEffectString(effectString)
-                    window.updateEffectString(effectString)
-                end
-            </script>
+            <script file="common/scripts/subwindow_effect_editor.lua" />
         </subwindow>
     </template>
 </root>
