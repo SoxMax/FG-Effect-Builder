@@ -16,7 +16,7 @@
                 <invisible />
             </genericcontrol>
 
-            <stringcycler_effects name="susceptiblity_type">
+            <stringcycler_effects name="effect">
                 <anchored width="140" height="20">
                     <top offset="2" />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
@@ -35,14 +35,14 @@
                 </script>
             </stringcycler_effects>
 
-            <effect_number name="susceptiblity_modifier">
+            <effect_number name="effect_modifier">
                 <anchored width="20" height="20">
                     <top offset="2" />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
                 </anchored>
             </effect_number>
 
-            <combobox_damage_types name="susceptiblity">
+            <combobox_damage_types name="effect_damage_type">
                 <anchored width="100" height="20">
                     <top offset="2" />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="10" />

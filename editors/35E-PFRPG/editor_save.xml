@@ -16,7 +16,7 @@
                 <invisible />
             </genericcontrol>
 
-            <stringcycler_effects name="save">
+            <stringcycler_effects name="effect">
                 <anchored width="100" height="20">
                     <top offset="2" />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
@@ -28,14 +28,14 @@
                 </parameters>
             </stringcycler_effects>
 
-            <effect_number name="save_modifier">
+            <effect_number name="effect_modifier">
                 <anchored width="20" height="20">
                     <top offset="2" />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
                 </anchored>
             </effect_number>
 
-            <combobox_bonus_types name="save_bonus_type">
+            <combobox_bonus_types name="effect_bonus_type">
                 <anchored width="100" height="20">
                     <top offset="2" />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="10" />

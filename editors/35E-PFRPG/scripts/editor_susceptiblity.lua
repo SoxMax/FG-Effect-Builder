@@ -3,15 +3,15 @@ function onInit()
 end
 
 function updateVisibility()
-    local effect = susceptiblity_type.getStringValue()
-    susceptiblity_modifier.setVisible(effect == "RESIST" or effect == "DR")
+    local effect = effect.getStringValue()
+    effect_modifier.setVisible(effect == "RESIST" or effect == "DR")
 end
 
 function createEffectString()
-    local effectParts = { susceptiblity_type.getStringValue() .. ":" }
-    if susceptiblity_modifier.isVisible() and susceptiblity_modifier.getValue() ~= 0 then
-        table.insert(effectParts, susceptiblity_modifier.getValue())
+    local effectParts = { effect.getStringValue() .. ":" }
+    if effect_modifier.isVisible() and effect_modifier.getValue() ~= 0 then
+        table.insert(effectParts, effect_modifier.getValue())
     end
-    table.insert(effectParts, susceptiblity.getValue())
+    table.insert(effectParts, effect_damage_type.getValue())
     return table.concat(effectParts, " ")
 end

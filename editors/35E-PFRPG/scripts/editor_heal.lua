@@ -1,7 +1,7 @@
 function createEffectString()
-    local effectString = heal.getStringValue() .. ": " .. heal_modifier.getValue()
-    if not heal_bonus_type.isEmpty() then
-        effectString = effectString .. " " .. heal_bonus_type.getValue()
+    local effectString = effect.getStringValue() .. ": " .. effect_modifier.getValue()
+    if not effect_bonus_type.isEmpty() then
+        effectString = effectString .. " " .. effect_bonus_type.getValue()
     end
     return effectString
 end
