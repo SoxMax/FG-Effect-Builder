@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <windowclass name="ability_editor">
-        <script file="editors/35E-PFRPG/scripts/ability_editor.lua" />
+    <windowclass name="editor_save">
+        <script file="editors/35E-PFRPG/scripts/editor_save.lua" />
         <margin control="0,0,0,2" />
         <sizelimits>
             <minimum height="25" />
@@ -16,27 +16,26 @@
                 <invisible />
             </genericcontrol>
 
-            <stringcycler_effects name="ability">
+            <stringcycler_effects name="save">
                 <anchored width="100" height="20">
                     <top offset="2" />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
                 </anchored>
                 <parameters>
-                    <defaultlabelres mergerule="replace">strength</defaultlabelres>
-                    <defaultvalue>STR</defaultvalue>
-                    <labelsres>dexterity|constitution|intelligence|wisdom|charisma</labelsres>
-                    <values>DEX|CON|INT|WIS|CHA</values>
+                    <defaultlabelres mergerule="replace">allsaves</defaultlabelres>
+                    <labelsres>fortitude|reflex|will</labelsres>
+                    <values>fortitude|reflex|will</values>
                 </parameters>
             </stringcycler_effects>
 
-            <effect_number name="ability_modifier">
+            <effect_number name="save_modifier">
                 <anchored width="20" height="20">
                     <top offset="2" />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
                 </anchored>
             </effect_number>
 
-            <combobox_bonus_types name="ability_bonus_type">
+            <combobox_bonus_types name="save_bonus_type">
                 <anchored width="100" height="20">
                     <top offset="2" />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="10" />

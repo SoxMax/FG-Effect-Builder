@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <windowclass name="susceptiblity_editor">
-        <script file="editors/35E-PFRPG/scripts/susceptiblity_editor.lua" />
+    <windowclass name="editor_heal">
+        <script file="editors/35E-PFRPG/scripts/editor_heal.lua" />
         <margin control="0,0,0,2" />
         <sizelimits>
             <minimum height="25" />
@@ -16,38 +16,32 @@
                 <invisible />
             </genericcontrol>
 
-            <stringcycler_effects name="susceptiblity_type">
-                <anchored width="140" height="20">
+            <stringcycler_effects name="heal">
+                <anchored width="100" height="20">
                     <top offset="2" />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
                 </anchored>
                 <parameters>
-                    <defaultlabelres mergerule="replace">immune</defaultlabelres>
-                    <defaultvalue>IMMUNE</defaultvalue>
-                    <labelsres>resist|dr|vuln</labelsres>
-                    <values>RESIST|DR|VULN</values>
+                    <defaultlabelres mergerule="replace">heal</defaultlabelres>
+                    <defaultvalue>HEAL</defaultvalue>
+                    <labelsres></labelsres>
+                    <values></values>
                 </parameters>
-                <script>
-                    function onValueChanged()
-                        window.updateVisibility()
-                        super.onValueChanged()
-                    end
-                </script>
             </stringcycler_effects>
 
-            <effect_number name="susceptiblity_modifier">
+            <effect_number name="heal_modifier">
                 <anchored width="20" height="20">
                     <top offset="2" />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
                 </anchored>
             </effect_number>
 
-            <combobox_damage_types name="susceptiblity">
+            <combobox_bonus_types name="heal_bonus_type">
                 <anchored width="100" height="20">
                     <top offset="2" />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
                 </anchored>
-            </combobox_damage_types>
+            </combobox_bonus_types>
         </sheetdata>
     </windowclass>
 </root>

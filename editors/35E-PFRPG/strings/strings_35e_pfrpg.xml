@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <string name="save">Save</string>
-    <string name="ability">Ability</string>
-    <string name="susceptiblity">Susceptiblity</string>
-    <string name="combat">Combat</string>
+    <string name="editor_ability">Ability</string>
+    <string name="editor_save">Save</string>
+    <string name="editor_susceptiblity">Susceptiblity</string>
+    <string name="editor_combat">Combat</string>
+    <string name="editor_heal">Healing</string>
 
     <string name="allsaves">All Saves</string>
     <string name="resist">Resistance (Resist)</string>
