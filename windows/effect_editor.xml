@@ -63,7 +63,6 @@
                         window.windowlist.window.updateEffectString()
                     end
                 </script>
-                <default>description</default>
             </hs>
         </sheetdata>
     </windowclass>
