@@ -26,10 +26,17 @@
                 <disabled />
             </genericcontrol>
 
+            <priority_number name="effect_priority">
+                <anchored width="15" height="20">
+                    <top offset="2" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
+                </anchored>
+            </priority_number>
+
             <cycler_active_effect_type name="effect_type">
                 <anchored width="100" height="20">
                     <top offset="2" />
-                    <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
                 </anchored>
             </cycler_active_effect_type>
 
