@@ -17,24 +17,23 @@
             </genericcontrol>
 
             <stringcycler_effects name="susceptiblity_type">
-                <anchored width="100" height="20">
+                <anchored width="140" height="20">
                     <top offset="2" />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
                 </anchored>
                 <parameters>
                     <defaultlabelres mergerule="replace">immune</defaultlabelres>
                     <defaultvalue>IMMUNE</defaultvalue>
-                    <labelsres>resist|vuln</labelsres>
-                    <values>RESIST|VULN</values>
+                    <labelsres>resist|dr|vuln</labelsres>
+                    <values>RESIST|DR|VULN</values>
                 </parameters>
+                <script>
+                    function onValueChanged()
+                        window.updateVisibility()
+                        super.onValueChanged()
+                    end
+                </script>
             </stringcycler_effects>
-
-            <combobox_damage_types name="susceptiblity">
-                <anchored width="100" height="20">
-                    <top offset="2" />
-                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
-                </anchored>
-            </combobox_damage_types>
 
             <effect_number name="susceptiblity_modifier">
                 <anchored width="20" height="20">
@@ -42,6 +41,13 @@
                     <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
                 </anchored>
             </effect_number>
+
+            <combobox_damage_types name="susceptiblity">
+                <anchored width="100" height="20">
+                    <top offset="2" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+                </anchored>
+            </combobox_damage_types>
         </sheetdata>
     </windowclass>
 </root>
