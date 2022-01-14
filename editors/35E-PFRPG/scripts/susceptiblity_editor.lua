@@ -1,7 +1,17 @@
+function onInit()
+    updateVisibility()
+end
+
+function updateVisibility()
+    local effect = susceptiblity_type.getStringValue()
+    susceptiblity_modifier.setVisible(effect == "RESIST" or effect == "DR")
+end
+
 function createEffectString()
-    local effectString = susceptiblity_type.getStringValue() .. ": " .. susceptiblity.getValue()
-    if susceptiblity_modifier.getValue() ~= 0 then
-        effectString = effectString .. " " .. susceptiblity_modifier.getValue()
+    local effectParts = { susceptiblity_type.getStringValue() .. ":" }
+    if susceptiblity_modifier.isVisible() and susceptiblity_modifier.getValue() ~= 0 then
+        table.insert(effectParts, susceptiblity_modifier.getValue())
     end
-    return effectString
+    table.insert(effectParts, susceptiblity.getValue())
+    return table.concat(effectParts, " ")
 end
