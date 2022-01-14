@@ -30,6 +30,18 @@
         </basicnumber>
     </template>
 
+    <template name="priority_number">
+        <basicnumber>
+            <default>1</default>
+            <sourceless />
+            <script>
+                function onValueChanged()
+                    window.windowlist.applySort()
+                end
+            </script>
+        </basicnumber>
+    </template>
+
     <template name="combobox_damage_types">
         <combobox_sourceless>
             <listdirection>down</listdirection>

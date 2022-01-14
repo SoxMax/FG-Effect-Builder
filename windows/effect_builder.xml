@@ -81,26 +81,13 @@
                 <anchored to="effects_list_iedit" position="lefthigh" offset="5,0" />
                 <target>effects_list</target>
             </button_iadd>
-            <list_text name="effects_list">
+            <list_effect name="effects_list">
                 <anchored>
                     <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
                     <left />
                     <right />
                 </anchored>
-                <readonly />
-                <sourceless />
-                <class>effect_editor</class>
-                <script>
-                    function onListChanged()
-                        -- Debug.chat("listChanged")
-                        window.updateEffectString()
-                    end
-                    function onListRearranged(listchanged)
-                        -- Debug.chat("listRearranged", listchanged)
-                        -- window.updateEffectString()
-                    end
-                </script>
-            </list_text>
+            </list_effect>
             <!-- /Effects List -->
         </sheetdata>
     </windowclass>

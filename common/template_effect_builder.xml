@@ -9,4 +9,20 @@
             <script file="common/scripts/string_column_output_effect.lua" />
         </string_column_full>
     </template>
+
+    <template name="list_effect">
+		<windowlist>
+			<child mergerule="resetandadd"></child>
+			<child><backcolor>1A40301E</backcolor></child>
+			<allowcreate />
+			<allowdelete />
+            <readonly />
+            <sourceless />
+            <class>effect_editor</class>
+            <sortby>
+                <control>effect_priority</control>
+            </sortby>
+			<script file="common/scripts/list_effect.lua" />
+		</windowlist>
+	</template>
 </root>
