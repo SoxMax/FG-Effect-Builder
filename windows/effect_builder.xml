@@ -92,7 +92,12 @@
                 <class>effect_editor</class>
                 <script>
                     function onListChanged()
+                        -- Debug.chat("listChanged")
                         window.updateEffectString()
+                    end
+                    function onListRearranged(listchanged)
+                        -- Debug.chat("listRearranged", listchanged)
+                        -- window.updateEffectString()
                     end
                 </script>
             </list_text>
