@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
+    <template name="frame_effects">
+        <genericcontrol name="contentframe">
+            <anchored>
+                <top parent="title" anchor="bottom" offset="15" />
+                <left offset="35" />
+                <right offset="-35" />
+                <bottom offset="-32" />
+            </anchored>
+            <frame name="groupbox" offset="20,17,20,17" />
+            <disabled />
+        </genericcontrol>
+    </template>
+    
     <template name="string_column_output_effect">
         <string_column_full>
             <frame mergerule="replace" name="fielddark" offset="7,5,7,5" />
