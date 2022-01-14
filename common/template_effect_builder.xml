@@ -13,7 +13,7 @@
             <disabled />
         </genericcontrol>
     </template>
-    
+
     <template name="string_column_output_effect">
         <string_column_full>
             <frame mergerule="replace" name="fielddark" offset="7,5,7,5" />
@@ -33,7 +33,7 @@
             <sourceless />
             <class>effect_editor</class>
             <sortby>
-                <control>effect_priority</control>
+                <control desc="true">effect_priority</control>
             </sortby>
 			<script file="common/scripts/list_effect.lua" />
 		</windowlist>
