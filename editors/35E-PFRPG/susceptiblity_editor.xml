@@ -7,10 +7,9 @@
             <anchor_column name="columnanchor" />
 
             <effects_stringcycler name="susceptiblity_type">
-                <anchored>
+                <anchored width="100"> 
                     <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
                     <left offset="5" />
-                    <right offset="-230" />
                 </anchored>
                 <parameters>
                     <defaultlabelres mergerule="replace">immune</defaultlabelres>
