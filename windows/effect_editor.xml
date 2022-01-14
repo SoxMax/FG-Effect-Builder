@@ -49,21 +49,19 @@
             </button_idelete>
 
             <!-- Effect Specific editor -->
-            <subwindow name="effect_type_editor">
+            <subwindow_effect_editor name="effect_type_editor">
                 <!-- <frame name="border" /> -->
                 <anchored>
                     <top />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
                     <right parent="rightanchor" anchor="left" relation="relative" offset="-5" />
                 </anchored>
-                <activate />
-                <fastinit />
                 <script>
                     function onInit()
                         window.updateEffectType()
                     end
                 </script>
-            </subwindow>
+            </subwindow_effect_editor>
 
             <!-- Effect String holder -->
             <hs name="effect_description">

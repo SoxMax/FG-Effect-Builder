@@ -30,6 +30,13 @@
         </basicnumber>
     </template>
 
+    <template name="dice_effect">
+        <basicdice>
+            <sourceless />
+            <script file="common/scripts/valueholder_effect_editor.lua" />
+        </basicdice>
+    </template>
+
     <template name="priority_number">
         <basicnumber>
             <default>0</default>
@@ -78,5 +85,17 @@
                     end
                 </script>
         </button_stringcycler_defaultable>
+    </template>
+
+    <template name="subwindow_effect_editor">
+        <subwindow name="effect_type_editor">
+            <activate />
+            <fastinit />
+            <script>
+                function updateEffectString(effectString)
+                    window.updateEffectString(effectString)
+                end
+            </script>
+        </subwindow>
     </template>
 </root>
