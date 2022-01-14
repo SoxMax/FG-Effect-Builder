@@ -39,29 +39,13 @@
                 </anchored>
             </button_idelete>
 
-            <basicstring name="effect_description">
-                <!-- <frame name="border" /> -->
-                <anchored width="150">
-                    <top offset="7"/>
-                    <right parent="rightanchor" anchor="left" relation="relative" />
-                </anchored>
-                <multilinespacing>20</multilinespacing>
-                <readonly />
-                <script>
-                    function onValueChanged()
-                        window.windowlist.window.updateEffectString()
-                    end
-                </script>
-                <default>description</default>
-            </basicstring>
-
+            <!-- Effect Specific editor -->
             <subwindow name="effect_type_editor">
                 <!-- <frame name="border" /> -->
                 <anchored merge="replace">
                     <top />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="10"/>
-                    <right parent="effect_description" anchor="left" relation="relative" offset="-5" />
-                    <bottom />
+                    <right parent="rightanchor" anchor="left" relation="relative" offset="-5" />
                 </anchored>
                 <activate />
                 <fastinit />
@@ -71,6 +55,16 @@
                     end
                 </script>
             </subwindow>
+            
+            <!-- Effect String holder -->
+            <hs name="effect_description">
+                <script>
+                    function onValueChanged()
+                        window.windowlist.window.updateEffectString()
+                    end
+                </script>
+                <default>description</default>
+            </hs>
         </sheetdata>
     </windowclass>
 </root>
