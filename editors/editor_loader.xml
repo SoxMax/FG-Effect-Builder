@@ -7,7 +7,7 @@
     <includefile source="editors/35E-PFRPG/ability_editor.xml" />
     <includefile source="editors/35E-PFRPG/save_editor.xml" />
     <includefile source="editors/35E-PFRPG/susceptiblity_editor.xml" />
-    <includefile source="editors/35E-PFRPG/misc_editor.xml" />
+    <includefile source="editors/35E-PFRPG/combat_editor.xml" />
 
     <!-- Selectable Effect Editor bundles -->
     <template name="cycler_active_effect_type">
@@ -15,8 +15,8 @@
             <parameters mergerule="replace">
                 <defaultlabelres>ability</defaultlabelres>
                 <defaultvalue>ability_editor</defaultvalue>
-                <labelsres>save|susceptiblity|misc</labelsres>
-                <values>save_editor|susceptiblity_editor|misc_editor</values>
+                <labelsres>save|susceptiblity|combat</labelsres>
+                <values>save_editor|susceptiblity_editor|combat_editor</values>
             </parameters>
         </cycler_effect_type>
     </template>
