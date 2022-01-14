@@ -4,8 +4,8 @@
     <windowclass name="effect_editor">
         <!-- <frame name="border" /> -->
         <script file="windows/scripts/effect_editor.lua" />
-        <margin control="0,0,0,0" />
-        <sizelimits >
+        <margin control="0,0,0,2" />
+        <sizelimits>
             <minimum height="25" />
         </sizelimits>
         <sheetdata>
@@ -15,6 +15,7 @@
                     <left />
                 </anchored>
                 <invisible />
+                <disabled />
             </genericcontrol>
             <genericcontrol name="rightanchor">
                 <anchored width="0" height="0">
@@ -22,29 +23,30 @@
                     <right />
                 </anchored>
                 <invisible />
+                <disabled />
             </genericcontrol>
 
-            <cycler_active_effect_type name="effect_type" >
-                <anchored width="100">
-                    <top offset="2"/>
-                    <left parent="leftanchor" anchor="right" relation="relative" offset="5"/>
+            <cycler_active_effect_type name="effect_type">
+                <anchored width="100" height="20">
+                    <top offset="2" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
                 </anchored>
             </cycler_active_effect_type>
 
             <!-- delete button if in edit mode -->
             <button_idelete name="idelete">
                 <anchored width="20" height="20">
-                    <top parent="rightanchor" anchor="top"/>
-                    <right parent="rightanchor" anchor="left" relation="relative"/>
+                    <top parent="rightanchor" anchor="top" />
+                    <right parent="rightanchor" anchor="left" relation="relative" />
                 </anchored>
             </button_idelete>
 
             <!-- Effect Specific editor -->
             <subwindow name="effect_type_editor">
                 <!-- <frame name="border" /> -->
-                <anchored merge="replace">
+                <anchored>
                     <top />
-                    <left parent="leftanchor" anchor="right" relation="relative" offset="10"/>
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
                     <right parent="rightanchor" anchor="left" relation="relative" offset="-5" />
                 </anchored>
                 <activate />
@@ -55,7 +57,7 @@
                     end
                 </script>
             </subwindow>
-            
+
             <!-- Effect String holder -->
             <hs name="effect_description">
                 <script>

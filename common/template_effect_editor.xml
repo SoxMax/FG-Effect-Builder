@@ -7,7 +7,7 @@
         </button_stringcycler>
     </template>
 
-    <template name="effects_stringcycler">
+    <template name="stringcycler_effects">
         <button_stringcycler_defaultable>
             <sourceless />
             <script file="common/scripts/valueholder_effect_editor.lua" />

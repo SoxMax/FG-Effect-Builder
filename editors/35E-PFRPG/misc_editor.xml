@@ -3,13 +3,23 @@
 <root>
     <windowclass name="misc_editor">
         <script file="editors/35E-PFRPG/scripts/misc_editor.lua" />
+        <margin control="0,0,0,2" />
+        <sizelimits>
+            <minimum height="25" />
+        </sizelimits>
         <sheetdata>
-            <anchor_column name="columnanchor" />
+            <genericcontrol name="leftanchor">
+                <anchored width="0" height="0">
+                    <top />
+                    <left />
+                </anchored>
+                <invisible />
+            </genericcontrol>
 
-            <effects_stringcycler name="misc">
-                <anchored width="100"> 
-                    <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-                    <left offset="5" />
+            <stringcycler_effects name="misc">
+                <anchored width="100" height="20">
+                    <top offset="2" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
                 </anchored>
                 <parameters>
                     <defaultlabelres mergerule="replace">ac</defaultlabelres>
@@ -17,14 +27,20 @@
                     <labelsres>atk|dmg|heal|init_eb</labelsres>
                     <values>ATK|DMG|HEAL|INIT</values>
                 </parameters>
-            </effects_stringcycler>
+            </stringcycler_effects>
 
             <effect_number name="misc_modifier">
-                <anchored to="misc" position="righthigh" offset="10,0" width="20" height="20"/>
+                <anchored width="20" height="20">
+                    <top offset="2" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+                </anchored>
             </effect_number>
 
             <combobox_bonus_types name="misc_bonus_type">
-                <anchored to="misc_modifier" position="righthigh" offset="10,0" width="100" height="20"/>
+                <anchored width="100" height="20">
+                    <top offset="2" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+                </anchored>
             </combobox_bonus_types>
         </sheetdata>
     </windowclass>
