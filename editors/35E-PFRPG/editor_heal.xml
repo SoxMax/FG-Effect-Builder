@@ -16,9 +16,15 @@
                 </parameters>
             </stringcycler_effects>
 
-            <effect_number name="effect_modifier" />
+            <dice_effect name="effect_dice" />
 
-            <combobox_bonus_types name="effect_bonus_type" />
+			<label_plus />
+
+            <effect_number name="effect_modifier">
+                <anchored>
+                    <left offset="5" />
+                </anchored>
+            </effect_number>
         </sheetdata>
     </windowclass>
 </root>
