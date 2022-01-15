@@ -9,6 +9,16 @@ function onInit()
     end
 end
 
+function initialize(sLabels, sValues, sDefaultLabel, sInitialValue, sDefaultValue)
+    super.initialize(sLabels, sValues, sDefaultLabel, sInitialValue)
+    startValue = (sDefaultValue or "")
+end
+
+function initialize2(sLabels, sValues, sDefaultLabel, sInitialValue, sDefaultValue)
+    super.initialize2(sLabels, sValues, sDefaultLabel, sInitialValue)
+    startValue = (sDefaultValue or "")
+end
+
 function getStringValue()
     local value = super.getStringValue()
     if value == "" then
