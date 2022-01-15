@@ -7,19 +7,9 @@
             <minimum height="25" />
         </sizelimits>
         <sheetdata>
-            <genericcontrol name="leftanchor">
-                <anchored width="0" height="0">
-                    <top />
-                    <left />
-                </anchored>
-                <invisible />
-            </genericcontrol>
+            <leftanchor />
 
             <stringcycler_effects name="effect">
-                <anchored width="100" height="20">
-                    <top offset="2" />
-                    <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
-                </anchored>
                 <parameters>
                     <defaultlabelres mergerule="replace">allsaves</defaultlabelres>
                     <labelsres>fortitude|reflex|will</labelsres>
@@ -27,19 +17,9 @@
                 </parameters>
             </stringcycler_effects>
 
-            <effect_number name="effect_modifier">
-                <anchored width="20" height="20">
-                    <top offset="2" />
-                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
-                </anchored>
-            </effect_number>
+            <effect_number name="effect_modifier" />
 
-            <combobox_bonus_types name="effect_bonus_type">
-                <anchored width="100" height="20">
-                    <top offset="2" />
-                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
-                </anchored>
-            </combobox_bonus_types>
+            <combobox_bonus_types name="effect_bonus_type" />
         </sheetdata>
     </windowclass>
 </root>
