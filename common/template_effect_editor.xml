@@ -73,7 +73,7 @@
             <script file="common/scripts/valueholder_effect_editor.lua" />
         </basicdice>
     </template>
-    
+
     <template name="checkbox_effect">
         <button_checkbox>
             <anchored width="20" height="20">
@@ -83,6 +83,16 @@
             <sourceless />
             <script file="common/scripts/valueholder_effect_editor.lua" />
         </button_checkbox>
+    </template>
+
+    <template name="cycler_range">
+        <stringcycler_effects name="effect_range">
+            <parameters>
+                <defaultlabelres mergerule="replace">allrange</defaultlabelres>
+                <labelsres>melee|ranged</labelsres>
+                <values>melee|ranged</values>
+            </parameters>
+        </stringcycler_effects>
     </template>
 
     <template name="priority_number">

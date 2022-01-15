@@ -15,7 +15,7 @@
 
             <stringcycler_effects name="effect">
                 <parameters>
-                    <defaultlabelres mergerule="replace">ac</defaultlabelres>
+                    <defaultlabelres mergerule="replace">ac_long</defaultlabelres>
                     <defaultvalue>AC</defaultvalue>
                     <labelsres>atk|dmg|init_eb</labelsres>
                     <values>ATK|DMG|INIT</values>

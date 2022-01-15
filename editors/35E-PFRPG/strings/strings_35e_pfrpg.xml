@@ -13,6 +13,7 @@
     <string name="vuln">Vulnerability</string>
 
     <string name="editor_combat">Combat</string>
+    <string name="ac_long">Armor Class (AC)</string>
     <string name="atk">Attack</string>
     <string name="dmg">Damage</string>
     <string name="init_eb">Initiative</string>

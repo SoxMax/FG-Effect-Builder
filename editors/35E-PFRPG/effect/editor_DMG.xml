@@ -18,6 +18,8 @@
             </effect_number>
 
             <combobox_bonus_types name="effect_bonus_type" />
+
+            <cycler_range />
         </sheetdata>
     </windowclass>
 </root>

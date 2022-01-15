@@ -19,13 +19,7 @@
 
             <combobox_bonus_types name="effect_bonus_type" />
 
-            <stringcycler_effects name="effect_range">
-                <parameters>
-                    <defaultlabelres mergerule="replace">allrange</defaultlabelres>
-                    <labelsres>melee|ranged</labelsres>
-                    <values>melee|ranged</values>
-                </parameters>
-            </stringcycler_effects>
+            <cycler_range />
 
             <label_effect>
                 <static textres="opportunity_bonus"/>
