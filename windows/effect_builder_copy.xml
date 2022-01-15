@@ -13,7 +13,7 @@
         </sizelimits>
         <nodelete />
         <playercontrol />
-        <tooltip control="name" />
+        <script file="windows/scripts/effect_builder.lua" />
         <sheetdata>
             <windowtitlebar name="title">
                 <resource>effect_builder_title</resource>
@@ -43,17 +43,33 @@
                 </anchored>
             </frame_effects>
 
-            <subwindow name="body">
-                <anchored to="bodyframe" position="over" />
-                <class>effect_builder_main</class>
-                <activate />
-                <fastinit />
-            </subwindow>
-
+            <!-- Effects List -->
+            <header_column name="header_effects">
+                <anchored to="bodyframe" position="insidetop" height="20" merge="replace"/>
+                <static textres="header_effects_list" />
+                <center />
+            </header_column>
+            <button_iedit name="effects_list_iedit">
+                <anchored to="header_effects" position="insideright" offset="-5,0" />
+                <target>effects_list</target>
+            </button_iedit>
+            <button_iadd name="effects_list_iadd">
+                <anchored to="effects_list_iedit" position="insideright" offset="25,0" />
+                <target>effects_list</target>
+            </button_iadd>
+            <list_effect name="effects_list">
+                <anchored  to="bodyframe">
+                    <top offset="30" />
+					<left offset="0" />
+					<right offset="0" />
+					<bottom offset="0" />
+                </anchored>
+            </list_effect>
             <scrollbar>
-                <target>body</target>
-                <anchored to="bodyframe" />
+                <target>effects_list</target>
+                <anchored to="effects_list" />
             </scrollbar>
+            <!-- /Effects List -->
 
             <resize_recordsheet />
             <close_recordsheet />
@@ -91,35 +107,6 @@
             </header_column>
             <string_column_output_effect name="output_effect"></string_column_output_effect>
             <!-- /Output -->
-        </sheetdata>
-    </windowclass>
-
-    <windowclass name="effect_builder_main">
-        <script file="windows/scripts/effect_builder.lua" />
-        <sheetdata>
-            <anchor_column name="columnanchor" />
-
-            <!-- Effects List -->
-            <header_column name="header_effects">
-                <static textres="header_effects_list" />
-                <center />
-            </header_column>
-            <button_iedit name="effects_list_iedit">
-                <anchored to="header_effects" position="insidetopright" offset="-5,0" />
-                <target>effects_list</target>
-            </button_iedit>
-            <button_iadd name="effects_list_iadd">
-                <anchored to="effects_list_iedit" position="lefthigh" offset="5,0" />
-                <target>effects_list</target>
-            </button_iadd>
-            <list_effect name="effects_list">
-                <anchored>
-                    <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-                    <left />
-                    <right />
-                </anchored>
-            </list_effect>
-            <!-- /Effects List -->
         </sheetdata>
     </windowclass>
 </root>
