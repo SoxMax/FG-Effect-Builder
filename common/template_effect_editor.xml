@@ -73,6 +73,17 @@
             <script file="common/scripts/valueholder_effect_editor.lua" />
         </basicdice>
     </template>
+    
+    <template name="checkbox_effect">
+        <button_checkbox>
+            <anchored width="20" height="20">
+                <top offset="2" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="0" />
+            </anchored>
+            <sourceless />
+            <script file="common/scripts/valueholder_effect_editor.lua" />
+        </button_checkbox>
+    </template>
 
     <template name="priority_number">
         <basicnumber>
@@ -132,14 +143,23 @@
         </button_stringcycler_defaultable>
     </template>
 
+    <template name="label_effect">
+        <label>
+            <anchored height="20">
+                <top offset="2" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+            </anchored>
+        </label>
+    </template>
+
     <template name="label_plus">
-        <label name="label_plus">
+        <label_effect name="label_plus">
             <anchored height="20">
                 <top offset="2" />
                 <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
             </anchored>
             <static>+</static>
-        </label>
+        </label_effect>
     </template>
 
     <template name="subwindow_effect_editor">

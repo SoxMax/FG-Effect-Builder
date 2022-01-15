@@ -9,7 +9,7 @@
 
             <dice_effect name="effect_dice" />
 
-			<lable_plus />
+			<label_plus />
 
             <effect_number name="effect_modifier">
                 <anchored>
@@ -18,6 +18,19 @@
             </effect_number>
 
             <combobox_bonus_types name="effect_bonus_type" />
+
+            <stringcycler_effects name="effect_range">
+                <parameters>
+                    <defaultlabelres mergerule="replace">allrange</defaultlabelres>
+                    <labelsres>melee|ranged</labelsres>
+                    <values>melee|ranged</values>
+                </parameters>
+            </stringcycler_effects>
+
+            <label_effect>
+                <static textres="opportunity_bonus"/>
+            </label_effect>
+            <checkbox_effect name="effect_opportunity"/>
         </sheetdata>
     </windowclass>
 </root>

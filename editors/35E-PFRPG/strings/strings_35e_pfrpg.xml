@@ -16,6 +16,10 @@
     <string name="atk">Attack</string>
     <string name="dmg">Damage</string>
     <string name="init_eb">Initiative</string>
+    <string name="allrange">Melee+Ranged</string>
+    <string name="melee">Melee</string>
+    <string name="ranged">Ranged</string>
+    <string name="opportunity_bonus">Opportunity only?</string>
     
     <string name="editor_heal">Healing</string>
     <string name="heal">Heal</string>
