@@ -3,5 +3,9 @@ function onInit()
 end
 
 function updateEffectString(effectString)
-    window.updateEffectString(effectString)
+    if window.parentcontrol then
+        window.parentcontrol.updateEffectString(effectString)
+    else
+        window.updateEffectString(effectString)
+    end
 end

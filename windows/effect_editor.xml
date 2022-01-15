@@ -51,11 +51,6 @@
             <!-- Effect Specific editor -->
             <subwindow_effect_editor name="effect_type_editor">
                 <!-- <frame name="border" /> -->
-                <anchored>
-                    <top />
-                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
-                    <right parent="rightanchor" anchor="left" relation="relative" offset="-5" />
-                </anchored>
             </subwindow_effect_editor>
 
             <!-- Effect String holder -->

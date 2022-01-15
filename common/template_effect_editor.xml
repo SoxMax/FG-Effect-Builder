@@ -80,15 +80,20 @@
         <button_stringcycler_defaultable>
             <sourceless />
             <script>
-                    function onValueChanged()
-                        window.updateEffectEditor()
-                    end
-                </script>
+                function onValueChanged()
+                    window.updateEffectEditor()
+                end
+            </script>
         </button_stringcycler_defaultable>
     </template>
 
     <template name="subwindow_effect_editor">
         <subwindow>
+            <anchored mergerule="replace">
+                <top />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+                <right />
+            </anchored>
             <activate />
             <fastinit />
             <script file="common/scripts/subwindow_effect_editor.lua" />

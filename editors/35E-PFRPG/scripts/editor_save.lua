@@ -1,5 +1,5 @@
 function createEffectString()
-    local effectString = "effect: " .. effect_modifier.getValue()
+    local effectString = "SAVE: " .. effect_modifier.getValue()
     if effect.getStringValue() ~= "" and not effect_bonus_type.isEmpty() then
         effectString = effectString .. " " .. effect.getStringValue() .. "," .. effect_bonus_type.getValue()
     elseif effect.getStringValue() ~= "" then
