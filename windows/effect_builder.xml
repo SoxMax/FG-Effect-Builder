@@ -8,47 +8,36 @@
             <size width="520" height="370" />
         </placement>
         <sizelimits>
-            <minimum width="480" height="370" />
+            <minimum width="480" height="100" />
             <dynamic />
         </sizelimits>
         <nodelete />
         <playercontrol />
-        <tooltip control="name" />
+        <script file="windows/scripts/effect_builder.lua" />
         <sheetdata>
             <windowtitlebar name="title">
                 <resource>effect_builder_title</resource>
             </windowtitlebar>
 
-            <frame_effects name="contentframe" />
-
-            <subwindow_record name="main">
-                <class>effect_builder_main</class>
-                <activate />
-                <fastinit />
-            </subwindow_record>
-
-            <scrollbar_record>
-                <target>main</target>
-            </scrollbar_record>
-
-            <resize_recordsheet />
-            <close_recordsheet />
-        </sheetdata>
-    </windowclass>
-    <windowclass name="effect_builder_main">
-        <script file="windows/scripts/effect_builder.lua"/>
-        <sheetdata>
-            <anchor_column name="columnanchor" />
+            <frame_effects name="contentframe">
+                <anchored merge="replace">
+                    <top parent="title" anchor="bottom" offset="15" />
+                    <left offset="35" />
+                    <right offset="-35" />
+                    <bottom offset="-32" />
+                </anchored>
+            </frame_effects>
 
             <!-- Effect Name -->
             <label_column name="name_label">
+                <anchored to="contentframe" position="insidetopleft" height="20"  merge="replace"/>
                 <static textres="effect_name_label" />
             </label_column>
             <string_column_full name="effect_name">
-                <anchored>
-                    <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-                    <left offset="97" />
-                    <right offset="-5" />
+                <anchored to="contentframe" position="insidetopleft" height="20" merge="replace">
+                    <top anchor="top" relation="relative" />
+                    <left parent="name_label" anchor="right" relation="relative" offset="7" />
+                    <right offset="-2" />
                 </anchored>
                 <sourceless />
                 <script>
@@ -61,34 +50,49 @@
 
             <!-- Output -->
             <header_column name="output_label">
+                <anchored to="contentframe" position="insidetop" height="20" offset="0,30" merge="replace"/>
                 <static textres="output_effect_label" />
                 <center />
             </header_column>
             <string_column_output_effect name="output_effect">
+                <anchored to="output_label" position="insidetopleft" offset="17,40"  merge="replace">
+                    <top offset="30" />
+					<left offset="0" />
+					<right offset="0" />
+                </anchored>
             </string_column_output_effect>
             <!-- /Output -->
 
             <!-- Effects List -->
             <header_column name="header_effects">
+                <anchored to="output_effect" position="insidebottom" height="20" offset="0,-30" merge="replace" />
                 <static textres="header_effects_list" />
                 <center />
             </header_column>
             <button_iedit name="effects_list_iedit">
-                <anchored to="header_effects" position="insidetopright" offset="-5,0" />
+                <anchored to="header_effects" position="insideright" offset="-5,0" />
                 <target>effects_list</target>
             </button_iedit>
             <button_iadd name="effects_list_iadd">
-                <anchored to="effects_list_iedit" position="lefthigh" offset="5,0" />
+                <anchored to="effects_list_iedit" position="insideright" offset="25,0" />
                 <target>effects_list</target>
             </button_iadd>
             <list_effect name="effects_list">
-                <anchored>
-                    <top parent="columnanchor" anchor="bottom" relation="relative" offset="7" />
-                    <left />
-                    <right />
+                <anchored to="contentframe" position="over">
+                    <top parent="header_effects" anchor="bottom" relation="relative" offset="10" />
+					<left offset="0" />
+					<right offset="0" />
+					<bottom offset="0" />
                 </anchored>
             </list_effect>
+            <scrollbar>
+                <target>effects_list</target>
+                <anchored to="effects_list" />
+            </scrollbar>
             <!-- /Effects List -->
+
+            <resize_recordsheet />
+            <close_recordsheet />
         </sheetdata>
     </windowclass>
 </root>
