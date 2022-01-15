@@ -26,7 +26,7 @@
 			<label name="label_plus">
                 <anchored height="20">
                     <top offset="2" />
-                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
                 </anchored>
 				<static>+</static>
 			</label>
@@ -34,7 +34,7 @@
             <effect_number name="effect_modifier">
                 <anchored width="20" height="20">
                     <top offset="2" />
-                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
                 </anchored>
             </effect_number>
 
