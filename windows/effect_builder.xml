@@ -19,14 +19,7 @@
                 <resource>effect_builder_title</resource>
             </windowtitlebar>
 
-            <frame_effects name="contentframe">
-                <anchored merge="replace">
-                    <top parent="title" anchor="bottom" offset="15" />
-                    <left offset="35" />
-                    <right offset="-35" />
-                    <bottom offset="-32" />
-                </anchored>
-            </frame_effects>
+            <frame_effects name="contentframe"/>
 
             <!-- Effect Name -->
             <label_column name="name_label">
