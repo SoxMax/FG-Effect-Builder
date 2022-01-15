@@ -4,9 +4,7 @@
     <windowclass name="effect_editor">
         <!-- <frame name="border" /> -->
         <script file="windows/scripts/effect_editor.lua" />
-        <sizelimits>
-            <minimum height="25" />
-        </sizelimits>
+		<margins control="0,0,0,2" />
         <sheetdata>
             <leftanchor />
             <rightanchor />

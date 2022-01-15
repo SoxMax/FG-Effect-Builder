@@ -3,9 +3,7 @@
 <root>
     <windowclass name="editor_susceptiblity">
         <script file="editors/35E-PFRPG/scripts/editor_susceptiblity.lua" />
-        <sizelimits>
-            <minimum height="25" />
-        </sizelimits>
+		<margins control="0,0,0,2" />
         <sheetdata>
             <leftanchor />
 

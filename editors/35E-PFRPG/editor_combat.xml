@@ -9,9 +9,7 @@
     <!-- combat effects bundle editor -->
     <windowclass name="editor_combat">
         <script file="editors/35E-PFRPG/scripts/editor_combat.lua" />
-        <sizelimits>
-            <minimum height="25" />
-        </sizelimits>
+		<margins control="0,0,0,2" />
         <sheetdata>
             <leftanchor />
 

@@ -3,9 +3,7 @@
 <root>
     <windowclass name="editor_save">
         <script file="editors/35E-PFRPG/scripts/editor_save.lua" />
-        <sizelimits>
-            <minimum height="25" />
-        </sizelimits>
+		<margins control="0,0,0,2" />
         <sheetdata>
             <leftanchor />
 
