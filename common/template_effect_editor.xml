@@ -9,12 +9,20 @@
 
     <template name="stringcycler_effects">
         <button_stringcycler_defaultable>
+            <anchored width="15" height="20">
+                <top offset="2" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
+            </anchored>
             <sourceless />
             <script file="common/scripts/valueholder_effect_editor.lua" />
         </button_stringcycler_defaultable>
     </template>
 
-    <template name="combobox_sourceless">
+    <template name="combobox_effects">
+        <anchored width="100" height="20">
+            <top offset="2" />
+            <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
+        </anchored>
         <combobox>
             <sourceless />
             <script file="common/scripts/valueholder_effect_editor.lua" />
@@ -23,6 +31,10 @@
 
     <template name="effect_number">
         <basicnumber>
+            <anchored width="20" height="20">
+                <top offset="2" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
+            </anchored>
             <default>0</default>
             <hideonvalue>0</hideonvalue>
             <sourceless />
@@ -32,6 +44,10 @@
 
     <template name="dice_effect">
         <basicdice>
+            <anchored width="60" height="20">
+                <top offset="2" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
+            </anchored>
             <sourceless />
             <script file="common/scripts/valueholder_effect_editor.lua" />
         </basicdice>
@@ -39,6 +55,10 @@
 
     <template name="priority_number">
         <basicnumber>
+            <anchored width="15" height="20">
+                <top offset="2" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
+            </anchored>
             <default>0</default>
             <sourceless />
             <script>
@@ -50,7 +70,7 @@
     </template>
 
     <template name="combobox_damage_types">
-        <combobox_sourceless>
+        <combobox_effects>
             <listdirection>down</listdirection>
             <script>
                 function onInit()
@@ -59,11 +79,11 @@
                 end
             </script>
             <listmaxsize>5</listmaxsize>
-        </combobox_sourceless>
+        </combobox_effects>
     </template>
 
     <template name="combobox_bonus_types">
-        <combobox_sourceless>
+        <combobox_effects>
             <listdirection>down</listdirection>
             <script>
                 function onInit()
@@ -72,12 +92,16 @@
                     addItems(DataCommon.bonustypes);
                 end
             </script>
-            <listmaxsize>3</listmaxsize>
-        </combobox_sourceless>
+            <listmaxsize>5</listmaxsize>
+        </combobox_effects>
     </template>
 
     <template name="cycler_effect_type">
         <button_stringcycler_defaultable>
+            <anchored width="100" height="20">
+                <top offset="2" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
+            </anchored>
             <sourceless />
             <script>
                 function onValueChanged()
@@ -91,7 +115,7 @@
         <subwindow>
             <anchored>
                 <top />
-                <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
                 <right />
             </anchored>
             <activate />
