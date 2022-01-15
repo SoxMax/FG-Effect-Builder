@@ -4,31 +4,20 @@
     <windowclass name="effect_editor">
         <!-- <frame name="border" /> -->
         <script file="windows/scripts/effect_editor.lua" />
+        <sizelimits>
+            <minimum height="25" />
+        </sizelimits>
         <sheetdata>
-            <genericcontrol name="leftanchor">
-                <anchored width="0" height="0">
-                    <top />
-                    <left />
-                </anchored>
-                <invisible />
-                <disabled />
-            </genericcontrol>
-            <genericcontrol name="rightanchor">
-                <anchored width="0" height="0">
-                    <top />
-                    <right />
-                </anchored>
-                <invisible />
-                <disabled />
-            </genericcontrol>
+            <leftanchor />
+            <rightanchor />
 
-            <priority_number name="effect_priority" />
-
-            <cycler_active_effect_type name="effect_type">
+            <priority_number name="effect_priority">
                 <anchored>
-                    <left offset="10" />
+                    <left offset="5" />
                 </anchored>
-            </cycler_active_effect_type>
+            </priority_number>
+
+            <cycler_active_effect_type name="effect_type" />
 
             <!-- delete button if in edit mode -->
             <button_idelete name="idelete">

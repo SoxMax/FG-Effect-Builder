@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
+    <template name="leftanchor">
+        <genericcontrol name="leftanchor">
+            <anchored width="0" height="0">
+                <top />
+                <left />
+            </anchored>
+            <invisible />
+            <disabled />
+        </genericcontrol>
+    </template>
+    <template name="rightanchor">
+        <genericcontrol name="rightanchor">
+            <anchored width="0" height="0">
+                <top />
+                <right />
+            </anchored>
+            <invisible />
+            <disabled />
+        </genericcontrol>
+    </template>
+
     <template name="button_stringcycler_defaultable">
         <button_stringcycler>
             <script file="common/scripts/button_stringcycler_defaultable.lua" />
@@ -9,9 +30,9 @@
 
     <template name="stringcycler_effects">
         <button_stringcycler_defaultable>
-            <anchored width="15" height="20">
+            <anchored width="100" height="20">
                 <top offset="2" />
-                <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
             <sourceless />
             <script file="common/scripts/valueholder_effect_editor.lua" />
@@ -19,11 +40,11 @@
     </template>
 
     <template name="combobox_effects">
-        <anchored width="100" height="20">
-            <top offset="2" />
-            <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
-        </anchored>
         <combobox>
+            <anchored width="100" height="20">
+                <top offset="3" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+            </anchored>
             <sourceless />
             <script file="common/scripts/valueholder_effect_editor.lua" />
         </combobox>
@@ -33,7 +54,7 @@
         <basicnumber>
             <anchored width="20" height="20">
                 <top offset="2" />
-                <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
             <default>0</default>
             <hideonvalue>0</hideonvalue>
@@ -46,7 +67,7 @@
         <basicdice>
             <anchored width="60" height="20">
                 <top offset="2" />
-                <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
             <sourceless />
             <script file="common/scripts/valueholder_effect_editor.lua" />
@@ -57,7 +78,7 @@
         <basicnumber>
             <anchored width="15" height="20">
                 <top offset="2" />
-                <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
             <default>0</default>
             <sourceless />
@@ -100,7 +121,7 @@
         <button_stringcycler_defaultable>
             <anchored width="100" height="20">
                 <top offset="2" />
-                <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
             <sourceless />
             <script>
@@ -115,7 +136,7 @@
         <subwindow>
             <anchored>
                 <top />
-                <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="0" />
                 <right />
             </anchored>
             <activate />
