@@ -89,7 +89,7 @@
 
     <template name="subwindow_effect_editor">
         <subwindow>
-            <anchored mergerule="replace">
+            <anchored>
                 <top />
                 <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
                 <right />
