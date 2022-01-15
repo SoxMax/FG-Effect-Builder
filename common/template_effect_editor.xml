@@ -132,6 +132,16 @@
         </button_stringcycler_defaultable>
     </template>
 
+    <template name="label_plus">
+        <label name="label_plus">
+            <anchored height="20">
+                <top offset="2" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
+            </anchored>
+            <static>+</static>
+        </label>
+    </template>
+
     <template name="subwindow_effect_editor">
         <subwindow>
             <anchored>

@@ -13,19 +13,9 @@
             <minimum height="25" />
         </sizelimits>
         <sheetdata>
-            <genericcontrol name="leftanchor">
-                <anchored width="0" height="0">
-                    <top />
-                    <left />
-                </anchored>
-                <invisible />
-            </genericcontrol>
+            <leftanchor />
 
             <stringcycler_effects name="effect">
-                <anchored width="100" height="20">
-                    <top offset="2" />
-                    <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
-                </anchored>
                 <parameters>
                     <defaultlabelres mergerule="replace">ac</defaultlabelres>
                     <defaultvalue>AC</defaultvalue>
@@ -40,9 +30,7 @@
                 </script>
             </stringcycler_effects>
 
-            <subwindow_effect_editor name="effect_editor">
-                <!-- <frame name="border" /> -->
-            </subwindow_effect_editor>
+            <subwindow_effect_editor name="effect_editor" />
         </sheetdata>
     </windowclass>
 </root>
