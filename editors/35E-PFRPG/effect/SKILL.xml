@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <windowclass name="editor_DMGO">
-        <script file="editors/35E-PFRPG/effect/scripts/editor_DMGO.lua" />
+    <windowclass name="SKILL">
+        <script file="editors/35E-PFRPG/effect/scripts/SKILL.lua" />
 		<margins control="0,0,0,2" />
         <sheetdata>
             <leftanchor />
@@ -17,7 +17,9 @@
                 </anchored>
             </effect_number>
 
-            <combobox_damage_types name="effect_damage_type" />
+            <combobox_bonus_types name="effect_bonus_type" />
+
+            <combobox_skills name="effect_skill_name" />
         </sheetdata>
     </windowclass>
 </root>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <windowclass name="editor_CMD">
-        <script file="editors/35E-PFRPG/effect/scripts/editor_CMD.lua" />
+    <windowclass name="CMD">
+        <script file="editors/35E-PFRPG/effect/scripts/CMD.lua" />
 		<margins control="0,0,0,2" />
         <sheetdata>
             <leftanchor />

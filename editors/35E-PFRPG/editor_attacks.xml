@@ -2,11 +2,11 @@
 
 <root>
     <!-- individual effect editors -->
-    <includefile source="editors/35E-PFRPG/effect/editor_ATK.xml" />
-    <includefile source="editors/35E-PFRPG/effect/editor_CMB.xml" />
-    <includefile source="editors/35E-PFRPG/effect/editor_DMG.xml" />
-    <includefile source="editors/35E-PFRPG/effect/editor_DMGTYPE.xml" />
-    <includefile source="editors/35E-PFRPG/effect/editor_CC.xml" />
+    <includefile source="editors/35E-PFRPG/effect/ATK.xml" />
+    <includefile source="editors/35E-PFRPG/effect/CMB.xml" />
+    <includefile source="editors/35E-PFRPG/effect/DMG.xml" />
+    <includefile source="editors/35E-PFRPG/effect/DMGTYPE.xml" />
+    <includefile source="editors/35E-PFRPG/effect/CC.xml" />
     <!-- attack effects bundle editor -->
     <windowclass name="editor_attacks">
         <script file="editors/35E-PFRPG/scripts/subwindow_editor.lua" />

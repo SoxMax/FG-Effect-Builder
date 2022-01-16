@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <windowclass name="editor_INIT">
-        <script file="editors/35E-PFRPG/effect/scripts/editor_INIT.lua" />
+    <windowclass name="ATK">
+        <script file="editors/35E-PFRPG/effect/scripts/ATK.lua" />
 		<margins control="0,0,0,2" />
         <sheetdata>
             <leftanchor />
@@ -18,6 +18,13 @@
             </effect_number>
 
             <combobox_bonus_types name="effect_bonus_type" />
+
+            <cycler_range />
+
+            <label_effect>
+                <static textres="opportunity_bonus"/>
+            </label_effect>
+            <checkbox_effect name="effect_opportunity"/>
         </sheetdata>
     </windowclass>
 </root>

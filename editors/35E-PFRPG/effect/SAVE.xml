@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <windowclass name="editor_SAVE">
-        <script file="editors/35E-PFRPG/effect/scripts/editor_SAVE.lua" />
+    <windowclass name="SAVE">
+        <script file="editors/35E-PFRPG/effect/scripts/SAVE.lua" />
 		<margins control="0,0,0,2" />
         <sheetdata>
             <leftanchor />

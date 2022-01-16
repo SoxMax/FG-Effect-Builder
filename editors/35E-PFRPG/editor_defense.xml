@@ -2,9 +2,9 @@
 
 <root>
     <!-- individual effect editors -->
-    <includefile source="editors/35E-PFRPG/effect/editor_AC.xml" />
-    <includefile source="editors/35E-PFRPG/effect/editor_CMD.xml" />
-    <includefile source="editors/35E-PFRPG/effect/editor_SAVE.xml" />
+    <includefile source="editors/35E-PFRPG/effect/AC.xml" />
+    <includefile source="editors/35E-PFRPG/effect/CMD.xml" />
+    <includefile source="editors/35E-PFRPG/effect/SAVE.xml" />
     <!-- combat effects bundle editor -->
     <windowclass name="editor_defense">
         <script file="editors/35E-PFRPG/scripts/subwindow_editor.lua" />
