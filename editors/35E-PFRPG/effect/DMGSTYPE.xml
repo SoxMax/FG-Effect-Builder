@@ -7,7 +7,7 @@
         <sheetdata>
             <leftanchor />
 
-            <combobox_damage_types name="effect_damage_type" />
+            <combobox_damage_types name="damage_type" />
         </sheetdata>
     </windowclass>
 </root>

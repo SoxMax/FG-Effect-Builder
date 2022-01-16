@@ -13,12 +13,12 @@
     </template>
 
     <template name="combobox_damage_types">
-        <combobox_effects>
+        <combobox_effects name="damage_type">
             <listdirection>down</listdirection>
             <script>
                 function onInit()
-                    super.onInit();
-                    addItems(DataCommon.dmgtypes);
+                    super.onInit()
+                    addItems(DataCommon.dmgtypes)
                 end
             </script>
             <listmaxsize>5</listmaxsize>
@@ -26,13 +26,13 @@
     </template>
 
     <template name="combobox_bonus_types">
-        <combobox_effects>
+        <combobox_effects name="effect_bonus_type">
             <listdirection>down</listdirection>
             <script>
                 function onInit()
-                    super.onInit();
-                    add("");
-                    addItems(DataCommon.bonustypes);
+                    super.onInit()
+                    add("")
+                    addItems(DataCommon.bonustypes)
                 end
             </script>
             <listmaxsize>5</listmaxsize>
@@ -40,14 +40,87 @@
     </template>
 
     <template name="combobox_skills">
-        <combobox_effects>
+        <combobox_effects name="skill">
             <listdirection>down</listdirection>
             <script>
                 function onInit()
-                    super.onInit();
-                    add("");
+                    super.onInit()
+                    add("")
                     for skill,_ in pairs(DataCommon.skilldata) do
-                        add(skill);
+                        add(skill)
+                    end
+                end
+            </script>
+            <listmaxsize>5</listmaxsize>
+        </combobox_effects>
+    </template>
+
+    <template name="combobox_conditions">
+        <combobox_effects name="condition">
+            <listdirection>down</listdirection>
+            <script>
+                function onInit()
+                    super.onInit()
+                    addItems(DataCommon.conditions)
+                end
+            </script>
+            <listmaxsize>5</listmaxsize>
+        </combobox_effects>
+    </template>
+
+    <template name="combobox_alignments">
+        <combobox_effects name="alignment">
+            <listdirection>down</listdirection>
+            <script>
+                function onInit()
+                    super.onInit()
+                    add("good", "Good")
+                    add("evil", "Evil")
+
+                    add("lawful", "Lawful")
+                    add("chaotic", "Chaotic")
+
+                    add("LG", "Lawful Good")
+                    add("NG", "Neutral Good")
+                    add("CG", "Chaotic Good")
+                    
+                    add("LN", "Lawful Neutral")
+                    -- add("N", "Neutral") No True Neutral support
+                    add("CN", "Chaotic Neutral")
+                    
+                    add("LE", "Lawful Evil")
+                    add("NE", "Neutral Evil")
+                    add("CE", "Chaotic Evil")
+                end
+            </script>
+            <listmaxsize>5</listmaxsize>
+        </combobox_effects>
+    </template>
+
+    <template name="combobox_sizes">
+        <combobox_effects name="size">
+            <listdirection>down</listdirection>
+            <script>
+                function onInit()
+                    super.onInit()
+                    addItems(DataCommon.creaturesize)
+                    addItems(DataCommon.creaturesubtype)
+                end
+            </script>
+            <listmaxsize>5</listmaxsize>
+        </combobox_effects>
+    </template>
+
+    <template name="combobox_creature_types">
+        <combobox_effects name="creature_type">
+            <listdirection>down</listdirection>
+            <script>
+                function onInit()
+                    super.onInit()
+                    for sizeName,_ in pairs(DataCommon.creaturetype) do
+                        if sizeName:sub(2,1) then
+                            add(sizeName)
+                        end
                     end
                 end
             </script>

@@ -17,7 +17,7 @@
                 </anchored>
             </effect_number>
 
-            <combobox_damage_types name="effect_damage_type" />
+            <combobox_damage_types name="damage_type" />
 
             <combobox_bonus_types name="effect_bonus_type" />
 

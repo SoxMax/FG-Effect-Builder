@@ -1,3 +1,3 @@
 function createEffectString()
-    return parentcontrol.window.effect.getStringValue() .. ": " .. effect_damage_type.getValue()
+    return parentcontrol.window.effect.getStringValue() .. ": " .. damage_type.getValue()
 end

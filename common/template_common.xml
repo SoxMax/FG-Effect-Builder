@@ -73,6 +73,15 @@
         </button_checkbox>
     </template>
 
+    <template name="stringfield_effects">
+        <simplestring>
+            <anchored width="150" height="20">
+                <top offset="2" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="0" />
+            </anchored>
+        </simplestring>
+    </template>
+
     <template name="label_effect">
         <label>
             <anchored height="20">

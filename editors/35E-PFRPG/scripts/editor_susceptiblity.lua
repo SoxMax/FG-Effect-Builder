@@ -12,6 +12,6 @@ function createEffectString()
     if effect_modifier.isVisible() and effect_modifier.getValue() ~= 0 then
         table.insert(effectParts, effect_modifier.getValue())
     end
-    table.insert(effectParts, effect_damage_type.getValue())
+    table.insert(effectParts, damage_type.getValue())
     return table.concat(effectParts, " ")
 end
