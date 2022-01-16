@@ -1,11 +1,7 @@
 function onInit()
-    window.updateEffectEditor()
+    window.effect.updateEffectEditor()
 end
 
 function updateEffectString(effectString)
-    if window.parentcontrol then
-        window.parentcontrol.updateEffectString(effectString)
-    else
-        window.updateEffectString(effectString)
-    end
+    window.parentcontrol.updateEffectString(effectString)
 end

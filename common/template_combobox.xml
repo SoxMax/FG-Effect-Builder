@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <template name="combobox_effects">
+        <combobox>
+            <anchored width="100" height="20">
+                <top offset="3" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+            </anchored>
+            <sourceless />
+            <script file="common/scripts/valueholder_effect_editor.lua" />
+        </combobox>
+    </template>
+
+    <template name="combobox_damage_types">
+        <combobox_effects>
+            <listdirection>down</listdirection>
+            <script>
+                function onInit()
+                    super.onInit();
+                    addItems(DataCommon.dmgtypes);
+                end
+            </script>
+            <listmaxsize>5</listmaxsize>
+        </combobox_effects>
+    </template>
+
+    <template name="combobox_bonus_types">
+        <combobox_effects>
+            <listdirection>down</listdirection>
+            <script>
+                function onInit()
+                    super.onInit();
+                    add("");
+                    addItems(DataCommon.bonustypes);
+                end
+            </script>
+            <listmaxsize>5</listmaxsize>
+        </combobox_effects>
+    </template>
+
+    <template name="combobox_skills">
+        <combobox_effects>
+            <listdirection>down</listdirection>
+            <script>
+                function onInit()
+                    super.onInit();
+                    add("");
+                    for skill,_ in pairs(DataCommon.skilldata) do
+                        add(skill);
+                    end
+                end
+            </script>
+            <listmaxsize>5</listmaxsize>
+        </combobox_effects>
+    </template>
+</root>

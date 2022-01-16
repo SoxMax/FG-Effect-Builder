@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <template name="subwindow_effect_category">
+        <subwindow>
+            <anchored>
+                <top />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="0" />
+                <right />
+            </anchored>
+            <activate />
+            <fastinit />
+            <script file="common/scripts/subwindow_effect_editor.lua" />
+        </subwindow>
+    </template>
+
+    <template name="subwindow_effect_editor">
+        <subwindow>
+            <anchored>
+                <top />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="0" />
+                <right />
+            </anchored>
+            <activate />
+            <fastinit />
+            <script file="common/scripts/subwindow_effect_editor.lua" />
+        </subwindow>
+    </template>
+</root>

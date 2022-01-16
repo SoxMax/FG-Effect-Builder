@@ -26,12 +26,12 @@
 			</button_idelete>
 
             <!-- Effect Specific editor -->
-            <subwindow_effect_editor name="effect_type_editor">
+            <subwindow_effect_category name="effect_type_editor">
                 <!-- <frame name="border" /> -->
                 <anchored>
                     <right parent="rightanchor" anchor="left" relation="relative" offset="-5" />
                 </anchored>
-            </subwindow_effect_editor>
+            </subwindow_effect_category>
 
             <!-- Effect String holder -->
             <hs name="effect_description">
