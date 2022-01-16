@@ -97,13 +97,13 @@
         </combobox_effects>
     </template>
 
-    <template name="combobox_sizes">
-        <combobox_effects name="size">
+    <template name="combobox_creature_types">
+        <combobox_effects name="creature_type">
             <listdirection>down</listdirection>
             <script>
                 function onInit()
                     super.onInit()
-                    addItems(DataCommon.creaturesize)
+                    addItems(DataCommon.creaturetype)
                     addItems(DataCommon.creaturesubtype)
                 end
             </script>
@@ -111,14 +111,15 @@
         </combobox_effects>
     </template>
 
-    <template name="combobox_creature_types">
-        <combobox_effects name="creature_type">
+    
+    <template name="combobox_sizes">
+        <combobox_effects name="size">
             <listdirection>down</listdirection>
             <script>
                 function onInit()
                     super.onInit()
-                    for sizeName,_ in pairs(DataCommon.creaturetype) do
-                        if sizeName:sub(2,1) then
+                    for sizeName,_ in pairs(DataCommon.creaturesize) do
+                        if #sizeName > 1 then
                             add(sizeName)
                         end
                     end

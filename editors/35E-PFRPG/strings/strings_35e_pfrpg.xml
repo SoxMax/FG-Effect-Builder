@@ -39,4 +39,14 @@
     <string name="skill">Skill</string>
     <string name="nlvl">Negative Level</string>
     <string name="speed">Speed</string>
+    
+    <string name="editor_conditional">Conditionals</string>
+    <string name="if">If</string>
+    <string name="ift">If Target</string>
+    <string name="condition">Condition</string>
+    <string name="alignment">Alignment</string>
+    <string name="size">Size</string>
+    <string name="type">Creature Type</string>
+    <string name="health">Health</string>
+    <string name="custom">Custom Condition</string>
 </root>

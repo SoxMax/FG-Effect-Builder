@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="conditional_CONDITION">
+        <script file="editors/35E-PFRPG/conditional/scripts/conditional_CONDITION.lua" />
+		<margins control="0,0,0,2" />
+        <sheetdata>
+            <leftanchor />
+
+            <combobox_conditions />
+        </sheetdata>
+    </windowclass>
+</root>
