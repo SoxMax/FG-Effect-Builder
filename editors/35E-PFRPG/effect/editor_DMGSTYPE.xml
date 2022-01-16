@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="editor_DMGSTYPE">
+        <script file="editors/35E-PFRPG/effect/scripts/editor_DMGTYPE.lua" />
+		<margins control="0,0,0,2" />
+        <sheetdata>
+            <leftanchor />
+
+            <combobox_damage_types name="effect_damage_type" />
+        </sheetdata>
+    </windowclass>
+</root>
