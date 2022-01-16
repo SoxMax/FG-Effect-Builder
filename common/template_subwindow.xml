@@ -10,7 +10,7 @@
             </anchored>
             <activate />
             <fastinit />
-            <script file="common/scripts/subwindow_effect_editor.lua" />
+            <script file="common/scripts/subwindow_effect_category.lua" />
         </subwindow>
     </template>
 
