@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <!-- individual effect editors -->
+    <includefile source="editors/35E-PFRPG/effect/editor_ATK.xml" />
+    <includefile source="editors/35E-PFRPG/effect/editor_CMB.xml" />
+    <includefile source="editors/35E-PFRPG/effect/editor_DMG.xml" />
+    <includefile source="editors/35E-PFRPG/effect/editor_DMGTYPE.xml" />
+    <includefile source="editors/35E-PFRPG/effect/editor_CC.xml" />
+    <!-- attack effects bundle editor -->
+    <windowclass name="editor_attacks">
+        <script file="editors/35E-PFRPG/scripts/subwindow_editor.lua" />
+		<margins control="0,0,0,2" />
+        <sheetdata>
+            <leftanchor />
+
+            <cycler_effect_subwindow>
+                <parameters>
+                    <defaultlabelres mergerule="replace">atk</defaultlabelres>
+                    <defaultvalue>ATK</defaultvalue>
+                    <labelsres>cmb_long|dmg|dmgtype|cc</labelsres>
+                    <values>CMB|DMG|DMGTYPE|CC</values>
+                </parameters>
+            </cycler_effect_subwindow>
+
+            <subwindow_effect_editor />
+        </sheetdata>
+    </windowclass>
+</root>

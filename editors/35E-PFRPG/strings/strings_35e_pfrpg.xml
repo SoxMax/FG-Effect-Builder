@@ -1,29 +1,42 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <string name="editor_ability">Ability</string>
-
-    <string name="editor_save">Save</string>
-    <string name="allsaves">All Saves</string>
-
-    <string name="editor_susceptiblity">Susceptiblity</string>
-    <string name="resist">Resistance (Resist)</string>
-    <string name="immune">Immunity</string>
-    <string name="dr">Damage Resistance (DR)</string>
-    <string name="vuln">Vulnerability</string>
-
-    <string name="editor_combat">Combat</string>
-    <string name="ac_long">Armor Class (AC)</string>
-    <string name="atk">Attack</string>
-    <string name="dmg">Damage</string>
-    <string name="init_eb">Initiative</string>
     <string name="allrange">Melee+Ranged</string>
     <string name="melee">Melee</string>
     <string name="ranged">Ranged</string>
     <string name="opportunity_bonus">Opportunity only?</string>
+
+
+    <string name="editor_ability">Ability</string>
+
+    <string name="editor_attacks">Attacks</string>
+    <string name="atk">Attack</string>
+    <string name="cmb_long">Combat Maneuver Bonus (CMB)</string>
+    <string name="dmg">Damage</string>
+    <string name="dmgtype">Damage Type</string>
+
+    <string name="editor_defense">Defense</string>
+    <string name="ac_long">Armor Class (AC)</string>
+    <string name="cmd_long">Combat Maneuver Defense (CMD)</string>
+    <string name="allsaves">All Saves</string>
+
+    <string name="editor_susceptiblity">Susceptiblity</string>
+    <string name="dr">Damage Resistance (DR)</string>
+    <string name="resist">Resistance (Resist)</string>
+    <string name="immune">Immunity</string>
+    <string name="vuln">Vulnerability</string>
     
     <string name="editor_heal">Healing</string>
     <string name="heal">Heal</string>
     <string name="fast_heal">Fast Healing</string>
     <string name="regen">Regeneration</string>
+    
+    <string name="editor_spell">Spells</string>
+    <string name="dmgs">Spell Damage</string>
+    <string name="dmgstype">Spell Damage Type</string>
+    
+    <string name="editor_misc">Miscellaneous</string>
+    <string name="skill">Skill</string>
+    <string name="nlvl">Negative Level</string>
+    <string name="speed">Speed</string>
 </root>

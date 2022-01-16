@@ -7,14 +7,14 @@
         <sheetdata>
             <leftanchor />
 
-            <stringcycler_effects name="effect">
+            <stringcycler_effect name="effect">
                 <parameters>
                     <defaultlabelres mergerule="replace">heal</defaultlabelres>
                     <defaultvalue>HEAL</defaultvalue>
                     <labelsres>fast_heal|regen</labelsres>
                     <values>FHEAL|REGEN</values>
                 </parameters>
-            </stringcycler_effects>
+            </stringcycler_effect>
 
             <dice_effect name="effect_dice" />
 

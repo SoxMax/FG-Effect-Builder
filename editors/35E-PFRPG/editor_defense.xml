@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <!-- individual effect editors -->
+    <includefile source="editors/35E-PFRPG/effect/editor_AC.xml" />
+    <includefile source="editors/35E-PFRPG/effect/editor_CMD.xml" />
+    <includefile source="editors/35E-PFRPG/effect/editor_SAVE.xml" />
+    <!-- combat effects bundle editor -->
+    <windowclass name="editor_defense">
+        <script file="editors/35E-PFRPG/scripts/subwindow_editor.lua" />
+		<margins control="0,0,0,2" />
+        <sheetdata>
+            <leftanchor />
+
+            <cycler_effect_subwindow>
+                <parameters>
+                    <defaultlabelres mergerule="replace">ac_long</defaultlabelres>
+                    <defaultvalue>AC</defaultvalue>
+                    <labelsres>cmd_long|save</labelsres>
+                    <values>CMD|SAVE</values>
+                </parameters>
+            </cycler_effect_subwindow>
+
+            <subwindow_effect_editor />
+        </sheetdata>
+    </windowclass>
+</root>

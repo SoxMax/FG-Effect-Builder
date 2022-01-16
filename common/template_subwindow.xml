@@ -15,7 +15,7 @@
     </template>
 
     <template name="subwindow_effect_editor">
-        <subwindow>
+        <subwindow name="effect_editor">
             <anchored>
                 <top />
                 <left parent="leftanchor" anchor="right" relation="relative" offset="0" />

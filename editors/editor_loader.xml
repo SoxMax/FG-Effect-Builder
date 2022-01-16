@@ -5,10 +5,12 @@
 
     <!-- Effect Editor bundles-->
     <includefile source="editors/35E-PFRPG/editor_ability.xml" />
-    <includefile source="editors/35E-PFRPG/editor_combat.xml" />
-    <includefile source="editors/35E-PFRPG/editor_save.xml" />
+    <includefile source="editors/35E-PFRPG/editor_attacks.xml" />
+    <includefile source="editors/35E-PFRPG/editor_defense.xml" />
     <includefile source="editors/35E-PFRPG/editor_susceptiblity.xml" />
     <includefile source="editors/35E-PFRPG/editor_heal.xml" />
+    <includefile source="editors/35E-PFRPG/editor_spell.xml" />
+    <includefile source="editors/35E-PFRPG/editor_misc.xml" />
 
     <!-- Selectable Effect Editor bundles -->
     <template name="cycler_active_effect_type">
@@ -16,8 +18,8 @@
             <parameters mergerule="replace">
                 <defaultlabelres>editor_ability</defaultlabelres>
                 <defaultvalue>editor_ability</defaultvalue>
-                <labelsres>editor_combat|editor_save|editor_susceptiblity|editor_heal</labelsres>
-                <values>editor_combat|editor_save|editor_susceptiblity|editor_heal</values>
+                <labelsres>editor_attacks|editor_defense|editor_susceptiblity|editor_heal|editor_spell|editor_misc</labelsres>
+                <values>editor_attacks|editor_defense|editor_susceptiblity|editor_heal|editor_spell|editor_misc</values>
             </parameters>
         </cycler_effect_type>
     </template>

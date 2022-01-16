@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <!-- individual effect editors -->
+    <includefile source="editors/35E-PFRPG/effect/editor_INIT.xml" />
+    <includefile source="editors/35E-PFRPG/effect/editor_SKILL.xml" />
+    <includefile source="editors/35E-PFRPG/effect/editor_NLVL.xml" />
+    <includefile source="editors/35E-PFRPG/effect/editor_SPEED.xml" />
+    <windowclass name="editor_misc">
+        <script file="editors/35E-PFRPG/scripts/subwindow_editor.lua" />
+		<margins control="0,0,0,2" />
+        <sheetdata>
+            <leftanchor />
+
+            <cycler_effect_subwindow>
+                <parameters>
+                    <defaultlabelres mergerule="replace">initiative</defaultlabelres>
+                    <defaultvalue>INIT</defaultvalue>
+                    <labelsres>skill|nlvl|speed</labelsres>
+                    <values>SKILL|NLVL|SPEED</values>
+                </parameters>
+            </cycler_effect_subwindow>
+
+            <subwindow_effect_editor />
+        </sheetdata>
+    </windowclass>
+</root>
