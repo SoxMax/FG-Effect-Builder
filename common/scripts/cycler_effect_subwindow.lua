@@ -1,5 +1,5 @@
 function updateEffectEditor()
-    window.effect_editor.setValue("editor_" .. window.effect.getStringValue())
+    window.effect_editor.setValue(effect.getStringValue())
 end
 
 function onValueChanged()
