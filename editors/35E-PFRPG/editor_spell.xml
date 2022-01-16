@@ -12,6 +12,7 @@
             <leftanchor />
 
             <cycler_effect_subwindow>
+                <anchored width="140" />
                 <parameters>
                     <defaultlabelres mergerule="replace">casterlevelcheck</defaultlabelres>
                     <defaultvalue>CLC</defaultvalue>

@@ -15,6 +15,7 @@
             <leftanchor />
 
             <cycler_effect_subwindow>
+                <anchored width="190" />
                 <parameters>
                     <defaultlabelres mergerule="replace">atk</defaultlabelres>
                     <defaultvalue>ATK</defaultvalue>

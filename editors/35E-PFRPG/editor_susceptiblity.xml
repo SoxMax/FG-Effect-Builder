@@ -8,6 +8,7 @@
             <leftanchor />
 
             <stringcycler_effect name="effect">
+                <anchored width="140" />
                 <parameters>
                     <defaultlabelres mergerule="replace">immune</defaultlabelres>
                     <defaultvalue>IMMUNE</defaultvalue>

@@ -13,6 +13,7 @@
             <leftanchor />
 
             <cycler_effect_subwindow>
+                <anchored width="200" />
                 <parameters>
                     <defaultlabelres mergerule="replace">ac_long</defaultlabelres>
                     <defaultvalue>AC</defaultvalue>
