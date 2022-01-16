@@ -1,15 +1,11 @@
 function createEffectString()
     local effectString = parentcontrol.window.effect.getStringValue() .. ": " .. StringManager.convertDiceToString(effect_dice.getDice(), effect_modifier.getValue())
     local descriptors = {}
-    if not effect_damage_type.isEmpty() then
-        table.insert(descriptors, effect_damage_type.getValue())
-    end
     if not effect_bonus_type.isEmpty() then
         table.insert(descriptors, effect_bonus_type.getValue())
     end
-    local effectRange = effect_range.getStringValue()
-    if effectRange ~= "" then
-        table.insert(descriptors, effectRange)
+    if effect_opportunity.getValue() > 0 then
+        table.insert(descriptors, "opportunity")
     end
 
     if next(descriptors) then

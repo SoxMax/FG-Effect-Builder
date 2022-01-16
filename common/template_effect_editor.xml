@@ -138,6 +138,22 @@
         </combobox_effects>
     </template>
 
+    <template name="combobox_skills">
+        <combobox_effects>
+            <listdirection>down</listdirection>
+            <script>
+                function onInit()
+                    super.onInit();
+                    add("");
+                    for skill,_ in pairs(DataCommon.skilldata) do
+                        add(skill);
+                    end
+                end
+            </script>
+            <listmaxsize>5</listmaxsize>
+        </combobox_effects>
+    </template>
+
     <template name="cycler_effect_type">
         <button_stringcycler_defaultable>
             <anchored width="100" height="20">

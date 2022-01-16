@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <windowclass name="editor_DMG">
-        <script file="editors/35E-PFRPG/effect/scripts/editor_DMG.lua" />
+    <windowclass name="editor_CMB">
+        <script file="editors/35E-PFRPG/effect/scripts/editor_CMB.lua" />
 		<margins control="0,0,0,2" />
         <sheetdata>
             <leftanchor />
@@ -17,11 +17,12 @@
                 </anchored>
             </effect_number>
 
-            <combobox_damage_types name="effect_damage_type" />
-
             <combobox_bonus_types name="effect_bonus_type" />
 
-            <cycler_range />
+            <label_effect>
+                <static textres="opportunity_bonus"/>
+            </label_effect>
+            <checkbox_effect name="effect_opportunity"/>
         </sheetdata>
     </windowclass>
 </root>
