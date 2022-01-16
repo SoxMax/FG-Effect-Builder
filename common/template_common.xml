@@ -54,7 +54,7 @@
     <template name="dice_effect">
         <basicdice>
             <anchored width="60" height="20">
-                <top offset="2" />
+                <top offset="3" />
                 <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
             <sourceless />
