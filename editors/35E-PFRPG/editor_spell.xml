@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
+    <!-- Dynamic Effect editor loader -->
+    <script name="LoaderSpell" file="editors/35E-PFRPG/loader/loader_spell.lua" />
     <!-- individual effect editors -->
     <includefile source="editors/35E-PFRPG/effect/CLC.xml" />
     <includefile source="editors/35E-PFRPG/effect/DMGS.xml" />
@@ -14,10 +16,7 @@
             <cycler_effect_subwindow>
                 <anchored width="140" />
                 <parameters>
-                    <defaultlabelres mergerule="replace">casterlevelcheck</defaultlabelres>
-                    <defaultvalue>CLC</defaultvalue>
-                    <labelsres>dmgs|dmgstype</labelsres>
-                    <values>DMGS|DMGSTYPE</values>
+                    <dynamicinitlist>spellEditors</dynamicinitlist>
                 </parameters>
             </cycler_effect_subwindow>
 

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
+    <!-- Dynamic Effect editor loader -->
+    <script name="LoaderDefense" file="editors/35E-PFRPG/loader/loader_defense.lua" />
     <!-- individual effect editors -->
     <includefile source="editors/35E-PFRPG/effect/AC.xml" />
     <includefile source="editors/35E-PFRPG/effect/CMD.xml" />
@@ -15,10 +17,7 @@
             <cycler_effect_subwindow>
                 <anchored width="200" />
                 <parameters>
-                    <defaultlabelres mergerule="replace">ac_long</defaultlabelres>
-                    <defaultvalue>AC</defaultvalue>
-                    <labelsres>cmd_long|save</labelsres>
-                    <values>CMD|SAVE</values>
+                    <dynamicinitlist>defenseEditors</dynamicinitlist>
                 </parameters>
             </cycler_effect_subwindow>
 

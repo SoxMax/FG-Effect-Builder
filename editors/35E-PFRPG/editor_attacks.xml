@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
+    <!-- Dynamic Effect editor loader -->
+    <script name="LoaderAttacks" file="editors/35E-PFRPG/loader/loader_attacks.lua" />
     <!-- individual effect editors -->
     <includefile source="editors/35E-PFRPG/effect/ATK.xml" />
     <includefile source="editors/35E-PFRPG/effect/CMB.xml" />
@@ -17,10 +19,7 @@
             <cycler_effect_subwindow>
                 <anchored width="190" />
                 <parameters>
-                    <defaultlabelres mergerule="replace">atk</defaultlabelres>
-                    <defaultvalue>ATK</defaultvalue>
-                    <labelsres>cmb_long|dmg|dmgtype|cc</labelsres>
-                    <values>CMB|DMG|DMGTYPE|CC</values>
+                    <dynamicinitlist>attackEditors</dynamicinitlist>
                 </parameters>
             </cycler_effect_subwindow>
 

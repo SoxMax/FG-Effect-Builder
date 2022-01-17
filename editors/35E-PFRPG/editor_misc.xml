@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
+    <!-- Dynamic Effect editor loader -->
+    <script name="LoaderMisc" file="editors/35E-PFRPG/loader/loader_misc.lua" />
     <!-- individual effect editors -->
     <includefile source="editors/35E-PFRPG/effect/INIT.xml" />
     <includefile source="editors/35E-PFRPG/effect/SKILL.xml" />
@@ -14,10 +16,7 @@
 
             <cycler_effect_subwindow>
                 <parameters>
-                    <defaultlabelres mergerule="replace">initiative</defaultlabelres>
-                    <defaultvalue>INIT</defaultvalue>
-                    <labelsres>skill|nlvl|speed</labelsres>
-                    <values>SKILL|NLVL|SPEED</values>
+                    <dynamicinitlist>miscEditors</dynamicinitlist>
                 </parameters>
             </cycler_effect_subwindow>
 

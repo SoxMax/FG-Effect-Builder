@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
+    <!-- Dynamic Effect editor loader -->
+    <script name="LoaderConditional" file="editors/35E-PFRPG/loader/loader_conditional.lua" />
     <!-- individual effect editors -->
     <includefile source="editors/35E-PFRPG/conditional/conditional_CONDITION.xml" />
     <includefile source="editors/35E-PFRPG/conditional/conditional_ALIGN.xml" />
@@ -27,10 +29,7 @@
 
             <cycler_effect_subwindow name="conditional">
                 <parameters>
-                    <defaultlabelres mergerule="replace">condition</defaultlabelres>
-                    <defaultvalue>conditional_CONDITION</defaultvalue>
-                    <labelsres>alignment|size|type|health|custom</labelsres>
-                    <values>conditional_ALIGN|conditional_SIZE|conditional_TYPE|conditional_HEALTH|conditional_CUSTOM</values>
+                    <dynamicinitlist>conditionalEditors</dynamicinitlist>
                 </parameters>
             </cycler_effect_subwindow>
 

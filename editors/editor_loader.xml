@@ -3,6 +3,8 @@
     <!-- Strings -->
     <includefile source="editors/35E-PFRPG/strings/strings_35e_pfrpg.xml" />
 
+    <script name="EditorLoader" file="editors/editor_loader.lua" />
+
     <!-- Effect Editor bundles-->
     <includefile source="editors/35E-PFRPG/editor_ability.xml" />
     <includefile source="editors/35E-PFRPG/editor_attacks.xml" />
@@ -16,12 +18,9 @@
     <!-- Selectable Effect Editor bundles -->
     <template name="cycler_active_effect_type">
         <cycler_effect_type>
-            <parameters mergerule="replace">
-                <defaultlabelres>editor_ability</defaultlabelres>
-                <defaultvalue>editor_ability</defaultvalue>
+            <parameters>
+                <dynamicinitlist>editorBundles</dynamicinitlist>
             </parameters>
-                <labelsres>editor_attacks|editor_defense|editor_susceptibility|editor_heal|editor_spell|editor_misc|editor_conditional</labelsres>
-                <values>editor_attacks|editor_defense|editor_susceptibility|editor_heal|editor_spell|editor_misc|editor_conditional</values>
         </cycler_effect_type>
     </template>
 </root>
