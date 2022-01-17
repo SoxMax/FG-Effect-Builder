@@ -19,9 +19,9 @@
             <parameters mergerule="replace">
                 <defaultlabelres>editor_ability</defaultlabelres>
                 <defaultvalue>editor_ability</defaultvalue>
-                <labelsres>editor_attacks|editor_defense|editor_susceptiblity|editor_heal|editor_spell|editor_misc|editor_conditional</labelsres>
-                <values>editor_attacks|editor_defense|editor_susceptiblity|editor_heal|editor_spell|editor_misc|editor_conditional</values>
             </parameters>
+                <labelsres>editor_attacks|editor_defense|editor_susceptibility|editor_heal|editor_spell|editor_misc|editor_conditional</labelsres>
+                <values>editor_attacks|editor_defense|editor_susceptibility|editor_heal|editor_spell|editor_misc|editor_conditional</values>
         </cycler_effect_type>
     </template>
 </root>

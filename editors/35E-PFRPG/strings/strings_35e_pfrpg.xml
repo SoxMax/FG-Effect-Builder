@@ -20,7 +20,7 @@
     <string name="cmd_long">Combat Maneuver Defense (CMD)</string>
     <string name="allsaves">All Saves</string>
 
-    <string name="editor_susceptiblity">Susceptiblity</string>
+    <string name="editor_susceptibility">Susceptibility</string>
     <string name="dr">Damage Resistance (DR)</string>
     <string name="resist">Resistance (Resist)</string>
     <string name="immune">Immunity</string>

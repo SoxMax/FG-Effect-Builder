@@ -19,6 +19,7 @@
             <frame mergerule="replace" name="fielddark" offset="7,5,7,5" />
             <sourceless />
             <readonly />
+            <nodrop />
             <script file="common/scripts/string_column_output_effect.lua" />
         </string_column_full>
     </template>
