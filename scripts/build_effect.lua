@@ -4,6 +4,10 @@ local function buildEffect(sCommand, sParams)
 end
 
 function onInit()
-    Comm.registerSlashHandler("buildeffect", buildEffect)
-    Comm.registerSlashHandler("effectbuilder", buildEffect)
+    if EffectLoader.editorBundles then
+        Comm.registerSlashHandler("buildeffect", buildEffect)
+        Comm.registerSlashHandler("effectbuilder", buildEffect)
+    else
+        Debug.chat("No bundles loaded! Effect builder disabled!")
+    end
 end
