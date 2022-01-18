@@ -40,7 +40,7 @@
     </template>
 
     <template name="combobox_abilities">
-        <combobox_effects name="abilities">
+        <combobox_effects name="ability">
             <listdirection>down</listdirection>
             <script>
                 function onInit()
