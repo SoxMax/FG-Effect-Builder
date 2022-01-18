@@ -24,10 +24,6 @@ editorBundles = {
         value = "editor_spell"
     },
     {
-        labelres ="editor_ability",
-        value = "editor_ability"
-    },
-    {
         labelres ="editor_misc",
         value = "editor_misc"
     },
