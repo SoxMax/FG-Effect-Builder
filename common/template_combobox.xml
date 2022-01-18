@@ -39,6 +39,20 @@
         </combobox_effects>
     </template>
 
+    <template name="combobox_abilities">
+        <combobox_effects name="abilities">
+            <listdirection>down</listdirection>
+            <script>
+                function onInit()
+                    super.onInit()
+                    add("")
+                    addItems(DataCommon.abilities)
+                end
+            </script>
+            <listmaxsize>5</listmaxsize>
+        </combobox_effects>
+    </template>
+
     <template name="combobox_skills">
         <combobox_effects name="skill">
             <listdirection>down</listdirection>
