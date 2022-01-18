@@ -2,13 +2,13 @@
 <root version="3.3">
 	<properties>
 		<name>Feature: Effect Builder</name>
-		<version>0.8.0</version>
+		<version>0.8.1</version>
 		<author>SoxMax</author>
 		<description>GUI utility to help with building effects</description>
 		<loadorder>1000</loadorder>
 	</properties>
 	
-	<announcement text="https://github.com/SoxMax/FG-Effect-Builder \r Effect Builder v0.8.0 \r GUI utility to help with building effects" font="emotefont" />
+	<announcement text="https://github.com/SoxMax/FG-Effect-Builder \r Effect Builder v0.8.1 \r GUI utility to help with building effects" font="emotefont" />
 	
 	<base>
 		<!-- Strings -->
