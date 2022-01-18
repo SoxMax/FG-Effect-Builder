@@ -21,7 +21,7 @@
 		<includefile source="common/template_subwindow.xml" />
 		<includefile source="common/template_effect_builder.xml" />
 		<!-- Editors -->
-		<includefile source="editors/editor_loader.xml" />
+		<includefile source="loader/editor_loader.xml" />
 		<!-- Windows -->
 		<includefile source="windows/effect_editor.xml" />
 		<includefile source="windows/effect_builder.xml" />

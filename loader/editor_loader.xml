@@ -3,7 +3,7 @@
     <!-- Strings -->
     <includefile source="editors/35E-PFRPG/strings/strings_35e_pfrpg.xml" />
 
-    <script name="EditorLoader" file="editors/editor_loader.lua" />
+    <script name="EditorLoader" file="loader/editor_loader.lua" />
 
     <!-- Effect Editor bundles-->
     <includefile source="editors/35E-PFRPG/editor_ability.xml" />
