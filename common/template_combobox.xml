@@ -61,7 +61,7 @@
                     super.onInit()
                     add("")
                     for skill,_ in pairs(DataCommon.skilldata) do
-                        add(skill)
+                        add(skill:lower())
                     end
                 end
             </script>
