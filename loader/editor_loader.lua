@@ -33,6 +33,19 @@ editorBundles = {
     }
 }
 
+function loadEditors(editorlist, editors)
+    if editors.value then
+        editors = {editors}
+    end
+    if EditorLoader[editorlist] then
+        for _, bundle in ipairs(editors) do
+            table.insert(EditorLoader[editorlist], bundle)
+        end
+    else
+        EditorLoader[editorlist] = editors
+    end
+end
+
 function convertListToCyclerParams(editorList)
     local defaultlabel = ""
     local defaultvalue = ""

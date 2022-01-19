@@ -8,7 +8,6 @@ function onInit()
         end
         if parameters[1].dynamicinitlist then
             local defaultlabel, defaultvalue, labels, values = EditorLoader.convertListToCyclerParams(EditorLoader[parameters[1].dynamicinitlist[1]])
-
             initialize(labels, values, defaultlabel, nil, defaultvalue)
 	        updateDisplay()
         end
