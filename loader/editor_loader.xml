@@ -3,24 +3,20 @@
     <!-- Strings -->
     <includefile source="editors/35E-PFRPG/strings/strings_35e_pfrpg.xml" />
 
-    <script name="EditorLoader" file="loader/editor_loader.lua" />
+    <!-- <script name="EditorLoader" file="loader/editor_loader.lua" /> -->
 
     <!-- Effect Editor bundles-->
-    <includefile source="editors/35E-PFRPG/editor_ability.xml" />
+    <!-- <includefile source="editors/35E-PFRPG/editor_ability.xml" />
     <includefile source="editors/35E-PFRPG/editor_attacks.xml" />
     <includefile source="editors/35E-PFRPG/editor_defense.xml" />
     <includefile source="editors/35E-PFRPG/editor_susceptibility.xml" />
     <includefile source="editors/35E-PFRPG/editor_heal.xml" />
     <includefile source="editors/35E-PFRPG/editor_spell.xml" />
     <includefile source="editors/35E-PFRPG/editor_misc.xml" />
-    <includefile source="editors/35E-PFRPG/editor_conditional.xml" />
+    <includefile source="editors/35E-PFRPG/editor_conditional.xml" /> -->
 
-    <!-- Selectable Effect Editor bundles -->
-    <template name="cycler_active_effect_type">
-        <cycler_effect_type>
-            <parameters>
-                <dynamicinitlist>editorBundles</dynamicinitlist>
-            </parameters>
-        </cycler_effect_type>
-    </template>
+
+    <includefile source="editors/35E-PFRPG/effect/AC.xml" />
+
+
 </root>

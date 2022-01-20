@@ -4,7 +4,7 @@
     <windowclass name="effect_editor">
         <!-- <frame name="border" /> -->
         <script file="windows/scripts/effect_editor.lua" />
-		<margins control="0,0,0,2" />
+        <margins control="0,0,0,2" />
         <sheetdata>
             <leftanchor />
             <rightanchor />
@@ -14,24 +14,26 @@
                     <left offset="5" />
                 </anchored>
             </priority_number>
-
-            <cycler_active_effect_type name="effect_type" />
+            
+            <cycler_effect_category name="effect_category" />
+            
+            <cycler_effect name="effect" />
 
             <!-- delete button if in edit mode -->
             <button_idelete name="idelete">
-				<anchored width="20" height="20">
-					<top offset="2" />
-					<right parent="rightanchor" anchor="left" relation="relative" offset="-2" />
-				</anchored>
-			</button_idelete>
+                <anchored width="20" height="20">
+                    <top offset="2" />
+                    <right parent="rightanchor" anchor="left" relation="relative" offset="-2" />
+                </anchored>
+            </button_idelete>
 
-            <!-- Effect Specific editor -->
-            <subwindow_effect_category name="effect_type_editor">
+            <!-- Effect Type Specific editor -->
+            <subwindow_effect_editor>
                 <!-- <frame name="border" /> -->
                 <anchored>
                     <right parent="rightanchor" anchor="left" relation="relative" offset="-5" />
                 </anchored>
-            </subwindow_effect_category>
+            </subwindow_effect_editor>
 
             <!-- Effect String holder -->
             <hs name="effect_description">

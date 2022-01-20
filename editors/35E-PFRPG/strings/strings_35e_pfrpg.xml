@@ -15,7 +15,7 @@
     <string name="dmg">Damage</string>
     <string name="dmgtype">Damage Type</string>
 
-    <string name="editor_defense">Defense</string>
+    <string name="category_defense">Defense</string>
     <string name="ac_long">Armor Class (AC)</string>
     <string name="cmd_long">Combat Maneuver Defense (CMD)</string>
     <string name="allsaves">All Saves</string>

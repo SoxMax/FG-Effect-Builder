@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <windowclass name="AC">
+    <windowclass name="editor_AC">
         <script file="editors/35E-PFRPG/effect/scripts/AC.lua" />
 		<margins control="0,0,0,2" />
         <sheetdata>
@@ -19,4 +19,16 @@
             <checkbox_effect name="effect_opportunity"/>
         </sheetdata>
     </windowclass>
+    <script name="loader_AC">
+        function onInit()
+            EditorManager.addEditor(
+                "category_defense",
+                {
+                    value="AC",
+                    labelres="ac_long",
+                    windowclass="editor_AC"
+                }
+            )
+        end
+    </script>
 </root>

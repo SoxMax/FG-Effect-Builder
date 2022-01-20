@@ -50,8 +50,8 @@
             <string_column_output_effect name="output_effect">
                 <anchored to="output_label" position="insidetopleft" offset="17,40"  merge="replace">
                     <top offset="30" />
-					<left offset="0" />
-					<right offset="0" />
+                    <left offset="0" />
+                    <right offset="0" />
                 </anchored>
             </string_column_output_effect>
             <!-- /Output -->
@@ -73,9 +73,9 @@
             <list_effect name="effects_list">
                 <anchored to="contentframe" position="over">
                     <top parent="header_effects" anchor="bottom" relation="relative" offset="10" />
-					<left offset="0" />
-					<right offset="0" />
-					<bottom offset="0" />
+                    <left offset="0" />
+                    <right offset="0" />
+                    <bottom offset="0" />
                 </anchored>
             </list_effect>
             <scrollbar>

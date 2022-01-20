@@ -11,6 +11,8 @@
 	<announcement text="https://github.com/SoxMax/FG-Effect-Builder \r Effect Builder v1.0.0 \r GUI utility to help with building effects" font="emotefont" />
 	
 	<base>
+		<!-- Libraries -->
+		<script name="EditorManager" file="scripts/manager_editor.lua" />
 		<!-- Strings -->
 		<includefile source="strings/strings_effect_editor.xml" />
 		<includefile source="strings/strings_effect_builder.xml" />
