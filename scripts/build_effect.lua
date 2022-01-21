@@ -1,13 +1,18 @@
 
 local function buildEffect(sCommand, sParams)
-    if EditorLoader.editorBundles then
+    if EditorManager.areEditorsLoaded() then
         Interface.openWindow("effect_builder", "")
     else
-        Debug.chat("No bundles loaded! Effect builder disabled!")
+        local msg = {
+            font = "systemfont",
+            icon = "turn_flag",
+            text = "Couldn't open Effect Builder. No effect editors loaded!"
+        }
+        Comm.addChatMessage(msg)
     end
 end
 
 function onInit()
-        Comm.registerSlashHandler("buildeffect", buildEffect)
-        Comm.registerSlashHandler("effectbuilder", buildEffect)
+    Comm.registerSlashHandler("buildeffect", buildEffect)
+    Comm.registerSlashHandler("effectbuilder", buildEffect)
 end

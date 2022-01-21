@@ -7,7 +7,7 @@ function onInit()
             startValue = parameters[1].defaultvalue[1]
         end
         if parameters[1].dynamicinitlist then
-            local defaultlabel, defaultvalue, labels, values = EditorLoader.convertListToCyclerParams(EditorLoader[parameters[1].dynamicinitlist[1]])
+            local defaultlabel, defaultvalue, labels, values = EditorLoader.getCategoryEffectsAsCyclerParams(parameters[1].dynamicinitlist[1])
             initialize(labels, values, defaultlabel, nil, defaultvalue)
 	        updateDisplay()
         end
