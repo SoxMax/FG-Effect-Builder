@@ -86,12 +86,12 @@
     </template>
 
     <template name="stringfield_effects">
-        <simplestring>
+        <basicstring>
             <anchored width="150" height="20">
                 <top offset="2" />
-                <left parent="leftanchor" anchor="right" relation="relative" offset="0" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
-        </simplestring>
+        </basicstring>
     </template>
 
     <template name="label_effect">
