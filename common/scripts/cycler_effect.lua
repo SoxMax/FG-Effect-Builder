@@ -10,6 +10,12 @@ function updateEffects()
     updateDisplay()
 end
 
+function updateWidth()
+    local width = math.max(100, #getValue() * 6.5)
+    setSize(width, 20)
+end
+
 function onValueChanged()
     window.effect_editor.updateEditor()
+    -- updateWidth()
 end

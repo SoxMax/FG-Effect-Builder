@@ -1,14 +1,18 @@
 local editorBundles = {}
 
 function addEditor(category, editor)
+
+    Debug.console(category, editor)
     if not category and not editor then
         return
     end
     
     if type(editor) == "string" then
+        Debug.console("Is String!")
         editor = { labelres=editor, value=editor, windowclass="editor_" .. editor }
     end
     
+    Debug.console(editorBundles)
     if editorBundles[category] then
         if not editorBundles[category][editor.value] then
             editorBundles[category][editor.value] = editor
@@ -79,7 +83,7 @@ function getEffect(category, effect)
 end
 
 function isEffectBuilderPluginLoaded()
-    for k, v in pairs(Extension.getExtensions()) do
+    for _, v in pairs(Extension.getExtensions()) do
         if v:match("Effect-Builder-Plugin") then
             return true
         end

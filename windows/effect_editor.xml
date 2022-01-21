@@ -17,7 +17,9 @@
             
             <cycler_effect_category name="effect_category" />
             
-            <cycler_effect name="effect" />
+            <cycler_effect name="effect">
+                <anchored width="200" />
+            </cycler_effect>
 
             <!-- delete button if in edit mode -->
             <button_idelete name="idelete">

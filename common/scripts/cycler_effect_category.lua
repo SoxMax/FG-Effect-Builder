@@ -8,4 +8,5 @@ end
 
 function onValueChanged()
     window.effect.updateEffects()
+    window.effect_editor.updateEditor()
 end

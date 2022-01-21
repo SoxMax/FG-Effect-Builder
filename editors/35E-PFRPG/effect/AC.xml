@@ -21,14 +21,16 @@
     </windowclass>
     <script name="loader_AC">
         function onInit()
-            EditorManager.addEditor(
-                "category_defense",
-                {
-                    value="AC",
-                    labelres="ac_long",
-                    windowclass="editor_AC"
-                }
-            )
+            if isEffectBuilderPluginLoaded() then
+                EditorManager.addEditor(
+                    "category_defense",
+                    {
+                        value="AC",
+                        labelres="ac_long",
+                        windowclass="editor_AC"
+                    }
+                )
+            end
         end
     </script>
 </root>
