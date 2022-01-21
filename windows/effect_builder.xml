@@ -8,7 +8,7 @@
             <size width="520" height="370" />
         </placement>
         <sizelimits>
-            <minimum width="480" height="100" />
+            <minimum width="480" height="370" />
             <dynamic />
         </sizelimits>
         <nodelete />
