@@ -32,6 +32,14 @@ function getCategoryEffects(category)
     return editorBundles[category]
 end
 
+local function getInterfaceString(string)
+    local label = Interface.getString(string)
+    if label and label ~= "" then
+        return label
+    end
+    return string
+end
+
 function getCategoriesAsCyclerParams()
     local defaultlabel = ""
     local defaultvalue = ""
@@ -39,15 +47,11 @@ function getCategoriesAsCyclerParams()
     local values = {}
     local index = 1
     for category,_ in pairs(editorBundles) do
-        local label = Interface.getString(category)
-        if not label or label == "" then
-            label = category
-        end 
         if index == 1 then
-            defaultlabel = label
+            defaultlabel = getInterfaceString(category)
             defaultvalue = category
         else
-            table.insert(labels, label)
+            table.insert(labels, getInterfaceString(category))
             table.insert(values, category)
         end
         index = index + 1
@@ -63,10 +67,10 @@ function getCategoryEffectsAsCyclerParams(category)
     local index = 1
     for _,effect in pairs(getCategoryEffects(category)) do
         if index == 1 then
-            defaultlabel = (Interface.getString(effect.labelres) or effect.labelres)
+            defaultlabel = getInterfaceString(effect.labelres)
             defaultvalue = effect.value
         else
-            table.insert(labels, (Interface.getString(effect.labelres) or effect.labelres))
+            table.insert(labels, getInterfaceString(effect.labelres))
             table.insert(values, effect.value)
         end
         index = index + 1
