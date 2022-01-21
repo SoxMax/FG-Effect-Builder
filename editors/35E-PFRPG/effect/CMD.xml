@@ -19,7 +19,7 @@
     </windowclass>
     <script name="loader_CMD">
         function onInit()
-            if isEffectBuilderPluginLoaded() then
+            if not EditorManager.isEffectBuilderPluginLoaded() then
                 EditorManager.addEditor(
                     "category_defense",
                     {
