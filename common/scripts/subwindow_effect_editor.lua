@@ -4,6 +4,7 @@ end
 
 function updateEditor()
     setValue(EditorManager.getEffect(window.effect_category.getStringValue(), window.effect.getStringValue()).windowclass)
+    updateEffectString(subwindow.createEffectString())
 end
 
 function updateEffectString(effectString)
