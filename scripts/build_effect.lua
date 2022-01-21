@@ -5,7 +5,7 @@ local function buildEffect(sCommand, sParams)
     else
         local msg = {
             font = "systemfont",
-            icon = "turn_flag", --"roll_effect",
+            icon = "turn_flag",
             text = "Couldn't open Effect Builder. No effect editors loaded!"
         }
         Comm.addChatMessage(msg)
