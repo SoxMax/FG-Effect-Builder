@@ -18,6 +18,7 @@
             <script>
                 function onInit()
                     super.onInit()
+                    add("")
                     addItems(DataCommon.dmgtypes)
                 end
             </script>
