@@ -34,10 +34,4 @@
             <script file="common/scripts/valueholder_effect_editor.lua" />
         </cycler_effect_editor>
     </template>
-
-    <template name="cycler_effect_subwindow">
-        <stringcycler_effect name="effect">
-            <script file="common/scripts/cycler_effect_subwindow.lua" />
-        </stringcycler_effect>
-    </template>
 </root>
