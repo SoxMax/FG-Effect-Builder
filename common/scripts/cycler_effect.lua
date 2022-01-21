@@ -16,6 +16,6 @@ function updateWidth()
 end
 
 function onValueChanged()
-    window.effect_editor.updateEditor()
     -- updateWidth()
+    window.effect_editor.updateEditor()
 end
