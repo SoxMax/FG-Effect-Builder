@@ -10,11 +10,10 @@ function addEditor(category, editor)
     end
     
     if editorBundles[category] then
-        if not editorBundles[category][editor.value] then
-            editorBundles[category][editor.value] = editor
-        else
-            Debug.console("WARNING: Attempt to load editor that already exists!")
+        if editorBundles[category][editor.value] then
+            Debug.console("WARNING: Overriding editor " .. editor.value .. " in category " .. category .. " that already exists!")
         end
+        editorBundles[category][editor.value] = editor
     else
         editorBundles[category] = { [editor.value] = editor }
     end
@@ -82,11 +81,7 @@ function getEffect(category, effect)
     return editorBundles[category][effect]
 end
 
-function isEffectBuilderPluginLoaded()
-    for _, v in pairs(Extension.getExtensions()) do
-        if v:match("Effect-Builder-Plugin") then
-            return true
-        end
-    end
-    return false
+function areEditorsLoaded()
+    local category, effects = next(editorBundles)
+    return category and next(effects)
 end
