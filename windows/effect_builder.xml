@@ -62,14 +62,14 @@
                 <static textres="header_effects_list" />
                 <center />
             </header_column>
-            <button_iedit name="effects_list_iedit">
+            <button_iedit_eb name="effects_list_iedit">
                 <anchored to="header_effects" position="insideright" offset="-5,0" />
                 <target>effects_list</target>
-            </button_iedit>
-            <button_iadd name="effects_list_iadd">
+            </button_iedit_eb>
+            <button_iadd_eb name="effects_list_iadd">
                 <anchored to="effects_list_iedit" position="insideright" offset="25,0" />
                 <target>effects_list</target>
-            </button_iadd>
+            </button_iadd_eb>
             <list_effect name="effects_list">
                 <anchored to="contentframe" position="over">
                     <top parent="header_effects" anchor="bottom" relation="relative" offset="10" />

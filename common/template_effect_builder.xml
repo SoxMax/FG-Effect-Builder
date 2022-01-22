@@ -39,4 +39,76 @@
 			<script file="common/scripts/list_effect.lua" />
 		</windowlist>
 	</template>
+
+    <template name="button_iadd_eb">
+		<buttoncontrol>
+			<anchored width="20" height="20" />
+			<icon normal="button_add" pressed="button_add_down" />
+			<tooltip textres="button_add" />
+			<script>
+				function onInit()
+					if visible then
+						return;
+					end
+					local node = window.getDatabaseNode();
+					if node and node.isReadOnly() then
+						setVisible(false);
+					end
+				end
+				function onButtonPress()
+					window[target[1]].addEntry(true);
+				end
+			</script>
+		</buttoncontrol>
+	</template>
+	<template name="button_iedit_eb">
+		<buttoncontrol>
+			<anchored width="20" height="20" />
+			<state icon="button_edit" tooltipres="button_editon" />
+			<state icon="button_edit_down" tooltipres="button_editoff" />
+			<script>
+				function onInit()
+					if visible then
+						return;
+					end
+					local node = window.getDatabaseNode();
+					if node and node.isReadOnly() then
+						setVisible(false);
+					end
+				end
+				function onValueChanged()
+					if window.onEditModeChanged then
+						window.onEditModeChanged(getValue() == 1);
+					end
+					window[target[1]].update();
+				end
+			</script>
+		</buttoncontrol>
+	</template>
+	<template name="button_idelete_eb">
+		<buttoncontrol>
+			<anchored width="20" height="20" />
+			<state icon="button_delete" tooltipres="button_delete" />
+			<state icon="button_deleteconfirm" tooltipres="button_deleteconfirm" />
+			<tooltip textres="button_delete" />
+			<allowdoubleclick />
+			<invisible />
+			<script>
+				function setVisibility(bVisible)
+					setValue(0);
+					setVisible(bVisible);
+				end
+				
+				function onButtonPress()
+					if getValue() == 0 then
+						if window.delete then
+							window.delete();
+						else
+							window.getDatabaseNode().delete();
+						end
+					end
+				end
+			</script>
+		</buttoncontrol>
+	</template>
 </root>

@@ -22,12 +22,12 @@
             </combobox_effect>
 
             <!-- delete button if in edit mode -->
-            <button_idelete name="idelete">
+            <button_idelete_eb name="idelete">
                 <anchored width="20" height="20">
                     <top offset="2" />
                     <right parent="rightanchor" anchor="left" relation="relative" offset="-2" />
                 </anchored>
-            </button_idelete>
+            </button_idelete_eb>
 
             <!-- Effect Type Specific editor -->
             <subwindow_effect_editor>
