@@ -2,13 +2,13 @@
 <root version="3.3">
 	<properties>
 		<name>Feature: Effect Builder</name>
-		<version>1.2.0</version>
+		<version>1.2.1</version>
 		<author>SoxMax</author>
 		<description>GUI utility to help with building effects</description>
 		<loadorder>1</loadorder>
 	</properties>
 	
-	<announcement text="https://forge.fantasygrounds.com/shop/items/457/view \r Effect Builder v1.2.0 \r GUI utility to help with building effects" font="emotefont" />
+	<announcement text="https://forge.fantasygrounds.com/shop/items/457/view \r Effect Builder v1.2.1 \r GUI utility to help with building effects" font="emotefont" />
 	
 	<base>
 		<!-- Libraries -->
