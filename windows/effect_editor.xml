@@ -15,11 +15,11 @@
                 </anchored>
             </priority_number>
             
-            <cycler_effect_category name="effect_category" />
+            <combobox_effect_category name="effect_category" />
             
-            <cycler_effect name="effect">
+            <combobox_effect name="effect">
                 <anchored width="200" />
-            </cycler_effect>
+            </combobox_effect>
 
             <!-- delete button if in edit mode -->
             <button_idelete name="idelete">

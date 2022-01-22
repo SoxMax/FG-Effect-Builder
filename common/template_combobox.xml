@@ -1,20 +1,58 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
+    <template name="combobox_retrievable_value">
+        <simplestring>
+			<frame>
+				<name>fieldlight</name>
+				<offset>7,5,7,5</offset>
+			</frame>
+			<readonly />
+			<listdirection mergerule="replace">up</listdirection>
+			<buttonoffset mergerule="replace">0,1</buttonoffset>
+			<!-- Possible parameters
+			<listoffset mergerule="replace">0,5</listoffset>
+			<listfonts>
+				<normal mergerule="replace">chatfont</normal>
+				<selected mergerule="replace">narratorfont</selected>
+			</listfonts>
+			<listframes>
+				<normal mergerule="replace"></normal>
+				<selected mergerule="replace">rowshade</selected>
+			</listframes>
+			<listmaxsize mergerule="replace">0</listmaxsize>
+			-->
+			<script file="common/scripts/combobox_retrievable_value.lua"/>
+		</simplestring>
+    </template>
+
     <template name="combobox_effects">
-        <combobox>
+        <combobox_retrievable_value>
             <anchored width="100" height="20">
                 <top offset="3" />
                 <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
             <sourceless />
+            <listdirection>down</listdirection>
+            <listmaxsize>5</listmaxsize>
             <script file="common/scripts/valueholder_effect_editor.lua" />
-        </combobox>
+        </combobox_retrievable_value>
+    </template>
+
+    <template name="combobox_effect_category">
+        <combobox_effects name="effect_category">
+            <script file="common/scripts/combobox_effect_category.lua" />
+        </combobox_effects>
+    </template>
+
+    <template name="combobox_effect">
+        <combobox_effects name="effect">
+            <script file="common/scripts/combobox_effect.lua" />
+        </combobox_effects>
     </template>
 
     <template name="combobox_damage_types">
         <combobox_effects name="damage_type">
-            <listdirection>down</listdirection>
             <script>
                 function onInit()
                     super.onInit()
@@ -22,13 +60,11 @@
                     addItems(DataCommon.dmgtypes)
                 end
             </script>
-            <listmaxsize>5</listmaxsize>
         </combobox_effects>
     </template>
 
     <template name="combobox_bonus_types">
         <combobox_effects name="effect_bonus_type">
-            <listdirection>down</listdirection>
             <script>
                 function onInit()
                     super.onInit()
@@ -36,13 +72,11 @@
                     addItems(DataCommon.bonustypes)
                 end
             </script>
-            <listmaxsize>5</listmaxsize>
         </combobox_effects>
     </template>
 
     <template name="combobox_abilities">
         <combobox_effects name="ability">
-            <listdirection>down</listdirection>
             <script>
                 function onInit()
                     super.onInit()
@@ -50,13 +84,11 @@
                     addItems(DataCommon.abilities)
                 end
             </script>
-            <listmaxsize>5</listmaxsize>
         </combobox_effects>
     </template>
 
     <template name="combobox_skills">
         <combobox_effects name="skill">
-            <listdirection>down</listdirection>
             <script>
                 function onInit()
                     super.onInit()
@@ -66,26 +98,22 @@
                     end
                 end
             </script>
-            <listmaxsize>5</listmaxsize>
         </combobox_effects>
     </template>
 
     <template name="combobox_conditions">
         <combobox_effects name="condition">
-            <listdirection>down</listdirection>
             <script>
                 function onInit()
                     super.onInit()
                     addItems(DataCommon.conditions)
                 end
             </script>
-            <listmaxsize>5</listmaxsize>
         </combobox_effects>
     </template>
 
     <template name="combobox_alignments">
         <combobox_effects name="alignment">
-            <listdirection>down</listdirection>
             <script>
                 function onInit()
                     super.onInit()
@@ -108,13 +136,11 @@
                     add("CE", "Chaotic Evil")
                 end
             </script>
-            <listmaxsize>5</listmaxsize>
         </combobox_effects>
     </template>
 
     <template name="combobox_creature_types">
         <combobox_effects name="creature_type">
-            <listdirection>down</listdirection>
             <script>
                 function onInit()
                     super.onInit()
@@ -122,14 +148,12 @@
                     addItems(DataCommon.creaturesubtype)
                 end
             </script>
-            <listmaxsize>5</listmaxsize>
         </combobox_effects>
     </template>
 
     
     <template name="combobox_sizes">
         <combobox_effects name="size">
-            <listdirection>down</listdirection>
             <script>
                 function onInit()
                     super.onInit()
@@ -140,7 +164,6 @@
                     end
                 end
             </script>
-            <listmaxsize>5</listmaxsize>
         </combobox_effects>
     </template>
 </root>

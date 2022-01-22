@@ -1,3 +1,11 @@
+local function getInterfaceString(string)
+    local label = Interface.getString(string)
+    if label and label ~= "" then
+        return label
+    end
+    return string
+end
+
 local editorBundles = {}
 
 function addEditor(category, editor)
@@ -7,6 +15,10 @@ function addEditor(category, editor)
     
     if type(editor) == "string" then
         editor = { labelres=editor, value=editor, windowclass="editor_" .. editor }
+    end
+
+    if not editor.label then
+        editor.label = getInterfaceString(editor.labelres)
     end
     
     if editorBundles[category] then
@@ -21,8 +33,8 @@ end
 
 function getCategories()
     local categories = {}
-    for bundle,_ in pairs(editorBundles) do
-        table.insert(categories, bundle)
+    for category,_ in pairs(editorBundles) do
+        table.insert(categories, category)
     end
     return categories
 end
@@ -31,12 +43,12 @@ function getCategoryEffects(category)
     return editorBundles[category]
 end
 
-local function getInterfaceString(string)
-    local label = Interface.getString(string)
-    if label and label ~= "" then
-        return label
+function getCategoriesAsComboboxParams()
+    local categories = {}
+    for category,_ in pairs(editorBundles) do
+        table.insert(categories, {value=category, text=getInterfaceString(category)})
     end
-    return string
+    return categories
 end
 
 function getCategoriesAsCyclerParams()
@@ -66,10 +78,10 @@ function getCategoryEffectsAsCyclerParams(category)
     local index = 1
     for _,effect in pairs(getCategoryEffects(category)) do
         if index == 1 then
-            defaultlabel = getInterfaceString(effect.labelres)
+            defaultlabel = effect.label
             defaultvalue = effect.value
         else
-            table.insert(labels, getInterfaceString(effect.labelres))
+            table.insert(labels, effect.label)
             table.insert(values, effect.value)
         end
         index = index + 1
