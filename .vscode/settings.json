@@ -7,7 +7,7 @@
         "DataCommon",
         "DB",
         "Debug",
-        "EffectManager",
+        "EditorManager",
         "Extension",
         "Interface",
         "Session",
