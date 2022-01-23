@@ -31,7 +31,7 @@
 
     <template name="stringcycler_effect">
         <cycler_effect_editor>
-            <script file="common/scripts/valueholder_effect_editor.lua" />
+            <script file="common/scripts/control_valueholder.lua" />
         </cycler_effect_editor>
     </template>
 </root>

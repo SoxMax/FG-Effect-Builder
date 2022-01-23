@@ -35,7 +35,7 @@
             <sourceless />
             <listdirection>down</listdirection>
             <listmaxsize>5</listmaxsize>
-            <script file="common/scripts/valueholder_effect_editor.lua" />
+            <script file="common/scripts/control_valueholder.lua" />
         </combobox_retrievable_value>
     </template>
 
