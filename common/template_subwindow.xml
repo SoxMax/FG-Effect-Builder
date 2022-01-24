@@ -38,15 +38,15 @@
         <sheetdata>
             <leftanchor_eb />
             
-            <dice_eb name="effect_dice" />
+            <dice_eb_valueholder name="effect_dice" />
 
 			<label_eb_plus />
 
-            <number_eb name="effect_modifier">
+            <number_eb_valueholder name="effect_modifier">
                 <anchored>
                     <left offset="5" />
                 </anchored>
-            </number_eb>
+            </number_eb_valueholder>
         </sheetdata>
     </windowclass>
 </root>

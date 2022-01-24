@@ -34,7 +34,7 @@
         </genericcontrol>
     </template>
 
-    <template name="number_eb">
+    <template name="number_eb_valueholder">
         <basicnumber>
             <anchored width="20" height="20">
                 <top offset="2" />
@@ -63,7 +63,7 @@
         </basicnumber>
     </template>
 
-    <template name="dice_eb">
+    <template name="dice_eb_valueholder">
         <basicdice>
             <anchored width="60" height="20">
                 <top offset="3" />
@@ -74,7 +74,7 @@
         </basicdice>
     </template>
 
-    <template name="checkbox_eb">
+    <template name="checkbox_eb_valueholder">
         <button_checkbox>
             <anchored width="20" height="20">
                 <top offset="2" />
@@ -85,12 +85,13 @@
         </button_checkbox>
     </template>
 
-    <template name="stringfield_eb">
+    <template name="stringfield_eb_valueholder">
         <basicstring>
             <anchored width="150" height="20">
                 <top offset="2" />
                 <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
+            <script file="common/scripts/control_valueholder.lua" />
         </basicstring>
     </template>
 
