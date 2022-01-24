@@ -15,11 +15,13 @@
     </template>
 
     <template name="subwindow_valueholder">
-        <subwindow name="value">
-            <anchored>
+        <subwindow>
+            <frame name="border" />
+            <anchored width="120">
+                <!-- <position>left</position> -->
                 <top />
                 <left parent="leftanchor" anchor="right" relation="relative" offset="0" />
-                <right />
+                <!-- <right /> -->
             </anchored>
             <activate />
             <fastinit />
@@ -28,7 +30,7 @@
     </template>
 
     <template name="subwindow_dice_value_editor">
-        <subwindow_valueholder name="value">
+        <subwindow_valueholder name="dice_value">
             <class>subwindow_dice_value_editor</class>
         </subwindow_valueholder>
     </template>
@@ -49,5 +51,4 @@
             </effect_number>
         </sheetdata>
     </windowclass>
-
 </root>
