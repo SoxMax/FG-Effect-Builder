@@ -1,5 +1,5 @@
 function getStringValue()
-    subwindow.getStringValue()
+    return subwindow.getStringValue()
 end
 
 function updateEffectString()
