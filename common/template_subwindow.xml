@@ -38,7 +38,7 @@
         <sheetdata>
             <leftanchor_eb />
             
-            <dice_effect_eb name="effect_dice" />
+            <dice_eb name="effect_dice" />
 
 			<label_eb_plus />
 

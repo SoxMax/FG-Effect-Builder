@@ -63,7 +63,7 @@
         </basicnumber>
     </template>
 
-    <template name="dice_effect_eb">
+    <template name="dice_eb">
         <basicdice>
             <anchored width="60" height="20">
                 <top offset="3" />
