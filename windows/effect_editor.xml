@@ -25,7 +25,7 @@
             <button_idelete_eb name="idelete">
                 <anchored width="20" height="20">
                     <top offset="2" />
-                    <right parent="rightanchor_eb" anchor="left" relation="relative" offset="-2" />
+                    <right parent="rightanchor" anchor="left" relation="relative" offset="-2" />
                 </anchored>
             </button_idelete_eb>
 
@@ -33,7 +33,7 @@
             <subwindow_eb_effect_editor>
                 <!-- <frame name="border" /> -->
                 <anchored>
-                    <right parent="rightanchor_eb" anchor="left" relation="relative" offset="-5" />
+                    <right parent="rightanchor" anchor="left" relation="relative" offset="-5" />
                 </anchored>
             </subwindow_eb_effect_editor>
 

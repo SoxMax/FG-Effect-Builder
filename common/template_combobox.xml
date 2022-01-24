@@ -30,7 +30,7 @@
         <combobox_eb_retrievable_value>
             <anchored width="100" height="20">
                 <top offset="3" />
-                <left parent="leftanchor_eb" anchor="right" relation="relative" offset="10" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
             <sourceless />
             <listdirection>down</listdirection>

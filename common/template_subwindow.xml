@@ -5,7 +5,7 @@
         <subwindow name="effect_editor">
             <anchored>
                 <top />
-                <left parent="leftanchor_eb" anchor="right" relation="relative" offset="0" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="0" />
                 <right />
             </anchored>
             <activate />
@@ -18,7 +18,7 @@
         <subwindow name="value">
             <anchored>
                 <top />
-                <left parent="leftanchor_eb" anchor="right" relation="relative" offset="0" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="0" />
                 <right />
             </anchored>
             <activate />
