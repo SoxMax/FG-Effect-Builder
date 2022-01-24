@@ -3,7 +3,7 @@
 <root>
     <template name="button_stringcycler_defaultable">
         <button_stringcycler>
-            <script file="common/scripts/old/button_stringcycler_defaultable.lua" />
+            <script file="common/old/scripts/button_stringcycler_defaultable.lua" />
         </button_stringcycler>
     </template>
 
@@ -19,19 +19,19 @@
 
     <template name="cycler_effect_category">
         <cycler_effect_editor>
-            <script file="common/scripts/old/cycler_effect_category.lua" />
+            <script file="common/old/scripts/cycler_effect_category.lua" />
         </cycler_effect_editor>
     </template>
 
     <template name="cycler_effect">
         <cycler_effect_editor>
-            <script file="common/scripts/old/cycler_effect.lua" />
+            <script file="common/old/scripts/cycler_effect.lua" />
         </cycler_effect_editor>
     </template>
 
     <template name="stringcycler_effect">
         <cycler_effect_editor>
-            <script file="common/scripts/old/control_valueholder.lua" />
+            <script file="common/old/scripts/control_valueholder.lua" />
         </cycler_effect_editor>
     </template>
 </root>

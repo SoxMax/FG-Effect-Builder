@@ -20,7 +20,7 @@
             <sourceless />
             <readonly />
             <nodrop />
-            <script file="common/scripts/old/string_column_output_effect.lua" />
+            <script file="common/old/scripts/string_column_output_effect.lua" />
         </string_column_full>
     </template>
 
@@ -36,7 +36,7 @@
             <sortby>
                 <control desc="true">effect_priority</control>
             </sortby>
-			<script file="common/scripts/old/list_effect.lua" />
+			<script file="common/old/scripts/list_effect.lua" />
 		</windowlist>
 	</template>
 
