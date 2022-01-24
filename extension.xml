@@ -17,6 +17,7 @@
 		<includefile source="strings/strings_effect_editor.xml" />
 		<includefile source="strings/strings_effect_builder.xml" />
 		<!-- Templates -->
+		<includefile source="common/old/old_loader.xml" />
 		<includefile source="common/template_common.xml" />
 		<includefile source="common/template_combobox.xml" />
 		<includefile source="common/template_cycler.xml" />

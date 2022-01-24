@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <template name="subwindow_eb_effect_editor">
+    <template name="subwindow_effect_editor">
         <subwindow name="effect_editor">
             <anchored>
                 <top />
@@ -10,11 +10,11 @@
             </anchored>
             <activate />
             <fastinit />
-            <script file="common/scripts/subwindow_eb_effect_editor.lua" />
+            <script file="common/old/scripts/subwindow_effect_editor.lua" />
         </subwindow>
     </template>
 
-    <template name="subwindow_eb_valueholder">
+    <template name="subwindow_valueholder">
         <subwindow name="value">
             <anchored>
                 <top />
@@ -23,30 +23,31 @@
             </anchored>
             <activate />
             <fastinit />
-            <script file="common/scripts/subwindow_eb_valueholder.lua" />
+            <script file="common/old/scripts/subwindow_valueholder.lua" />
         </subwindow>
     </template>
 
-    <template name="subwindow_eb_dice_value_editor">
-        <subwindow_eb_valueholder name="value">
-            <class>subwindow_eb_dice_value_editor</class>
-        </subwindow_eb_valueholder>
+    <template name="subwindow_dice_value_editor">
+        <subwindow_valueholder name="value">
+            <class>subwindow_dice_value_editor</class>
+        </subwindow_valueholder>
     </template>
-    <windowclass name="subwindow_eb_dice_value_editor">
-        <script file="common/scripts/subwindow_eb_dice_value_editor.lua" />
+    <windowclass name="subwindow_dice_value_editor">
+        <script file="common/old/scripts/subwindow_dice_value_editor.lua" />
         <margins control="0,0,0,2" />
         <sheetdata>
-            <leftanchor_eb />
+            <leftanchor />
             
-            <dice_eb_valueholder name="effect_dice" />
+            <dice_effect name="effect_dice" />
 
-			<label_eb_plus />
+			<label_plus />
 
-            <number_eb_valueholder name="effect_modifier">
+            <effect_number name="effect_modifier">
                 <anchored>
                     <left offset="5" />
                 </anchored>
-            </number_eb_valueholder>
+            </effect_number>
         </sheetdata>
     </windowclass>
+
 </root>
