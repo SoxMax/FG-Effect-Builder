@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <template name="frame_eb">
+    <template name="frame_effects">
         <genericcontrol name="contentframe">
             <anchored>
                 <top parent="title" anchor="bottom" offset="15" />
@@ -14,17 +14,17 @@
         </genericcontrol>
     </template>
 
-    <template name="string_column_be_effect_output">
+    <template name="string_column_output_effect">
         <string_column_full>
             <frame mergerule="replace" name="fielddark" offset="7,5,7,5" />
             <sourceless />
             <readonly />
             <nodrop />
-            <script file="common/scripts/string_column_be_effect_output.lua" />
+            <script file="common/scripts/old/string_column_output_effect.lua" />
         </string_column_full>
     </template>
 
-    <template name="list_eb_effect_editors">
+    <template name="list_effect">
 		<windowlist>
 			<child mergerule="resetandadd"></child>
 			<child><backcolor>1A40301E</backcolor></child>
@@ -36,7 +36,7 @@
             <sortby>
                 <control desc="true">effect_priority</control>
             </sortby>
-			<script file="common/scripts/list_eb_effect_editors.lua" />
+			<script file="common/scripts/old/list_effect.lua" />
 		</windowlist>
 	</template>
 

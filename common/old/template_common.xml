@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <template name="leftanchor_eb">
+    <template name="leftanchor">
         <genericcontrol name="leftanchor">
             <anchored width="0" height="0">
                 <top />
@@ -11,7 +11,7 @@
             <disabled />
         </genericcontrol>
     </template>
-    <template name="rightanchor_eb">
+    <template name="rightanchor">
         <genericcontrol name="rightanchor">
             <anchored width="0" height="0">
                 <top />
@@ -28,30 +28,30 @@
             <!-- <frame name="border" /> -->
             <anchored width="0" height="20">
                 <top offset="2" />
-                <left parent="leftanchor_eb" anchor="right" relation="relative" offset="10" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
             <disabled />
         </genericcontrol>
     </template>
 
-    <template name="number_eb">
+    <template name="effect_number">
         <basicnumber>
             <anchored width="20" height="20">
                 <top offset="2" />
-                <left parent="leftanchor_eb" anchor="right" relation="relative" offset="10" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
             <default>0</default>
             <hideonvalue>0</hideonvalue>
             <sourceless />
-            <script file="common/scripts/control_valueholder.lua" />
+            <script file="common/scripts/old/control_valueholder.lua" />
         </basicnumber>
     </template>
 
-    <template name="effect_priority_eb">
+    <template name="priority_number">
         <basicnumber>
             <anchored width="15" height="20">
                 <top offset="2" />
-                <left parent="leftanchor_eb" anchor="right" relation="relative" offset="10" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
             <default>0</default>
             <sourceless />
@@ -63,52 +63,52 @@
         </basicnumber>
     </template>
 
-    <template name="dice_effect_eb">
+    <template name="dice_effect">
         <basicdice>
             <anchored width="60" height="20">
                 <top offset="3" />
-                <left parent="leftanchor_eb" anchor="right" relation="relative" offset="10" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
             <sourceless />
-            <script file="common/scripts/control_valueholder.lua" />
+            <script file="common/scripts/old/control_valueholder.lua" />
         </basicdice>
     </template>
 
-    <template name="checkbox_eb">
+    <template name="checkbox_effect">
         <button_checkbox>
             <anchored width="20" height="20">
                 <top offset="2" />
-                <left parent="leftanchor_eb" anchor="right" relation="relative" offset="0" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="0" />
             </anchored>
             <sourceless />
-            <script file="common/scripts/control_valueholder.lua" />
+            <script file="common/scripts/old/control_valueholder.lua" />
         </button_checkbox>
     </template>
 
-    <template name="stringfield_eb">
+    <template name="stringfield_effects">
         <basicstring>
             <anchored width="150" height="20">
                 <top offset="2" />
-                <left parent="leftanchor_eb" anchor="right" relation="relative" offset="10" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
         </basicstring>
     </template>
 
-    <template name="label_eb">
+    <template name="label_effect">
         <label>
             <anchored height="20">
                 <top offset="2" />
-                <left parent="leftanchor_eb" anchor="right" relation="relative" offset="10" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
         </label>
     </template>
 
-    <template name="label_eb_plus">
-        <label_eb name="label_plus">
+    <template name="label_plus">
+        <label_effect name="label_plus">
             <anchored>
                 <left offset="5" />
             </anchored>
             <static>+</static>
-        </label_eb>
+        </label_effect>
     </template>
 </root>

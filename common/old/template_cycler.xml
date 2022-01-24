@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <template name="button_stringcycler_defaultable">
+        <button_stringcycler>
+            <script file="common/scripts/old/button_stringcycler_defaultable.lua" />
+        </button_stringcycler>
+    </template>
+
+    <template name="cycler_effect_editor">
+        <button_stringcycler_defaultable>
+            <anchored width="100" height="20">
+                <top offset="2" />
+                <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+            </anchored>
+            <sourceless />
+        </button_stringcycler_defaultable>
+    </template>
+
+    <template name="cycler_effect_category">
+        <cycler_effect_editor>
+            <script file="common/scripts/old/cycler_effect_category.lua" />
+        </cycler_effect_editor>
+    </template>
+
+    <template name="cycler_effect">
+        <cycler_effect_editor>
+            <script file="common/scripts/old/cycler_effect.lua" />
+        </cycler_effect_editor>
+    </template>
+
+    <template name="stringcycler_effect">
+        <cycler_effect_editor>
+            <script file="common/scripts/old/control_valueholder.lua" />
+        </cycler_effect_editor>
+    </template>
+</root>

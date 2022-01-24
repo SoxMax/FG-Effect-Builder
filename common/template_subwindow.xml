@@ -1,53 +1,52 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <template name="subwindow_effect_editor">
+    <template name="subwindow_eb_effect_editor">
         <subwindow name="effect_editor">
             <anchored>
                 <top />
-                <left parent="leftanchor" anchor="right" relation="relative" offset="0" />
+                <left parent="leftanchor_eb" anchor="right" relation="relative" offset="0" />
                 <right />
             </anchored>
             <activate />
             <fastinit />
-            <script file="common/scripts/subwindow_effect_editor.lua" />
+            <script file="common/scripts/subwindow_eb_effect_editor.lua" />
         </subwindow>
     </template>
 
-    <template name="subwindow_valueholder">
+    <template name="subwindow_eb_valueholder">
         <subwindow name="value">
             <anchored>
                 <top />
-                <left parent="leftanchor" anchor="right" relation="relative" offset="0" />
+                <left parent="leftanchor_eb" anchor="right" relation="relative" offset="0" />
                 <right />
             </anchored>
             <activate />
             <fastinit />
-            <script file="common/scripts/subwindow_valueholder.lua" />
+            <script file="common/scripts/subwindow_eb_valueholder.lua" />
         </subwindow>
     </template>
 
-    <template name="subwindow_dice_value_editor">
-        <subwindow_valueholder name="value">
-            <class>subwindow_dice_value_editor</class>
-        </subwindow_valueholder>
+    <template name="subwindow_eb_dice_value_editor">
+        <subwindow_eb_valueholder name="value">
+            <class>subwindow_eb_dice_value_editor</class>
+        </subwindow_eb_valueholder>
     </template>
-    <windowclass name="subwindow_dice_value_editor">
-        <script file="common/scripts/subwindow_dice_value_editor.lua" />
+    <windowclass name="subwindow_eb_dice_value_editor">
+        <script file="common/scripts/subwindow_eb_dice_value_editor.lua" />
         <margins control="0,0,0,2" />
         <sheetdata>
-            <leftanchor />
+            <leftanchor_eb />
             
-            <dice_effect name="effect_dice" />
+            <dice_effect_eb name="effect_dice" />
 
-			<label_plus />
+			<label_eb_plus />
 
-            <effect_number name="effect_modifier">
+            <number_eb name="effect_modifier">
                 <anchored>
                     <left offset="5" />
                 </anchored>
-            </effect_number>
+            </number_eb>
         </sheetdata>
     </windowclass>
-
 </root>
