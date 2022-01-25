@@ -17,6 +17,10 @@ function addEditor(category, editor)
         editor = { labelres=editor, value=editor, windowclass="editor_" .. editor }
     end
 
+    if not editor.labelres then
+        editor.labelres = getInterfaceString(editor.value)
+    end
+
     if not editor.label then
         editor.label = getInterfaceString(editor.labelres)
     end
