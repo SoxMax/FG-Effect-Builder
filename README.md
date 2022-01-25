@@ -36,8 +36,8 @@ While its not required that you load your new Effect Editors in the same file th
 Try and make your windowclasses, templates, and loader scripts have as unique a name as possible as they all use the same global namespace every other extension does. While your effect may load and function in isolation a conflict with another extension could turn your work into a pile of errors.
 
 ### Addtional Examples
-https://github.com/SoxMax/FG-Effect-Builder-Plugin-35E-PFRPG/blob/main/editors/effect/ABILITY.xml
-https://github.com/SoxMax/FG-Effect-Builder-Plugin-5E/blob/main/editors/effect/DMG.xml
-https://github.com/SoxMax/FG-Effect-Builder-Plugin-5E/blob/main/editors/effect/VULN.xml
-https://github.com/SoxMax/FG-Effect-Builder-Plugin-35E-PFRPG/blob/main/editors/conditional/conditional_SIZE.xml
-https://github.com/Kelrugem/Extended-automation-and-overlays/tree/main/effect_builder
+* https://github.com/SoxMax/FG-Effect-Builder-Plugin-35E-PFRPG/blob/main/editors/effect/ABILITY.xml
+* https://github.com/SoxMax/FG-Effect-Builder-Plugin-5E/blob/main/editors/effect/DMG.xml
+* https://github.com/SoxMax/FG-Effect-Builder-Plugin-5E/blob/main/editors/effect/VULN.xml
+* https://github.com/SoxMax/FG-Effect-Builder-Plugin-35E-PFRPG/blob/main/editors/conditional/conditional_SIZE.xml
+* https://github.com/Kelrugem/Extended-automation-and-overlays/tree/main/effect_builder
