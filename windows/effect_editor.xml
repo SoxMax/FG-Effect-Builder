@@ -6,20 +6,20 @@
         <script file="windows/scripts/effect_editor.lua" />
         <margins control="0,0,0,2" />
         <sheetdata>
-            <leftanchor />
-            <rightanchor />
+            <leftanchor_eb />
+            <rightanchor_eb />
 
-            <priority_number name="effect_priority">
+            <effect_priority_eb name="effect_priority">
                 <anchored>
                     <left offset="5" />
                 </anchored>
-            </priority_number>
+            </effect_priority_eb>
             
-            <combobox_effect_category name="effect_category" />
+            <combobox_eb_effect_category name="effect_category" />
             
-            <combobox_effect name="effect">
+            <combobox_eb_effect name="effect">
                 <anchored width="200" />
-            </combobox_effect>
+            </combobox_eb_effect>
 
             <!-- delete button if in edit mode -->
             <button_idelete_eb name="idelete">
@@ -30,12 +30,12 @@
             </button_idelete_eb>
 
             <!-- Effect Type Specific editor -->
-            <subwindow_effect_editor>
+            <subwindow_eb_effect_editor>
                 <!-- <frame name="border" /> -->
                 <anchored>
                     <right parent="rightanchor" anchor="left" relation="relative" offset="-5" />
                 </anchored>
-            </subwindow_effect_editor>
+            </subwindow_eb_effect_editor>
 
             <!-- Effect String holder -->
             <hs name="effect_description">
