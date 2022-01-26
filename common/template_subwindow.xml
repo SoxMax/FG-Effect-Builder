@@ -15,11 +15,11 @@
     </template>
 
     <template name="subwindow_eb_valueholder">
-        <subwindow name="value">
-            <anchored>
+        <subwindow>
+            <!-- <frame name="border" /> -->
+            <anchored width="1">
                 <top />
                 <left parent="leftanchor" anchor="right" relation="relative" offset="0" />
-                <right />
             </anchored>
             <activate />
             <fastinit />
@@ -27,14 +27,14 @@
         </subwindow>
     </template>
 
-    <template name="subwindow_eb_dice_value_editor">
-        <subwindow_eb_valueholder name="value">
-            <class>subwindow_eb_dice_value_editor</class>
+    <template name="subwindow_eb_dice_value">
+        <subwindow_eb_valueholder name="dice_value">
+            <class>subwindow_eb_dice_value</class>
         </subwindow_eb_valueholder>
     </template>
-    <windowclass name="subwindow_eb_dice_value_editor">
-        <script file="common/scripts/subwindow_eb_dice_value_editor.lua" />
-        <margins control="0,0,0,2" />
+    <windowclass name="subwindow_eb_dice_value">
+        <script file="common/scripts/subwindow_eb_dice_value.lua" />
+        <margins control="0,0,5,2" />
         <sheetdata>
             <leftanchor_eb />
             

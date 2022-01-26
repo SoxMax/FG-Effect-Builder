@@ -105,7 +105,7 @@
     </template>
 
     <template name="label_eb_plus">
-        <label_eb name="label_plus">
+        <label_eb>
             <anchored>
                 <left offset="5" />
             </anchored>
