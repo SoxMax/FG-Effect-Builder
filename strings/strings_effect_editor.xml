@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <string name="power_label_type">Effect Type</string>
-    <string name="power_label_type_tooltip">The effect bundle to use.</string>
+    <string name="damage_type">Damage Type</string>
+    <string name="bonus_type">Bonus Type</string>
+    <string name="ability_type">Ability</string>
+    <string name="skill_type">Skill</string>
+    <string name="condition_type">Condition</string>
+    <string name="alignment_type">Alignment</string>
+    <string name="creature_type">Creature Type</string>
+    <string name="size_type">Size</string>
 </root>

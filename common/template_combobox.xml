@@ -65,6 +65,7 @@
                     addItems(DataCommon.dmgtypes)
                 end
             </script>
+            <empty textres="damage_type"/>
         </combobox_eb_valueholder>
     </template>
 
@@ -77,6 +78,7 @@
                     addItems(DataCommon.bonustypes)
                 end
             </script>
+            <empty textres="bonus_type"/>
         </combobox_eb_valueholder>
     </template>
 
@@ -89,6 +91,7 @@
                     addItems(DataCommon.abilities)
                 end
             </script>
+            <empty textres="ability_type"/>
         </combobox_eb_valueholder>
     </template>
 
@@ -103,6 +106,7 @@
                     end
                 end
             </script>
+            <empty textres="skill_type"/>
         </combobox_eb_valueholder>
     </template>
 
@@ -114,6 +118,7 @@
                     addItems(DataCommon.conditions)
                 end
             </script>
+            <empty textres="condition_type"/>
         </combobox_eb_valueholder>
     </template>
 
@@ -141,6 +146,7 @@
                     add("CE", "Chaotic Evil")
                 end
             </script>
+            <empty textres="alignment_type"/>
         </combobox_eb_valueholder>
     </template>
 
@@ -153,6 +159,7 @@
                     addItems(DataCommon.creaturesubtype)
                 end
             </script>
+            <empty textres="creature_type"/>
         </combobox_eb_valueholder>
     </template>
 
@@ -169,6 +176,7 @@
                     end
                 end
             </script>
+            <empty textres="size_type"/>
         </combobox_eb_valueholder>
     </template>
 </root>
