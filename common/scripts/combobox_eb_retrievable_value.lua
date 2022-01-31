@@ -97,6 +97,11 @@ function onInit()
 	end
 end
 
+function destroyCombobox()
+	onDestroy()
+	destroy()
+end
+
 function onDestroy()
 	if _ctrlScroll then
 		_ctrlScroll.destroy();
