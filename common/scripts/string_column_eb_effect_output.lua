@@ -3,7 +3,6 @@ local menuCopy = 8
 
 function onInit()
     registerMenuItem(Interface.getString("chatclipboard"), "chatclipboard", menuCopy)
-    Debug.chat("init Output")
 end
 
 function onMenuSelection(selection)
@@ -17,5 +16,11 @@ function onDragStart(button, x, y, draginfo)
     if isEmpty() then
         return nil
     end
-    return ActionEffect.performRoll(draginfo, nil, { sName = getValue() })
+    -- return ActionEffect.performRoll(draginfo, nil, {sName = getValue()})
+
+    draginfo.setType("string")
+    draginfo.setDescription(getValue())
+    draginfo.setStringData(getValue())
+
+    return true
 end
