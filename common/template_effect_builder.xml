@@ -14,13 +14,13 @@
         </genericcontrol>
     </template>
 
-    <template name="string_column_be_effect_output">
+    <template name="string_column_eb_effect_output">
         <string_column_full>
             <frame mergerule="replace" name="fielddark" offset="7,5,7,5" />
             <sourceless />
             <readonly />
             <nodrop />
-            <script file="common/scripts/string_column_be_effect_output.lua" />
+            <script file="common/scripts/string_column_eb_effect_output.lua" />
         </string_column_full>
     </template>
 

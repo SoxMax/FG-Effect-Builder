@@ -47,13 +47,13 @@
                 <static textres="output_effect_label" />
                 <center />
             </header_column>
-            <string_column_be_effect_output name="output_effect">
+            <string_column_eb_effect_output name="output_effect">
                 <anchored to="output_label" position="insidetopleft" offset="17,40"  merge="replace">
                     <top offset="30" />
                     <left offset="0" />
                     <right offset="0" />
                 </anchored>
-            </string_column_be_effect_output>
+            </string_column_eb_effect_output>
             <!-- /Output -->
 
             <!-- Effects List -->
