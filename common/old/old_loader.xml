@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-
-<root>
-    <includefile source="common/old/template_common.xml" />
-    <includefile source="common/old/template_combobox.xml" />
-    <includefile source="common/old/template_cycler.xml" />
-    <includefile source="common/old/template_subwindow.xml" />
-    <includefile source="common/old/template_effect_builder.xml" />
-</root>
