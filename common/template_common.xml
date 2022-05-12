@@ -92,6 +92,7 @@
                 <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
             <script file="common/scripts/control_valueholder.lua" />
+            <script file="common/scripts/stringfield_eb_drop_handler.lua" />
         </basicstring>
     </template>
 
