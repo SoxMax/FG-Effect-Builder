@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- 
+  Please see the license.html file included with this distribution for 
+  attribution and copyright information.
+-->
+
+<root>
+<template name="button_effect_builder">
+		<button_iadd_campaign insertbefore="list_iedit">
+                <icon normal="button_action_effect" pressed="button_action_effect_down" />
+                <tooltip textres="effect_builder_title" />
+                <anchored to="rightanchor">
+				<top />
+				<right anchor="left" relation="relative" offset="-5" />
+			</anchored>
+                <script>
+                    function onInit()
+                        if visible then
+                            return;
+                        end
+                    end
+                    function onButtonPress()
+                        BuildEffect.buildEffect()
+                    end
+                </script>
+        </button_iadd_campaign>
+	</template>
+</root>
