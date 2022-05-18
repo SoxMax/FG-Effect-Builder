@@ -1,5 +1,5 @@
 
-local function buildEffect(sCommand, sParams)
+function buildEffect(sCommand, sParams)
     if EditorManager.areEditorsLoaded() then
         Interface.openWindow("effect_builder", "")
     else

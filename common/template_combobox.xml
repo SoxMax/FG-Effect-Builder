@@ -28,7 +28,7 @@
 
     <template name="combobox_eb">
         <combobox_eb_retrievable_value>
-            <anchored width="100" height="20">
+            <anchored width="115" height="20">
                 <top offset="3" />
                 <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
