@@ -2,6 +2,7 @@ function getStringValue()
     if subwindow then
         return subwindow.getStringValue()
     end
+    return ""
 end
 
 function updateEffectString()
