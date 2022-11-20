@@ -27,6 +27,7 @@
 		<!-- Windows -->
 		<includefile source="windows/effect_editor.xml" />
 		<includefile source="windows/effect_builder.xml" />
+		<includefile source="windows/effect_builders_library.xml" />
 		<!-- Scripts -->
 		<script name="BuildEffect" file="scripts/build_effect.lua" />
 	</base>
