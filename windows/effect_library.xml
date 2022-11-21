@@ -47,14 +47,13 @@
                 <frame name="groupbox" offset="15,15,20,15" />
                 <child></child>
                 <child><backcolor>1A40301E</backcolor></child>
-                <class>masterindexitem</class>
                 <readonly />
                 <sourceless />
-                <!-- <class>effect_editor</class>
-                <sortby>
+                <class>effect_library_item</class>
+                <!-- <sortby>
                     <control desc="true">effect_priority</control>
                 </sortby> -->
-                <script file="campaign/scripts/effect_library_list.lua" />
+                <script file="windows/scripts/effect_library_list.lua" />
             </windowlist>
             <scrollbar_list />
             <!-- /Effects List -->
@@ -93,11 +92,20 @@
         </sheetdata>
     </windowclass>
 
-    <windowclass name="masterindexitem">
+    <windowclass name="effect_library_item">
 		<margins control="0,0,0,2" />
-		<script file="campaign/scripts/masterindexitem_window.lua" />
+		<!-- <script file="campaign/scripts/masterindexitem_window.lua" /> -->
 		<sheetdata>
-			<masterindexitem_link name="link" />
+            <leftanchor_eb />
+            <label name="effect_name">
+                <anchored height="20">
+                    <top offset="2" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+                </anchored>
+            </label>
+
+
+			<!-- <masterindexitem_link name="link" />
 
 			<masterindexitem_anchor_right name="rightanchor" />
 			<masterindexitem_idelete name="idelete" />
@@ -105,7 +113,7 @@
 			<masterindexitem_modified name="modified" />
 			<masterindexitem_category name="category" />
 			
-			<masterindexitem_name name="name" />
+			<masterindexitem_name name="name" /> -->
 		</sheetdata>
 	</windowclass>
 </root>
