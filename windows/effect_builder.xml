@@ -27,7 +27,6 @@
                 <tooltip text="Effects Library" />
                 <script>
                     function onButtonPress()
-                        Debug.chat("Effects Library button pressed")
                         Interface.openWindow("effect_library", "")
                     end
                 </script>
