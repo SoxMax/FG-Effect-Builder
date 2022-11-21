@@ -82,7 +82,7 @@
                 <script>
                     function onValueChanged()
                         super.onValueChanged();
-                        window.onNameFilterChanged();
+                        -- window.onNameFilterChanged();
                     end
                 </script>
             </filter>
@@ -97,7 +97,13 @@
 		<!-- <script file="campaign/scripts/masterindexitem_window.lua" /> -->
 		<sheetdata>
             <leftanchor_eb />
-            <label name="effect_name">
+            <label name="category">
+                <anchored height="20">
+                    <top offset="2" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+                </anchored>
+            </label>
+            <label name="name">
                 <anchored height="20">
                     <top offset="2" />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
