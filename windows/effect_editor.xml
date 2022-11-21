@@ -38,13 +38,13 @@
             </subwindow_eb_effect_editor>
 
             <!-- Effect String holder -->
-            <hs name="effect_description">
+            <hsc name="effect_description">
                 <script>
                     function onValueChanged()
                         window.windowlist.window.updateEffectString()
                     end
                 </script>
-            </hs>
+            </hsc>
         </sheetdata>
     </windowclass>
 </root>
