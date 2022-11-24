@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <template name="string_eb_effect_library">
+        <stringcontrol>
+			<anchored height="20" />
+			<font>reference-r</font>
+			<static />
+			<script file="common/scripts/string_eb_effect_library.lua" />
+		</stringcontrol>
+    </template>
+</root>

@@ -3,6 +3,10 @@
 -- attribution and copyright information.
 --
 
-function onDragStart(button, x, y, dragdata)
-    return window.onDragStart(button, x, y, dragdata)
+function onHover(bHover)
+	setUnderline(bHover, -1);
+end
+
+function onClickDown(button, x, y)
+	return true;
 end

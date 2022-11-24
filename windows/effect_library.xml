@@ -93,28 +93,37 @@
 
     <windowclass name="effect_library_item">
 		<margins control="0,0,0,2" />
-        <!-- <script file="windows/scripts/effect_library_item.lua" /> -->
+        <script file="windows/scripts/effect_library_item.lua" />
 		<sheetdata>
             <leftanchor_eb />
-            <stringcontrol name="category">
-                <anchored height="20">
+            <buttoncontrol name="add_builder">
+                <anchored width="20" height="20">
                     <top offset="2" />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
                 </anchored>
-                <font>reference-r</font>
-                <script file="windows/scripts/effect_library_draggable.lua" />
-                <frame>border</frame>
-            </stringcontrol>
-            <stringcontrol name="name">
-                <anchored height="20">
+                <icon normal="button_add" pressed="button_add_down" />
+                <tooltip textres="button_add" />
+			    <!-- <script file="windows/scripts/effect_library_draggable.lua" /> -->
+                <script>
+                    function onButtonPress()
+                        window.addEffectBuilder()
+                    end
+                </script>
+            </buttoncontrol>
+            <string_eb_effect_library name="category">
+                <anchored>
                     <top offset="2" />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
                 </anchored>
-                <font>reference-r</font>
-                <static />
-                <script file="windows/scripts/effect_library_draggable.lua" />
-                <frame>border</frame>
-            </stringcontrol>
+			    <script file="windows/scripts/effect_library_draggable.lua" />
+            </string_eb_effect_library>
+            <string_eb_effect_library name="name">
+                <anchored>
+                    <top offset="2" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+                </anchored>
+			    <script file="windows/scripts/effect_library_draggable.lua" />
+            </string_eb_effect_library>
 
 
 			<!-- <masterindexitem_link name="link" />
