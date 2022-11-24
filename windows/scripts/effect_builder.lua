@@ -12,7 +12,10 @@ function updateEffectString()
 end
 
 function onDrop(x, y, dragdata)
-    local window = effects_list.addEntry(true)
-    window.effect_category.setListValue(dragdata.getMetaData("category"))
-    window.effect.setListValue(dragdata.getCustomData().value)
+    if dragdata.getType() == "effect_editor" then
+        local window = effects_list.addEntry(true)
+        window.effect_category.setListValue(dragdata.getMetaData("category"))
+        window.effect.setListValue(dragdata.getCustomData().value)
+        return true
+    end
 end
