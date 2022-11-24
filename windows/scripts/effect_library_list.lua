@@ -10,6 +10,7 @@ function onInit()
             local w = createWindow()
             w.category.setValue(Interface.getString(category))
             w.name.setValue(editor.label)
+            w.effect_editor = editor
         end
     end
 end
