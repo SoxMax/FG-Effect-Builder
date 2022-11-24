@@ -49,9 +49,8 @@
                 <readonly />
                 <sourceless />
                 <class>effect_library_item</class>
-                <!-- <sortby>
-                    <control desc="true">effect_priority</control>
-                </sortby> -->
+                <filter><control>filter_name</control></filter>
+                <filteron><control>name</control></filteron>
                 <script file="windows/scripts/effect_library_list.lua" />
             </windowlist>
             <scrollbar_list />
