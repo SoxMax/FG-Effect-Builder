@@ -93,7 +93,7 @@
 
     <windowclass name="effect_library_item">
 		<margins control="0,0,0,2" />
-        <script file="windows/scripts/effect_library_item.lua" />
+        <!-- <script file="windows/scripts/effect_library_item.lua" /> -->
 		<sheetdata>
             <leftanchor_eb />
             <stringcontrol name="category">

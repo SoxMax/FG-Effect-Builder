@@ -10,3 +10,9 @@ function updateEffectString()
     end
     output_effect.setValue(table.concat(effectItems, "; "))
 end
+
+function onDrop(x, y, dragdata)
+    local window = effects_list.addEntry(true)
+    window.effect_category.setListValue(dragdata.getMetaData("category"))
+    window.effect.setListValue(dragdata.getCustomData().value)
+end

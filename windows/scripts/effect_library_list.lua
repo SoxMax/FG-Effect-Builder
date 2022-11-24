@@ -6,11 +6,11 @@
 function onInit()
     for _,category in pairs(EditorManager.getCategories()) do
         for key, editor in pairs(EditorManager.getCategoryEffects(category)) do
-            -- Debug.chat(category, key, editor)
             local w = createWindow()
             w.category.setValue(Interface.getString(category))
             w.name.setValue(editor.label)
             w.effect_editor = editor
+            w.raw_category = category
         end
     end
 end

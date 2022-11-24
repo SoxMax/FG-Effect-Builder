@@ -295,17 +295,27 @@ end
 function setListIndex(nIndex)
 	if (nIndex > 0) or (nIndex <= #_tOrderedItems) then
         _activeIndex = nIndex
-		setListValue(_tItems[_tOrderedItems[nIndex]].text);
+		setListText(_tItems[_tOrderedItems[nIndex]].text);
 	else
         _activeIndex = 0
-		setListValue("");
+		setListText("");
 	end
 end
 
-function setListValue(sValue)
-	setValue(sValue);
-	setTooltipText(sValue);
+function setListText(sText)
+	setValue(sText);
+	setTooltipText(sText);
 	refreshSelectionDisplay();
+end
+
+function setListValue(sValue)
+	for nIndex, sItemValue in pairs(_tOrderedItems) do
+		if sValue == sItemValue then
+			setListIndex(nIndex)
+			return true
+		end
+	end
+	return false
 end
 
 function add(sValue, sText, bAllowDelete)
@@ -359,7 +369,7 @@ function replace(index, sValue, sText, bAllowDelete)
 		end
 
 		if sOriginalValue and getValue() == sOriginalValue then
-			setListValue(sValue);
+			setListText(sValue);
 		end
 	end
 end
@@ -393,7 +403,7 @@ function remove(sValue)
 			
 			if getValue() == sValue then
                 _activeIndex = 0
-				setListValue("");
+				setListText("");
 			end
 		end
 	end

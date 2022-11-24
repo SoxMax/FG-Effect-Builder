@@ -15,6 +15,7 @@ function onDragStart(button, x, y, dragdata)
     dragdata.disableHotkeying(true)
     dragdata.setType("effect_editor")
     dragdata.setIcon("action_effect")
+    dragdata.setMetaData("category", window.raw_category)
     dragdata.setCustomData(window.effect_editor)
     return true
 end

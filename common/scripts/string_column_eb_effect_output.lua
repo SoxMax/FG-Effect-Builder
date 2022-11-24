@@ -6,7 +6,6 @@ function onInit()
 end
 
 function onMenuSelection(selection)
-    Debug.chat(selection)
     if selection == menuCopy then
         Interface.clipboardSetText(getValue())
     end
