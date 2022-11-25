@@ -4,12 +4,12 @@
     <windowclass name="effect_library">
         <frame>referencelist</frame>
         <placement>
-            <size width="520" height="370" />
-        </placement>
-        <sizelimits>
-            <minimum width="480" height="370" />
-            <dynamic />
-        </sizelimits>
+			<size width="450" height="450" />
+		</placement>
+		<sizelimits>
+			<minimum width="450" height="450" />
+			<dynamic />
+		</sizelimits>
         <playercontrol />
         <sheetdata>
             <windowtitlebar name="title">
