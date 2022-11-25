@@ -11,6 +11,7 @@
 			<dynamic />
 		</sizelimits>
         <playercontrol />
+        <script file="windows/scripts/effect_library.lua" />
         <sheetdata>
             <windowtitlebar name="title">
                 <!-- <resource>effect_builder_title</resource> -->
@@ -49,8 +50,6 @@
                 <readonly />
                 <sourceless />
                 <class>effect_library_item</class>
-                <filter><control>filter_name</control></filter>
-                <filteron><control>name</control></filteron>
                 <script file="windows/scripts/effect_library_list.lua" />
             </windowlist>
             <scrollbar_list />
@@ -80,10 +79,27 @@
                 <script>
                     function onValueChanged()
                         super.onValueChanged();
-                        -- window.onNameFilterChanged();
+                        window.onFilterValueChanged();
                     end
                 </script>
             </filter>
+
+            <library_filter_eb_title name="filter_title_category">
+                <static>Category</static>
+            </library_filter_eb_title>
+
+
+            <library_filter_eb_value name="filter_value_category">
+                <script>
+                    function onInit()
+                        super.onInit()
+                        add("")
+                        for _,category in ipairs(EditorManager.getCategoriesAsComboboxParams()) do
+                            add(category.value, category.text)
+                        end
+                    end
+                </script>
+            </library_filter_eb_value>
 
             <resize_referencelist />
 			<close_referencelist />
@@ -98,7 +114,7 @@
             <buttoncontrol name="add_builder">
                 <anchored width="20" height="20">
                     <top offset="2" />
-                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="0" />
                 </anchored>
                 <icon normal="button_add" pressed="button_add_down" />
                 <tooltip textres="button_add" />
@@ -110,16 +126,16 @@
                 </script>
             </buttoncontrol>
             <string_eb_effect_library name="category">
-                <anchored>
+                <anchored width="100">
                     <top offset="2" />
-                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
                 </anchored>
 			    <script file="windows/scripts/effect_library_draggable.lua" />
             </string_eb_effect_library>
             <string_eb_effect_library name="name">
                 <anchored>
                     <top offset="2" />
-                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
                 </anchored>
 			    <script file="windows/scripts/effect_library_draggable.lua" />
             </string_eb_effect_library>
