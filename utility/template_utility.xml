@@ -6,24 +6,24 @@
 -->
 
 <root>
-<template name="button_effect_builder">
-		<button_iadd_campaign insertbefore="list_iedit">
-                <icon normal="button_action_effect" pressed="button_action_effect_down" />
-                <tooltip textres="effect_builder_title" />
-                <anchored to="rightanchor">
-				<top />
-				<right anchor="left" relation="relative" offset="-5" />
-			</anchored>
-                <script>
-                    function onInit()
-                        if visible then
-                            return;
-                        end
+    <template name="button_effect_builder">
+        <button_iadd_campaign insertbefore="list_iedit">
+            <icon normal="button_action_effect" pressed="button_action_effect_down" />
+            <tooltip textres="effect_builder_title" />
+            <anchored to="rightanchor">
+                <top />
+                <right anchor="left" relation="relative" offset="-5" />
+            </anchored>
+            <script>
+                function onInit()
+                    if visible then
+                        return;
                     end
-                    function onButtonPress()
-                        BuildEffect.buildEffect()
-                    end
-                </script>
+                end
+                function onButtonPress()
+                    BuildEffect.buildEffect()
+                end
+            </script>
         </button_iadd_campaign>
-	</template>
+    </template>
 </root>
