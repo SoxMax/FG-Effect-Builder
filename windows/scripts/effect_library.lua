@@ -5,4 +5,5 @@
 
 function onFilterValueChanged()
     list.applyFilter()
+    list.createWindow().close()
 end

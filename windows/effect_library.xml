@@ -95,8 +95,8 @@
                     function onInit()
                         super.onInit()
                         add("")
-                        for _,category in ipairs(EditorManager.getCategoriesAsComboboxParams()) do
-                            add(category.value, category.text)
+                        for value,text in pairs(EditorManager.getCategories()) do
+                            add(value, text)
                         end
                     end
                 </script>

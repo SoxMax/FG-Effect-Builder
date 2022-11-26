@@ -17,18 +17,6 @@
         </stringcycler_eb_defaultable>
     </template>
 
-    <template name="cycler_eb_effect_category">
-        <cycler_eb>
-            <script file="common/scripts/cycler_eb_effect_category.lua" />
-        </cycler_eb>
-    </template>
-
-    <template name="cycler_eb_effect">
-        <cycler_eb>
-            <script file="common/scripts/cycler_eb_effect.lua" />
-        </cycler_eb>
-    </template>
-
     <template name="cycler_eb_valueholder">
         <cycler_eb>
             <script file="common/scripts/control_valueholder.lua" />

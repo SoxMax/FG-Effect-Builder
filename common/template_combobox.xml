@@ -38,18 +38,6 @@
         </combobox_eb_retrievable_value>
     </template>
 
-    <template name="combobox_eb_effect_category">
-        <combobox_eb name="effect_category">
-            <script file="common/scripts/combobox_eb_effect_category.lua" />
-        </combobox_eb>
-    </template>
-
-    <template name="combobox_eb_effect">
-        <combobox_eb name="effect">
-            <script file="common/scripts/combobox_eb_effect.lua" />
-        </combobox_eb>
-    </template>
-
     <template name="combobox_eb_valueholder">
         <combobox_eb>
             <script file="common/scripts/control_valueholder.lua" />

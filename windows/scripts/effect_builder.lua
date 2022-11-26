@@ -20,5 +20,5 @@ end
 
 function addEffectBuilder(effect)
     local window = effects_list.addEntry(true)
-    window.effect.updateEffect(effect)
+    window.updateEffect(effect)
 end

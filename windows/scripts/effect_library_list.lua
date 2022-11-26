@@ -4,14 +4,12 @@
 --
 
 function onInit()
-    for _,category in pairs(EditorManager.getCategories()) do
-        for key, editor in pairs(EditorManager.getCategoryEffects(category)) do
-            local w = createWindow()
-            w.name.setValue(editor.label)
-            w.category = Interface.getString(category)
-            w.effect_editor = editor
-            w.raw_category = category
-        end
+    for _,effectEditor in pairs(EditorManager.getEffectEditors()) do
+        local w = createWindow()
+        w.name.setValue(effectEditor.label)
+        w.category = Interface.getString(effectEditor.category)
+        w.effect_editor = effectEditor
+        w.raw_category = effectEditor.category
     end
 end
 
@@ -25,4 +23,8 @@ function onFilter(subwindow)
         return false
     end
     return true
+end
+
+function onSortCompare(w1, w2)
+    return w1.name.getValue() >= w2.name.getValue()
 end
