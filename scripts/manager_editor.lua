@@ -8,7 +8,18 @@ end
 
 local effectEditors = {}
 
+-- Deprecated. Exists for compatibility
 function addEditor(category, editor)
+    if not editor then
+        return
+    end
+    if not editor.category then
+        editor.category = category
+    end
+    addEffectEditor(editor)
+end
+
+function addEffectEditor(editor)
     if not editor then
         return
     end
@@ -22,9 +33,6 @@ function addEditor(category, editor)
 
     if not editor.label then
         editor.label = getInterfaceString(editor.labelres)
-    end
-    if not editor.category then
-        editor.category = category
     end
     if effectEditors[editor.value] then
         Debug.console("WARNING: Overriding editor " .. editor.value .. " that already exists!")
