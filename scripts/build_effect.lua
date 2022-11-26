@@ -2,6 +2,7 @@
 function buildEffect(sCommand, sParams)
     if EditorManager.areEditorsLoaded() then
         Interface.openWindow("effect_builder", "")
+        Interface.openWindow("effect_library", "")
     else
         local msg = {
             font = "systemfont",
