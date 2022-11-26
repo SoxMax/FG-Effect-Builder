@@ -79,10 +79,6 @@
                 <anchored to="header_effects" position="insidetopright" offset="-5,0" />
                 <target>effects_list</target>
             </button_iedit_eb>
-            <!-- <button_iadd_eb name="effects_list_iadd">
-                <anchored to="effects_list_iedit" position="insidetopright" offset="25,0" />
-                <target>effects_list</target>
-            </button_iadd_eb> -->
             <list_eb_effect_editors name="effects_list">
                 <anchored to="contentframe" position="over">
                     <top parent="header_effects" anchor="bottom" relation="relative" offset="10" />

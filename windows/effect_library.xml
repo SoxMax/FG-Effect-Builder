@@ -14,8 +14,7 @@
         <script file="windows/scripts/effect_library.lua" />
         <sheetdata>
             <windowtitlebar name="title">
-                <!-- <resource>effect_builder_title</resource> -->
-                <static>Effects Library</static>
+                <resource>effect_builder_library_title</resource>
             </windowtitlebar>
 
             <genericcontrol name="contentanchor">
@@ -86,7 +85,7 @@
             </filter>
 
             <library_filter_eb_title name="filter_title_category">
-                <static>Category</static>
+                <static textres="filter_title_category" />
             </library_filter_eb_title>
 
 
@@ -140,17 +139,6 @@
                 </anchored>
 			    <script file="windows/scripts/effect_library_draggable.lua" />
             </string_eb_effect_library>
-
-
-			<!-- <masterindexitem_link name="link" />
-
-			<masterindexitem_anchor_right name="rightanchor" />
-			<masterindexitem_idelete name="idelete" />
-			<masterindexitem_access name="access" />
-			<masterindexitem_modified name="modified" />
-			<masterindexitem_category name="category" />
-			
-			<masterindexitem_name name="name" /> -->
 		</sheetdata>
 	</windowclass>
 </root>

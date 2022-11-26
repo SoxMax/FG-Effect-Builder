@@ -16,6 +16,7 @@
 		<!-- Strings -->
 		<includefile source="strings/strings_effect_editor.xml" />
 		<includefile source="strings/strings_effect_builder.xml" />
+		<includefile source="strings/strings_effect_library.xml" />
 		<!-- Templates -->
 		<includefile source="common/template_common.xml" />
 		<includefile source="common/template_combobox.xml" />
