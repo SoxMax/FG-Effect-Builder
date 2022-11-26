@@ -9,7 +9,7 @@ end
 local effectEditors = {}
 
 function addEditor(category, editor)
-    if not category and not editor then
+    if not editor then
         return
     end
     if type(editor) == "string" then
