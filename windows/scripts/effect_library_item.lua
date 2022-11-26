@@ -3,18 +3,24 @@
 -- attribution and copyright information.
 --
 
+local editor = nil
+
+function setEditor(effectEditor)
+    editor = effectEditor
+    name.setValue(editor.label)
+end
+
 function onDragStart(button, x, y, dragdata)
     dragdata.disableHotkeying(true)
     dragdata.setType("effect_editor")
     dragdata.setIcon("action_effect")
-    dragdata.setMetaData("category", raw_category)
-    dragdata.setCustomData(effect_editor)
+    dragdata.setCustomData(editor)
     return true
 end
 
 function addEffectBuilder()
-    local effect_builder = Interface.findWindow("effect_builder", "")
-    if effect_builder then
-        effect_builder.addEffectBuilder(effect_editor)
+    local effectBuilder = Interface.findWindow("effect_builder", "")
+    if effectBuilder then
+        effectBuilder.addEffectBuilder(editor)
     end
 end

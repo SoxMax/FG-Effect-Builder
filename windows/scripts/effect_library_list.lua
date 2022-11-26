@@ -5,11 +5,7 @@
 
 function onInit()
     for _,effectEditor in pairs(EditorManager.getEffectEditors()) do
-        local w = createWindow()
-        w.name.setValue(effectEditor.label)
-        w.category = Interface.getString(effectEditor.category)
-        w.effect_editor = effectEditor
-        w.raw_category = effectEditor.category
+        local w = createWindow().setEditor(effectEditor)
     end
 end
 
@@ -23,8 +19,4 @@ function onFilter(subwindow)
         return false
     end
     return true
-end
-
-function onSortCompare(w1, w2)
-    return w1.name.getValue() >= w2.name.getValue()
 end
