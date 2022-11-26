@@ -15,6 +15,6 @@ end
 function addEffectBuilder()
     local effect_builder = Interface.findWindow("effect_builder", "")
     if effect_builder then
-        effect_builder.addEffectBuilder(raw_category, effect_editor.value)
+        effect_builder.addEffectBuilder(effect_editor)
     end
 end

@@ -15,11 +15,20 @@
                 </anchored>
             </effect_priority_eb>
             
-            <combobox_eb_effect_category name="effect_category" />
+            <!-- <combobox_eb_effect_category name="effect_category" />
             
             <combobox_eb_effect name="effect">
                 <anchored width="200" />
-            </combobox_eb_effect>
+            </combobox_eb_effect> -->
+
+            <label name="effect">
+                <anchored height="20">
+                    <top offset="2" />
+                    <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
+                </anchored>
+                <!-- <font>utility_label</font> -->
+                <script file="common/scripts/label_eb_effect.lua" />
+            </label>
 
             <!-- delete button if in edit mode -->
             <button_idelete_eb name="idelete">

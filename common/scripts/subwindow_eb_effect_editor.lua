@@ -1,9 +1,5 @@
-function onInit()
-    updateEditor()
-end
-
 function updateEditor()
-    setValue(EditorManager.getEffect(window.effect_category.getStringValue(), window.effect.getStringValue()).windowclass)
+    setValue(EditorManager.getEffect(window.effect.getCategory(), window.effect.getStringValue()).windowclass)
     updateEffectString()
 end
 

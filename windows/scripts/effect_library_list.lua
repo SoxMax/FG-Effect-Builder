@@ -7,8 +7,8 @@ function onInit()
     for _,category in pairs(EditorManager.getCategories()) do
         for key, editor in pairs(EditorManager.getCategoryEffects(category)) do
             local w = createWindow()
-            w.category.setValue(Interface.getString(category))
             w.name.setValue(editor.label)
+            w.category = Interface.getString(category)
             w.effect_editor = editor
             w.raw_category = category
         end
@@ -21,7 +21,7 @@ function onFilter(subwindow)
         return false
     end
     local category_filter = window.filter_value_category.getValue()
-    if category_filter ~= '' and category_filter ~= subwindow.category.getValue() then
+    if category_filter ~= '' and category_filter ~= subwindow.category then
         return false
     end
     return true

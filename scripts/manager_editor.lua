@@ -24,7 +24,10 @@ function addEditor(category, editor)
     if not editor.label then
         editor.label = getInterfaceString(editor.labelres)
     end
-    
+
+    if not editor.category then
+        editor.category = category
+    end
     if editorBundles[category] then
         if editorBundles[category][editor.value] then
             Debug.console("WARNING: Overriding editor " .. editor.value .. " in category " .. category .. " that already exists!")

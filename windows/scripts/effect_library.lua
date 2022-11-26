@@ -4,5 +4,5 @@
 --
 
 function onFilterValueChanged()
-    list.applyFilter(true)
+    list.applyFilter()
 end
