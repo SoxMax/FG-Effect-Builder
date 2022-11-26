@@ -3,11 +3,15 @@
 -- attribution and copyright information.
 --
 
-local editor = nil
+local editor = {}
 
 function setEditor(effectEditor)
     editor = effectEditor
     name.setValue(editor.label)
+end
+
+function getEditor()
+    return editor
 end
 
 function onDragStart(button, x, y, dragdata)

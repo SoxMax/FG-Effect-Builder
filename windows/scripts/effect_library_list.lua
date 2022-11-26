@@ -5,7 +5,7 @@
 
 function onInit()
     for _,effectEditor in pairs(EditorManager.getEffectEditors()) do
-        local w = createWindow().setEditor(effectEditor)
+        createWindow().setEditor(effectEditor)
     end
 end
 
@@ -15,7 +15,7 @@ function onFilter(subwindow)
         return false
     end
     local category_filter = window.filter_value_category.getValue()
-    if category_filter ~= '' and category_filter ~= subwindow.category then
+    if category_filter ~= '' and category_filter ~= subwindow.getEditor().category then
         return false
     end
     return true

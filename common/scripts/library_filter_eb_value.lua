@@ -3,15 +3,9 @@
 -- attribution and copyright information.
 --
 
-local m_sType = nil;
-
 function onInit()
 	super.onInit();
 	updateDisplay();
-end
-
-function setFilterType(sType)
-	m_sType = sType;
 end
 
 function updateDisplay()
