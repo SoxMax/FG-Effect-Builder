@@ -13,8 +13,8 @@ function addEditor(category, editor)
     if not editor then
         return
     end
-    if not editor.category then
-        editor.category = category
+    if not editor.categoryres then
+        editor.categoryres = category
     end
     addEffectEditor(editor)
 end
@@ -26,13 +26,14 @@ function addEffectEditor(editor)
     if type(editor) == "string" then
         editor = { labelres=editor, value=editor, windowclass="editor_" .. editor }
     end
-
     if not editor.labelres then
         editor.labelres = getInterfaceString(editor.value)
     end
-
     if not editor.label then
         editor.label = getInterfaceString(editor.labelres)
+    end
+    if not editor.category then
+        editor.category = getInterfaceString(editor.categoryres)
     end
     if effectEditors[editor.value] then
         Debug.console("WARNING: Overriding editor " .. editor.value .. " that already exists!")
@@ -46,10 +47,6 @@ function getCategories()
         categories[editor.category] = getInterfaceString(editor.category)
     end
     return categories
-end
-
-function getEffect(category, effect)
-    return getEffectEditor(effect)
 end
 
 function areEditorsLoaded()
