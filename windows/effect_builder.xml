@@ -2,8 +2,7 @@
 
 <root>
     <windowclass name="effect_builder">
-        <!-- <softclose /> -->
-        <frame>recordsheet</frame>
+        <frame>referencelist</frame>
         <placement>
             <size width="520" height="370" />
         </placement>
@@ -11,7 +10,6 @@
             <minimum width="480" height="370" />
             <dynamic />
         </sizelimits>
-        <nodelete />
         <playercontrol />
         <script file="windows/scripts/effect_builder.lua" />
         <sheetdata>
@@ -52,8 +50,6 @@
             </string_column_full>
             <!-- Effect Name -->
 
-            
-
             <!-- Output -->
             <header_column name="output_label">
                 <anchored to="contentframe" position="insidetop" height="20" offset="0,30" merge="replace"/>
@@ -93,8 +89,8 @@
             </scrollbar>
             <!-- /Effects List -->
 
-            <resize_recordsheet />
-            <close_recordsheet />
+            <resize_referencelist />
+			<close_referencelist />
         </sheetdata>
     </windowclass>
 </root>
