@@ -8,6 +8,7 @@ local editor = {}
 function setEditor(effectEditor)
     editor = effectEditor
     name.setValue(editor.label)
+    category.setValue(editor.category)
 end
 
 function getEditor()

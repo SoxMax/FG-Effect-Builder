@@ -15,6 +15,7 @@ function addEditor(category, editor)
     end
     if not editor.categoryres then
         editor.categoryres = category
+        editor.category = nil
     end
     addEffectEditor(editor)
 end

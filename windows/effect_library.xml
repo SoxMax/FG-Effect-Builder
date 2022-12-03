@@ -125,13 +125,13 @@
                     end
                 </script>
             </buttoncontrol>
-            <!-- <string_eb_effect_library name="category">
+            <string_eb_effect_library name="category">
                 <anchored width="100">
                     <top offset="2" />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
                 </anchored>
 			    <script file="windows/scripts/effect_library_draggable.lua" />
-            </string_eb_effect_library> -->
+            </string_eb_effect_library>
             <string_eb_effect_library name="name">
                 <anchored>
                     <top offset="2" />
