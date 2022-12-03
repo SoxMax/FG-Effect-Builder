@@ -130,8 +130,9 @@
                 <anchored width="100">
                     <top offset="2" />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
-                    <!-- <right parent="rightanchor" anchor="left" relation="relative" offset="0" /> -->
+                    <!-- <right parent="rightanchor" anchor="left" relation="relative" offset="5" /> -->
                 </anchored>
+                <!-- <right /> -->
 			    <script file="windows/scripts/effect_library_draggable.lua" />
             </string_eb_effect_library>
             <string_eb_effect_library name="name">
