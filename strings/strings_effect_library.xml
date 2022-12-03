@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
-    <!-- Effect Builder Window -->
-    <string name="effect_builder_title">Effect Builder</string>
-    <string name="effect_name_label">Effect Name:</string>
+    <!-- Effect Library Window -->
+    <string name="effect_builder_library_title">Effect Library</string>
+    <string name="filter_title_category">Category</string>
     <string name="header_effects_list">EFFECTS</string>
     <string name="output_effect_label">EFFECT STRING</string>
 </root>

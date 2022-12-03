@@ -10,3 +10,15 @@ function updateEffectString()
     end
     output_effect.setValue(table.concat(effectItems, "; "))
 end
+
+function onDrop(x, y, dragdata)
+    if dragdata.getType() == "effect_editor" then
+        addEffectBuilder(dragdata.getCustomData())
+        return true
+    end
+end
+
+function addEffectBuilder(effect)
+    local window = effects_list.addEntry(true)
+    window.updateEffect(effect)
+end

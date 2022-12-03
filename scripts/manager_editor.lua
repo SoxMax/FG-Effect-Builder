@@ -6,98 +6,58 @@ local function getInterfaceString(string)
     return string
 end
 
-local editorBundles = {}
+local effectEditors = {}
 
+-- Deprecated. Exists for compatibility
 function addEditor(category, editor)
-    if not category and not editor then
+    if not editor then
         return
     end
-    
+    if not editor.categoryres then
+        editor.categoryres = category
+        editor.category = nil
+    end
+    addEffectEditor(editor)
+end
+
+function addEffectEditor(editor)
+    if not editor then
+        return
+    end
     if type(editor) == "string" then
         editor = { labelres=editor, value=editor, windowclass="editor_" .. editor }
     end
-
     if not editor.labelres then
         editor.labelres = getInterfaceString(editor.value)
     end
-
     if not editor.label then
         editor.label = getInterfaceString(editor.labelres)
     end
-    
-    if editorBundles[category] then
-        if editorBundles[category][editor.value] then
-            Debug.console("WARNING: Overriding editor " .. editor.value .. " in category " .. category .. " that already exists!")
-        end
-        editorBundles[category][editor.value] = editor
-    else
-        editorBundles[category] = { [editor.value] = editor }
+    if not editor.category then
+        editor.category = getInterfaceString(editor.categoryres)
     end
+    if effectEditors[editor.value] then
+        Debug.console("WARNING: Overriding editor " .. editor.value .. " that already exists!")
+    end
+    effectEditors[editor.value] = editor
 end
 
 function getCategories()
     local categories = {}
-    for category,_ in pairs(editorBundles) do
-        table.insert(categories, category)
+    for _,editor in pairs(effectEditors) do
+        categories[editor.category] = getInterfaceString(editor.category)
     end
     return categories
-end
-
-function getCategoryEffects(category)
-    return editorBundles[category]
-end
-
-function getCategoriesAsComboboxParams()
-    local categories = {}
-    for category,_ in pairs(editorBundles) do
-        table.insert(categories, {value=category, text=getInterfaceString(category)})
-    end
-    return categories
-end
-
-function getCategoriesAsCyclerParams()
-    local defaultlabel = ""
-    local defaultvalue = ""
-    local labels = {}
-    local values = {}
-    local index = 1
-    for category,_ in pairs(editorBundles) do
-        if index == 1 then
-            defaultlabel = getInterfaceString(category)
-            defaultvalue = category
-        else
-            table.insert(labels, getInterfaceString(category))
-            table.insert(values, category)
-        end
-        index = index + 1
-    end
-    return defaultlabel, defaultvalue, table.concat(labels, "|"), table.concat(values, "|")
-end
-
-function getCategoryEffectsAsCyclerParams(category)
-    local defaultlabel = ""
-    local defaultvalue = ""
-    local labels = {}
-    local values = {}
-    local index = 1
-    for _,effect in pairs(getCategoryEffects(category)) do
-        if index == 1 then
-            defaultlabel = effect.label
-            defaultvalue = effect.value
-        else
-            table.insert(labels, effect.label)
-            table.insert(values, effect.value)
-        end
-        index = index + 1
-    end
-    return defaultlabel, defaultvalue, table.concat(labels, "|"), table.concat(values, "|")
-end
-
-function getEffect(category, effect)
-    return editorBundles[category][effect]
 end
 
 function areEditorsLoaded()
-    local category, effects = next(editorBundles)
-    return category and next(effects)
+    return next(effectEditors)
+end
+
+function getEffectEditors()
+    return effectEditors
+end
+
+function getEffectEditor(effectName)
+    return effectEditors[effectName]
 end

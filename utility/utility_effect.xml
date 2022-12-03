@@ -6,10 +6,9 @@
 -->
 
 <root>
-	<windowclass name="effectlist"  merge="join">
-		<sheetdata>
-            <button_effect_builder name="effect_builder">
-            </button_effect_builder>
+    <windowclass name="effectlist" merge="join">
+        <sheetdata>
+            <button_effect_builder name="effect_builder" />
         </sheetdata>
     </windowclass>
- </root>
+</root>
