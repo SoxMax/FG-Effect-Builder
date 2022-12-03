@@ -111,6 +111,7 @@
         <script file="windows/scripts/effect_library_item.lua" />
 		<sheetdata>
             <leftanchor_eb />
+            <rightanchor_eb />
             <buttoncontrol name="add_builder">
                 <anchored width="20" height="20">
                     <top offset="2" />
@@ -129,6 +130,7 @@
                 <anchored width="100">
                     <top offset="2" />
                     <left parent="leftanchor" anchor="right" relation="relative" offset="5" />
+                    <!-- <right parent="rightanchor" anchor="left" relation="relative" offset="0" /> -->
                 </anchored>
 			    <script file="windows/scripts/effect_library_draggable.lua" />
             </string_eb_effect_library>
