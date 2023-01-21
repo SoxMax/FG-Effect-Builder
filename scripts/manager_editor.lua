@@ -38,6 +38,8 @@ function addEffectEditor(editor)
     end
     if effectEditors[editor.value] then
         Debug.console("WARNING: Overriding editor " .. editor.value .. " that already exists!")
+        Debug.console("Old Editor:", effectEditors[editor.value])
+        Debug.console("New Editor:", editor)
     end
     effectEditors[editor.value] = editor
 end
