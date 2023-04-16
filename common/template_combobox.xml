@@ -170,6 +170,7 @@
 
     <template name="combobox_eb_vision_type">
         <combobox_eb_valueholder name="vision_type">
+            <anchored width="85" />
             <script>
                 function onInit()
                     super.onInit()
@@ -185,6 +186,7 @@
 
     <template name="combobox_eb_light_type">
         <combobox_eb_valueholder name="light_type">
+            <anchored width="90" />
             <script>
                 function onInit()
                     super.onInit()
