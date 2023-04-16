@@ -6,4 +6,5 @@
     <!-- Editors -->
 	<includefile source="editors/vision/VISION.xml" />
 	<includefile source="editors/vision/VISION_MODIFIERS.xml" />
+	<includefile source="editors/light/LIGHT.xml" />
 </root>

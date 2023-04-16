@@ -10,4 +10,6 @@
     <string name="creature_type">Creature Type</string>
     <string name="size_type">Size</string>
     <string name="vision_type">Vision</string>
+    <string name="custom_light_type">Custom Light</string>
+    <string name="light_fx">Light FX</string>
 </root>

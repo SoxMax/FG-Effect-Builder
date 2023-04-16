@@ -5,4 +5,7 @@
     <string name="effect_vision">Vision</string>
     <string name="effect_vismax">Vision Maximum</string>
     <string name="effect_vismod">Vision Modifier</string>
+
+    <string name="category_light">Light</string>
+    <string name="effect_light">Light</string>
 </root>
