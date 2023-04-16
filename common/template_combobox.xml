@@ -2,7 +2,7 @@
 
 <root>
     <template name="combobox_eb_retrievable_value">
-        <simplestring>
+        <simplestringc>
 			<frame>
 				<name>fieldlight</name>
 				<offset>7,5,7,5</offset>
@@ -23,7 +23,7 @@
 			<listmaxsize mergerule="replace">0</listmaxsize>
 			-->
 			<script file="common/scripts/combobox_eb_retrievable_value.lua"/>
-		</simplestring>
+		</simplestringc>
     </template>
 
     <template name="combobox_eb">
