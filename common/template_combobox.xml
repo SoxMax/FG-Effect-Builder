@@ -182,4 +182,22 @@
             <empty textres="vision_type"/>
         </combobox_eb_valueholder>
     </template>
+
+    <template name="combobox_eb_light_type">
+        <combobox_eb_valueholder name="light_type">
+            <script>
+                function onInit()
+                    super.onInit()
+                    add("")
+                    add("candle")
+                    add("lamp")
+                    add("torch")
+                    add("latern")
+                    add("light")
+                    add("darkness")
+                end
+            </script>
+            <empty textres="custom_light_type"/>
+        </combobox_eb_valueholder>
+    </template>
 </root>
