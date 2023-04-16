@@ -192,7 +192,7 @@
                     add("candle")
                     add("lamp")
                     add("torch")
-                    add("latern")
+                    add("lantern")
                     add("light")
                     add("darkness")
                 end
