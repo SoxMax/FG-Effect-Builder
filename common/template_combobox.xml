@@ -202,4 +202,20 @@
             <empty textres="custom_light_type"/>
         </combobox_eb_valueholder>
     </template>
+
+    <template name="combobox_eb_light_fx">
+        <combobox_eb_valueholder name="light_fx">
+            <anchored width="60" />
+            <script>
+                function onInit()
+                    super.onInit()
+                    add("")
+                    add("flicker")
+                    add("pulse")
+                    add("flash")
+                end
+            </script>
+            <empty textres="light_fx"/>
+        </combobox_eb_valueholder>
+    </template>
 </root>

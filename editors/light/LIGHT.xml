@@ -14,6 +14,20 @@
                     <left offset="5" />
                 </anchored>
             </combobox_eb_light_type>
+
+            <stringfield_eb_valueholder name="color">
+                <anchored width="60" />
+                <empty text="ARGB Hex" />
+            </stringfield_eb_valueholder>
+            
+            <combobox_eb_light_fx />
+
+            <number_eb_valueholder name="frequency">
+                <anchored width="20" />
+                <min>1</min>
+                <max>100</max>
+                <default>50</default>
+            </number_eb_valueholder>
         </sheetdata>
     </windowclass>
     <script name="loader_LIGHT">
