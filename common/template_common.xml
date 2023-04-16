@@ -35,32 +35,30 @@
     </template>
 
     <template name="number_eb_valueholder">
-        <basicnumber>
+        <basicnumberc>
             <anchored width="20" height="20">
                 <top offset="2" />
                 <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
             <default>0</default>
             <hideonvalue>0</hideonvalue>
-            <sourceless />
             <script file="common/scripts/control_valueholder.lua" />
-        </basicnumber>
+        </basicnumberc>
     </template>
 
     <template name="effect_priority_eb">
-        <basicnumber>
+        <basicnumberc>
             <anchored width="15" height="20">
                 <top offset="2" />
                 <left parent="leftanchor" anchor="right" relation="relative" offset="10" />
             </anchored>
             <default>0</default>
-            <sourceless />
             <script>
                 function onValueChanged()
                     window.windowlist.applySort()
                 end
             </script>
-        </basicnumber>
+        </basicnumberc>
     </template>
 
     <template name="dice_eb_valueholder">
