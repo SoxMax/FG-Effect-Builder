@@ -1,5 +1,5 @@
 function createEffectString()
-    local effectString = "LIGHT: " .. number_value.getStringValue()
+    local effectString = "LIGHT: " .. bright_range.getValue()
     if light_type.isEmpty() then
         effectString = effectString .. " " .. color.getValue()
         if not light_fx.isEmpty() then

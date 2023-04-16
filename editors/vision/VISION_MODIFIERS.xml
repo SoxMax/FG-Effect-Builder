@@ -7,7 +7,7 @@
         <sheetdata>
             <leftanchor_eb />
 
-            <subwindow_eb_number_value />
+            <number_eb_valueholder name="number_value" />
         </sheetdata>
     </windowclass>
     <script name="loader_VISION_MODIFIERS">

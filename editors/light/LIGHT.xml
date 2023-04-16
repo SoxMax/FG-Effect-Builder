@@ -7,12 +7,12 @@
         <sheetdata>
             <leftanchor_eb />
 
-            <subwindow_eb_number_value />
+            <number_eb_valueholder name="bright_range">
+                <min>0</min>
+                <description text="Bright Distance" />
+            </number_eb_valueholder>
             
             <combobox_eb_light_type>
-                <anchored>
-                    <left offset="5" />
-                </anchored>
                 <script file="editors/light/scripts/LIGHT_values.lua" />
             </combobox_eb_light_type>
 
@@ -26,7 +26,6 @@
             </combobox_eb_light_fx>
 
             <number_eb_valueholder name="frequency">
-                <anchored width="20" />
                 <min>1</min>
                 <max>100</max>
                 <default>50</default>
