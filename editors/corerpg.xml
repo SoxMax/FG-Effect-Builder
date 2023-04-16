@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <!-- Strings -->
+	<includefile source="editors/strings/strings_effect_editor.xml" />
+    <!-- Editors -->
+	<includefile source="editors/vision/VISION.xml" />
+	<includefile source="editors/vision/VISION_MODIFIERS.xml" />
+</root>

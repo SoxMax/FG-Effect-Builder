@@ -32,5 +32,7 @@
 		<includefile source="windows/effect_library.xml" />
 		<!-- Scripts -->
 		<script name="BuildEffect" file="scripts/build_effect.lua" />
+		<!-- Editors -->
+		<includefile source="editors/corerpg.xml" />
 	</base>
 </root>

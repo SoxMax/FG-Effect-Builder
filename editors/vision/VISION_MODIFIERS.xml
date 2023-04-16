@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="effect_VISION_MODIFIERS">
+        <script file="editors/vision/scripts/VISION_MODIFIERS.lua" />
+		<margins control="0,0,0,2" />
+        <sheetdata>
+            <leftanchor_eb />
+
+            <subwindow_eb_number_value />
+        </sheetdata>
+    </windowclass>
+    <script name="loader_VISION_MODIFIERS">
+        function onInit()
+            EditorManager.addEditor(
+                "category_vision",
+                {
+                    value="VISMAX",
+                    labelres="effect_vismax",
+                    windowclass="effect_VISION_MODIFIERS"
+                }
+            )
+            EditorManager.addEditor(
+                "category_vision",
+                {
+                    value="VISMOD",
+                    labelres="effect_vismod",
+                    windowclass="effect_VISION_MODIFIERS"
+                }
+            )
+        end
+    </script>
+</root>
