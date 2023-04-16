@@ -167,4 +167,19 @@
             <empty textres="size_type"/>
         </combobox_eb_valueholder>
     </template>
+
+    <template name="combobox_eb_vision_type">
+        <combobox_eb_valueholder name="vision_type">
+            <script>
+                function onInit()
+                    super.onInit()
+                    add("")
+                    add("darkvision")
+                    add("blindsight")
+                    add("truesight")
+                end
+            </script>
+            <empty textres="vision_type"/>
+        </combobox_eb_valueholder>
+    </template>
 </root>
