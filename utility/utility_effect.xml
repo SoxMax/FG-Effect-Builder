@@ -6,7 +6,7 @@
 -->
 
 <root>
-    <windowclass name="effectlist" merge="join">
+    <windowclass name="effectlist_custom" merge="join">
         <sheetdata>
             <button_effect_builder name="effect_builder" />
         </sheetdata>

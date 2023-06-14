@@ -10,7 +10,7 @@
         <button_iadd_campaign insertbefore="list_iedit">
             <icon normal="button_action_effect" pressed="button_action_effect_down" />
             <tooltip textres="effect_builder_title" />
-            <anchored to="rightanchor">
+            <anchored to="controlsrightanchor">
                 <top />
                 <right anchor="left" relation="relative" offset="-5" />
             </anchored>
