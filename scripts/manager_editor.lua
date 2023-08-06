@@ -36,6 +36,10 @@ function addEffectEditor(editor)
     if not editor.category then
         editor.category = getInterfaceString(editor.categoryres)
     end
+    if not editor.categories then
+        editor.categories = {}
+        editor.categories[editor.category] = editor.categoryres
+    end
     if effectEditors[editor.value] then
         Debug.console("WARNING: Overriding editor " .. editor.value .. " that already exists!")
         Debug.console("Old Editor:", effectEditors[editor.value])
@@ -47,7 +51,9 @@ end
 function getCategories()
     local categories = {}
     for _,editor in pairs(effectEditors) do
-        categories[editor.category] = getInterfaceString(editor.category)
+        for category, categoryres in pairs(editor.categories) do
+            categories[category] = getInterfaceString(categoryres)
+        end
     end
     return categories
 end
