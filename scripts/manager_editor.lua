@@ -47,7 +47,7 @@ end
 function getCategories()
     local categories = {}
     for _,editor in pairs(effectEditors) do
-        categories[editor.category] = getInterfaceString(editor.category)
+        categories[editor.category] = getInterfaceString(editor.categoryres) or editor.category
     end
     return categories
 end
