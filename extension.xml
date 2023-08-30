@@ -25,7 +25,6 @@
 		<includefile source="common/template_effect_builder.xml" />
 		<includefile source="common/template_effect_library.xml" />
 		<includefile source="utility/utility_effect.xml" />
-		<includefile source="utility/template_utility.xml" />
 		<!-- Windows -->
 		<includefile source="windows/effect_editor.xml" />
 		<includefile source="windows/effect_builder.xml" />
