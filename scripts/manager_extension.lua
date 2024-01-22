@@ -13,11 +13,11 @@ function isExtensionLoaded(extensionName)
     return extensions[extensionName]
 end
 
-local rulsetPluginLoaded = false
+local rulesetPluginLoaded = false
 function isRulesetPluginLoaded()
-    return rulsetPluginLoaded
+    return rulesetPluginLoaded
 end
 
 function setRulestPluginLoaded(isLoaded)
-    rulsetPluginLoaded = isLoaded
+    rulesetPluginLoaded = isLoaded
 end
