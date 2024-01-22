@@ -12,6 +12,7 @@
 
 	<base>
 		<!-- Libraries -->
+		<script name="EffectBuilderExtensionManager" file="scripts/manager_extension.lua" />
 		<script name="EditorManager" file="scripts/manager_editor.lua" />
 		<!-- Strings -->
 		<includefile source="strings/strings_effect_editor.xml" />
