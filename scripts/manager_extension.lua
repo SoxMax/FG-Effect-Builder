@@ -6,7 +6,7 @@ function onInit()
     end
 
     Extension.isExtensionLoaded = isExtensionLoaded
-    Extension.isEffectBuilderLoaded = isRulesetPluginLoaded
+    Extension.isEffectBuilderRulesetPluginLoaded = isRulesetPluginLoaded
 end
 
 function isExtensionLoaded(extensionName)
