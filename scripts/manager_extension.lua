@@ -6,18 +6,13 @@ function onInit()
     end
 
     Extension.isExtensionLoaded = isExtensionLoaded
-    Extension.isEffectBuilderRulesetPluginLoaded = isRulesetPluginLoaded
+    Extension.isEffectBuilderRulesetPluginLoaded = false
 end
 
 function isExtensionLoaded(extensionName)
     return extensions[extensionName]
 end
 
-local rulesetPluginLoaded = false
-function isRulesetPluginLoaded()
-    return rulesetPluginLoaded
-end
-
 function setRulestPluginLoaded(isLoaded)
-    rulesetPluginLoaded = isLoaded
+    Extension.isEffectBuilderRulesetPluginLoaded = isLoaded
 end
