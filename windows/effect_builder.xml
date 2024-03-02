@@ -2,7 +2,7 @@
 
 <root>
     <windowclass name="effect_builder">
-        <frame>referencelist</frame>
+        <frame>utilitybox</frame>
         <placement>
             <size width="520" height="370" />
         </placement>
@@ -13,11 +13,14 @@
         <playercontrol />
         <script file="windows/scripts/effect_builder.lua" />
         <sheetdata>
-            <windowtitlebar name="title">
-                <resource>effect_builder_title</resource>
-            </windowtitlebar>
+            <windowtitlebar_utilitybox name="title" />
+			<windowmenubar_utilitybox name="menubar" />
+			<resize_utilitybox />
+			
+			<anchor_content_utilitybox_top />
+			<anchor_content_utilitybox_bottom />
 
-            <frame_eb name="contentframe"/>
+			<area_content_framed_groupbox name="contentframe" />
             
             <buttoncontrol name="effect_library_button">
                 <anchored to="contentframe" position="insidetopright" height="20" width="20" merge="replace" />
@@ -88,9 +91,6 @@
                 <anchored to="effects_list" />
             </scrollbar>
             <!-- /Effects List -->
-
-            <resize_referencelist />
-			<close_referencelist />
         </sheetdata>
     </windowclass>
 </root>
