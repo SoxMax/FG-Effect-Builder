@@ -13,9 +13,11 @@
         <playercontrol />
         <script file="windows/scripts/effect_library.lua" />
         <sheetdata>
-            <windowtitlebar name="title">
+            <windowtitlebar_utilitybox name="title">
                 <resource>effect_builder_library_title</resource>
-            </windowtitlebar>
+            </windowtitlebar_utilitybox>
+			<windowmenubar_utilitybox name="menubar" />
+			<resize_utilitybox />
 
             <genericcontrol name="contentanchor">
                 <anchored height="0">
@@ -100,9 +102,6 @@
                     end
                 </script>
             </library_filter_eb_value>
-
-            <resize_referencelist />
-			<close_referencelist />
         </sheetdata>
     </windowclass>
 
