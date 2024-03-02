@@ -55,7 +55,7 @@
 
             <!-- Output -->
             <header_column name="output_label">
-                <anchored to="contentframe" position="insidetop" height="20" offset="0,30" merge="replace"/>
+                <anchored to="contentframe" position="insidetop" height="20" offset="-10,30" merge="replace"/>
                 <static textres="output_effect_label" />
                 <center />
             </header_column>
@@ -82,7 +82,7 @@
                 <anchored to="contentframe" position="over">
                     <top parent="header_effects" anchor="bottom" relation="relative" offset="10" />
                     <left offset="0" />
-                    <right offset="0" />
+                    <right offset="-5" />
                     <bottom offset="0" />
                 </anchored>
             </list_eb_effect_editors>
