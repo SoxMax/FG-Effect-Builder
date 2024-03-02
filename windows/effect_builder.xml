@@ -18,8 +18,11 @@
             </windowtitlebar_utilitybox>
 			<windowmenubar_utilitybox name="menubar" />
 			<resize_utilitybox />
+			
+			<anchor_content_utilitybox_top />
+			<anchor_content_utilitybox_bottom />
 
-            <frame_eb name="contentframe"/>
+			<sub_content_framed_groupbox name="contentframe" />
             
             <buttoncontrol name="effect_library_button">
                 <anchored to="contentframe" position="insidetopright" height="20" width="20" merge="replace" />
