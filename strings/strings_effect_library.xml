@@ -2,7 +2,7 @@
 
 <root>
     <!-- Effect Library Window -->
-    <string name="effect_builder_library_title">Effect Library</string>
+    <string name="effect_library_window_title">Effect Library</string>
     <string name="filter_title_category">Category</string>
     <string name="header_effects_list">EFFECTS</string>
     <string name="output_effect_label">EFFECT STRING</string>

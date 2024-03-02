@@ -13,9 +13,7 @@
         <playercontrol />
         <script file="windows/scripts/effect_builder.lua" />
         <sheetdata>
-            <windowtitlebar_utilitybox name="title">
-                <resource>effect_builder_title</resource>
-            </windowtitlebar_utilitybox>
+            <windowtitlebar_utilitybox name="title" />
 			<windowmenubar_utilitybox name="menubar" />
 			<resize_utilitybox />
 			

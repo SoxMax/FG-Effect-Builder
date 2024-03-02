@@ -13,29 +13,21 @@
         <playercontrol />
         <script file="windows/scripts/effect_library.lua" />
         <sheetdata>
-            <windowtitlebar_utilitybox name="title">
-                <resource>effect_builder_library_title</resource>
-            </windowtitlebar_utilitybox>
-			<windowmenubar_utilitybox name="menubar" />
-			<resize_utilitybox />
-
-            <genericcontrol name="contentanchor">
-                <anchored height="0">
-                    <top parent="title" anchor="bottom" offset="3" />
+            <windowtitlebar_referencelist name="title" />
+			<windowmenubar_referencelist name="menubar" />
+			<resize_referencelist />
+            <anchor_content_referencelist_top>
+                <anchored>
                     <left parent="" anchor="left" offset="35" />
                     <right parent="" anchor="right" offset="-40" />
                 </anchored>
-                <disabled />
-            </genericcontrol>
-
-            <genericcontrol name="bottomanchor">
-                <anchored height="0">
-                    <bottom offset="-20" />
+            </anchor_content_referencelist_top>
+            <anchor_content_referencelist_bottom>
+                <anchored>
                     <left parent="" anchor="left" offset="35" />
                     <right parent="" anchor="right" offset="-40" />
                 </anchored>
-                <disabled />
-            </genericcontrol>
+            </anchor_content_referencelist_bottom>
 
             <!-- Effects List -->
             <windowlist name="list">
