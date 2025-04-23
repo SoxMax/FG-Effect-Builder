@@ -8,7 +8,7 @@
 <root>
     <windowclass name="effectlist_custom" merge="join">
         <sheetdata>
-            <button_iadd_campaign insertbefore="list_iedit">
+            <button_icon_sm insertbefore="list_iedit">
                 <anchored to="rightanchor">
                     <top />
                     <right anchor="left" relation="relative" offset="-5" />
@@ -25,7 +25,7 @@
                         BuildEffect.buildEffect()
                     end
                 </script>
-            </button_iadd_campaign>
+            </button_icon_sm>
         </sheetdata>
     </windowclass>
 </root>
