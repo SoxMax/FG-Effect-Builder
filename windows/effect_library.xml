@@ -93,6 +93,7 @@
                         end
                     end
                 </script>
+                <listdirection>up</listdirection>
             </library_filter_eb_value>
         </sheetdata>
     </windowclass>
