@@ -1,29 +1,18 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <root>
+    <!-- Thin wrapper over the base combobox. Retained for backward compatibility
+         with modules that inherit this template. Base combobox now provides the
+         value/text split, list options, and readonly handling this once added. -->
     <template name="combobox_eb_retrievable_value">
-        <simplestringc>
+        <combobox>
 			<frame>
 				<name>fieldlight</name>
 				<offset>7,5,7,5</offset>
 			</frame>
-			<readonly />
 			<listdirection mergerule="replace">up</listdirection>
 			<buttonoffset mergerule="replace">0,1</buttonoffset>
-			<!-- Possible parameters
-			<listoffset mergerule="replace">0,5</listoffset>
-			<listfonts>
-				<normal mergerule="replace">chatfont</normal>
-				<selected mergerule="replace">narratorfont</selected>
-			</listfonts>
-			<listframes>
-				<normal mergerule="replace"></normal>
-				<selected mergerule="replace">rowshade</selected>
-			</listframes>
-			<listmaxsize mergerule="replace">0</listmaxsize>
-			-->
-			<script file="common/scripts/combobox_eb_retrievable_value.lua"/>
-		</simplestringc>
+		</combobox>
     </template>
 
     <template name="combobox_eb">

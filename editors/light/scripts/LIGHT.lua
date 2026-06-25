@@ -16,7 +16,7 @@ function updateVisibility()
     local hasFx = not light_fx.isEmpty()
 
     color.setVisible(isCustomLight)
-    light_fx.setComboBoxVisible(isCustomLight)
+    light_fx.setVisible(isCustomLight)
     frequency.setVisible(isCustomLight and hasFx)
 end
 
