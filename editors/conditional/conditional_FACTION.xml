@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="conditional_FACTION">
+        <script file="editors/conditional/scripts/conditional_FACTION.lua" />
+		<margins control="0,0,0,2" />
+        <sheetdata>
+            <leftanchor_eb />
+
+            <cycler_eb_ifs />
+
+            <cycler_eb_valueholder name="faction">
+                <anchored width="70" />
+                <parameters mergerule="replace">
+                    <defaultlabel>friend</defaultlabel>
+                    <defaultvalue>friend</defaultvalue>
+                    <labels>foe|neutral|ally|enemy|notself|self</labels>
+                    <values>foe|neutral|ally|enemy|notself|self</values>
+                </parameters>
+            </cycler_eb_valueholder>
+        </sheetdata>
+    </windowclass>
+    <script name="loader_conditional_FACTION">
+        function onInit()
+            EditorManager.addEditor(
+                "category_conditional",
+                {
+                    value="CONDITIONAL_FACTION",
+                    labelres="effect_conditional_faction",
+                    windowclass="conditional_FACTION"
+                }
+            )
+        end
+    </script>
+</root>

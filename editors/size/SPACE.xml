@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="effect_SPACE">
+        <script file="editors/size/scripts/SPACE.lua" />
+		<margins control="0,0,0,2" />
+        <sheetdata>
+            <leftanchor_eb />
+
+            <number_eb_valueholder name="number_value" />
+        </sheetdata>
+    </windowclass>
+    <script name="loader_SPACE">
+        function onInit()
+            EditorManager.addEditor(
+                "category_misc",
+                {
+                    value="SPACE",
+                    labelres="effect_space",
+                    windowclass="effect_SPACE"
+                }
+            )
+        end
+    </script>
+</root>

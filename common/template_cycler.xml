@@ -22,4 +22,105 @@
             <script file="common/scripts/control_valueholder.lua" />
         </cycler_eb>
     </template>
+
+    <template name="cycler_eb_ifs">
+        <cycler_eb_valueholder name="target">
+            <anchored width="75" />
+            <parameters mergerule="replace">
+                <defaultlabelres>if</defaultlabelres>
+                <defaultvalue>IF</defaultvalue>
+                <labelsres>ift|elseif|elseift</labelsres>
+                <values>IFT|ELSEIF|ELSEIFT</values>
+            </parameters>
+        </cycler_eb_valueholder>
+    </template>
+
+    <template name="cycler_eb_range">
+        <cycler_eb_valueholder name="effect_range">
+            <parameters>
+                <defaultlabelres mergerule="replace">allrange</defaultlabelres>
+                <labelsres>melee|ranged</labelsres>
+                <values>melee|ranged</values>
+            </parameters>
+        </cycler_eb_valueholder>
+    </template>
+
+    <template name="cycler_eb_and_or">
+        <cycler_eb_valueholder name="and_or">
+            <anchored width="50" />
+            <parameters mergerule="replace">
+                <defaultlabel>AND</defaultlabel>
+                <defaultvalue>and</defaultvalue>
+                <labels>OR</labels>
+                <values>or</values>
+            </parameters>
+        </cycler_eb_valueholder>
+    </template>
+
+    <template name="cycler_eb_not">
+        <cycler_eb_valueholder name="negator">
+            <anchored width="25" />
+            <parameters mergerule="replace">
+                <labels>NOT</labels>
+                <values>!</values>
+            </parameters>
+        </cycler_eb_valueholder>
+    </template>
+
+    <template name="cycler_eb_plus_minus">
+        <cycler_eb_valueholder name="plus_minus">
+            <anchored width="10" />
+            <parameters mergerule="replace">
+                <defaultlabel>+</defaultlabel>
+                <labels>-</labels>
+                <values>-</values>
+            </parameters>
+        </cycler_eb_valueholder>
+    </template>
+
+    <template name="cycler_eb_multiply_divide">
+        <cycler_eb_valueholder name="multiply_divide">
+            <anchored width="10" />
+            <parameters mergerule="replace">
+                <defaultlabel>x</defaultlabel>
+                <defaultvalue>x</defaultvalue>
+                <labels>/</labels>
+                <values>/</values>
+            </parameters>
+        </cycler_eb_valueholder>
+    </template>
+
+    <template name="cycler_eb_turn_timing">
+        <cycler_eb_valueholder name="turn_timing">
+            <anchored width="90" />
+            <parameters mergerule="replace">
+                <defaultlabel>Start of Turn</defaultlabel>
+                <defaultvalue></defaultvalue>
+                <labels>End of Turn</labels>
+                <values>E</values>
+            </parameters>
+        </cycler_eb_valueholder>
+    </template>
+
+    <template name="cycler_eb_multiplier">
+        <cycler_eb_valueholder name="multiplier">
+            <anchored width="40" />
+            <parameters mergerule="replace">
+                <defaultlabel>0.5</defaultlabel>
+                <defaultvalue>0.5</defaultvalue>
+                <labels>-0.5|2|-1|-2|3|0.25</labels>
+                <values>-0.5|2|-1|-2|3|0.25</values>
+            </parameters>
+        </cycler_eb_valueholder>
+    </template>
+
+    <template name="cycler_eb_save">
+        <cycler_eb_valueholder name="save">
+            <parameters mergerule="replace">
+                <defaultlabelres>allsaves</defaultlabelres>
+                <labelsres>fortitude|reflex|will</labelsres>
+                <values>fortitude|reflex|will</values>
+            </parameters>
+        </cycler_eb_valueholder>
+    </template>
 </root>
