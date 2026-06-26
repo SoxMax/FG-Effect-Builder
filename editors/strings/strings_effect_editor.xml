@@ -8,4 +8,39 @@
 
     <string name="category_light">Light</string>
     <string name="effect_light">Light</string>
+
+    <!-- Categories (match ruleset-plugin names so editors group together) -->
+    <string name="category_misc">Miscellaneous</string>
+    <string name="category_heal">Healing</string>
+    <string name="category_conditional">Conditionals</string>
+
+    <!-- Size / Reach (plain numeric grid distances) -->
+    <string name="effect_space">Space</string>
+    <string name="effect_reach">Reach</string>
+    <string name="effect_addspace">Add Space</string>
+    <string name="effect_addreach">Add Reach</string>
+
+    <!-- Healing (rest/heal blockers) -->
+    <string name="effect_noheal">No Heal</string>
+    <string name="effect_norest">No Rest</string>
+
+    <!-- Conditional targets -->
+    <string name="effect_conditional_faction">Faction?</string>
+    <string name="effect_conditional_name">Has Name?</string>
+    <string name="effect_conditional_range">In Range?</string>
+
+    <!-- Language -->
+    <string name="effect_lang">Language</string>
+    <string name="effect_langs">Language (Speak)</string>
+    <string name="effect_langu">Language (Understand)</string>
+
+    <!-- No-heal / No-rest options -->
+    <string name="noheal_rest">rest</string>
+    <string name="noheal_hitdice">hitdice</string>
+    <string name="norest_long">long</string>
+    <string name="norest_short">short</string>
+
+    <!-- If/IfT for conditional targets -->
+    <string name="if">If Self</string>
+    <string name="ift">If Target</string>
 </root>

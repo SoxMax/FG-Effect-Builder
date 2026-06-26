@@ -7,4 +7,18 @@
 	<includefile source="editors/vision/VISION.xml" />
 	<includefile source="editors/vision/VISION_MODIFIERS.xml" />
 	<includefile source="editors/light/LIGHT.xml" />
+	<!-- Size / Reach (plain numeric grid distances; SIZE category moved to plugins) -->
+	<includefile source="editors/size/SPACE.xml" />
+	<includefile source="editors/size/REACH.xml" />
+	<includefile source="editors/size/ADDSPACE.xml" />
+	<includefile source="editors/size/ADDREACH.xml" />
+	<!-- Healing (rest/heal blockers; CoreRPG-fixed descriptors) -->
+	<includefile source="editors/healing/NOHEAL.xml" />
+	<includefile source="editors/healing/NOREST.xml" />
+	<!-- Language -->
+	<includefile source="editors/language/LANG.xml" />
+	<!-- Conditional targets (CoreRPG-fixed / free-text) -->
+	<includefile source="editors/conditional/conditional_FACTION.xml" />
+	<includefile source="editors/conditional/conditional_NAME.xml" />
+	<includefile source="editors/conditional/conditional_RANGE.xml" />
 </root>

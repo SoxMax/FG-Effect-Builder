@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="conditional_RANGE">
+        <script file="editors/conditional/scripts/conditional_RANGE.lua" />
+		<margins control="0,0,0,2" />
+        <sheetdata>
+            <leftanchor_eb />
+
+            <cycler_eb_ifs />
+
+            <cycler_eb_valueholder name="comparator">
+                <anchored width="25" />
+                <parameters mergerule="replace">
+                    <defaultlabel>=</defaultlabel>
+                    <labels>&gt;=|&gt;|&lt;|&lt;=</labels>
+                    <values>&gt;=|&gt;|&lt;|&lt;=</values>
+                </parameters>
+            </cycler_eb_valueholder>
+
+            <number_eb_valueholder name="distance" />
+        </sheetdata>
+    </windowclass>
+    <script name="loader_conditional_RANGE">
+        function onInit()
+            EditorManager.addEditor(
+                "category_conditional",
+                {
+                    value="CONDITIONAL_RANGE",
+                    labelres="effect_conditional_range",
+                    windowclass="conditional_RANGE"
+                }
+            )
+        end
+    </script>
+</root>

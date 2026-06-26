@@ -37,7 +37,7 @@
         <margins control="0,0,5,2" />
         <sheetdata>
             <leftanchor_eb />
-            
+
             <dice_eb_valueholder name="effect_dice" />
 
 			<label_eb_plus />
@@ -47,6 +47,51 @@
                     <left offset="5" />
                 </anchored>
             </number_eb_valueholder>
+        </sheetdata>
+    </windowclass>
+
+    <template name="subwindow_eb_number_value">
+        <subwindow_eb_valueholder name="number_value">
+            <class>subwindow_eb_number_value</class>
+        </subwindow_eb_valueholder>
+    </template>
+    <windowclass name="subwindow_eb_number_value">
+        <script file="common/scripts/subwindow_eb_dice_value.lua" />
+        <margins control="0,0,5,2" />
+        <sheetdata>
+            <leftanchor_eb />
+
+            <number_eb_valueholder name="effect_modifier" />
+        </sheetdata>
+    </windowclass>
+
+    <template name="subwindow_eb_damage_types">
+        <subwindow_eb_valueholder name="damage_types">
+            <class>subwindow_eb_damage_types</class>
+            <anchored>
+                <left offset="0" />
+            </anchored>
+        </subwindow_eb_valueholder>
+    </template>
+    <template name="subwindow_eb_damage_types_combobox">
+        <combobox_eb_damage_type>
+            <anchored>
+                <size><width>90</width></size>
+                <left><offset>10</offset></left>
+            </anchored>
+            <script>
+                function onValueChanged()
+                    window.damageFieldUpdated(self)
+                    super.onValueChanged()
+                end
+            </script>
+        </combobox_eb_damage_type>
+    </template>
+    <windowclass name="subwindow_eb_damage_types">
+        <script file="common/scripts/subwindow_eb_damage_types.lua" />
+        <margins control="0,0,5,2" />
+        <sheetdata>
+            <leftanchor_eb />
         </sheetdata>
     </windowclass>
 </root>

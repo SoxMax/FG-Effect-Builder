@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="effect_LANG">
+        <script file="editors/language/scripts/LANG.lua" />
+		<margins control="0,0,0,2" />
+        <sheetdata>
+            <leftanchor_eb />
+
+            <cycler_eb_valueholder name="lang_mode">
+                <anchored width="130" />
+                <parameters mergerule="replace">
+                    <defaultlabel>Speak &amp; Understand</defaultlabel>
+                    <defaultvalue>LANG</defaultvalue>
+                    <labels>Speak Only|Understand Only</labels>
+                    <values>LANGS|LANGU</values>
+                </parameters>
+            </cycler_eb_valueholder>
+
+            <stringfield_eb_valueholder name="language" />
+        </sheetdata>
+    </windowclass>
+    <script name="loader_LANG">
+        function onInit()
+            EditorManager.addEditor(
+                "category_misc",
+                {
+                    value="LANG",
+                    labelres="effect_lang",
+                    windowclass="effect_LANG"
+                }
+            )
+        end
+    </script>
+</root>

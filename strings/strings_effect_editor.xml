@@ -12,4 +12,10 @@
     <string name="vision_type">Vision</string>
     <string name="custom_light_type">Custom Light</string>
     <string name="light_fx">Light FX</string>
+
+    <string name="allsaves">All Saves</string>
+    <string name="allrange">Melee+Ranged</string>
+    <string name="status_type">Status</string>
+    <string name="faction_type">Faction</string>
+    <string name="language_type">Language</string>
 </root>

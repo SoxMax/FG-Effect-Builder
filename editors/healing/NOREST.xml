@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="effect_NOREST">
+        <script file="editors/healing/scripts/NOREST.lua" />
+		<margins control="0,0,0,2" />
+        <sheetdata>
+            <leftanchor_eb />
+
+            <cycler_eb_valueholder name="rest_type">
+                <anchored width="70" />
+                <parameters mergerule="replace">
+                    <defaultlabel>All</defaultlabel>
+                    <defaultvalue></defaultvalue>
+                    <labels>Long|Short</labels>
+                    <values>long|short</values>
+                </parameters>
+            </cycler_eb_valueholder>
+        </sheetdata>
+    </windowclass>
+    <script name="loader_NOREST">
+        function onInit()
+            EditorManager.addEditor(
+                "category_heal",
+                {
+                    value="NOREST",
+                    labelres="effect_norest",
+                    windowclass="effect_NOREST"
+                }
+            )
+        end
+    </script>
+</root>

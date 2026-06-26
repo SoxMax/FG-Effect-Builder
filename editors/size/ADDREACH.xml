@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="effect_ADDREACH">
+        <script file="editors/size/scripts/ADDREACH.lua" />
+		<margins control="0,0,0,2" />
+        <sheetdata>
+            <leftanchor_eb />
+
+            <number_eb_valueholder name="number_value">
+                <min>-100</min>
+            </number_eb_valueholder>
+        </sheetdata>
+    </windowclass>
+    <script name="loader_ADDREACH">
+        function onInit()
+            EditorManager.addEditor(
+                "category_misc",
+                {
+                    value="ADDREACH",
+                    labelres="effect_addreach",
+                    windowclass="effect_ADDREACH"
+                }
+            )
+        end
+    </script>
+</root>

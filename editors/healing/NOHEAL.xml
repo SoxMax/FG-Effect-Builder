@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+    <windowclass name="effect_NOHEAL">
+        <script file="editors/healing/scripts/NOHEAL.lua" />
+		<margins control="0,0,0,2" />
+        <sheetdata>
+            <leftanchor_eb />
+
+            <cycler_eb_valueholder name="heal_type">
+                <anchored width="70" />
+                <parameters mergerule="replace">
+                    <defaultlabel>All</defaultlabel>
+                    <defaultvalue></defaultvalue>
+                    <labels>Rest|Hit Dice|Heal</labels>
+                    <values>rest|hitdice|heal</values>
+                </parameters>
+            </cycler_eb_valueholder>
+        </sheetdata>
+    </windowclass>
+    <script name="loader_NOHEAL">
+        function onInit()
+            EditorManager.addEditor(
+                "category_heal",
+                {
+                    value="NOHEAL",
+                    labelres="effect_noheal",
+                    windowclass="effect_NOHEAL"
+                }
+            )
+        end
+    </script>
+</root>
